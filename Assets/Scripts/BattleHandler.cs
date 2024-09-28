@@ -98,10 +98,12 @@ public class BattleHandler : MonoBehaviour
 
         if (isCrit)
         {
+            damageText.color = new Color32(255, 13, 13, 255); // FF0D0D color (red)
             damageText.text = "*CRITICAL " + damageShow + " DAMAGE*";
         }
         else
         {
+            damageText.color = Color.white; // Set to original color (white)
             damageText.text = "*" + damageShow + " DAMAGE*";
         }
 

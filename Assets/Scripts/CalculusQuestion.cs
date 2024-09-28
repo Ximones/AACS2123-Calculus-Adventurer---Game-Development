@@ -56,10 +56,11 @@ public class CalculusQuestion : MonoBehaviour
             case "Forest":
                 InitializePowerRuleQuestions();
                 break;
-            case "Forest 1":
+            case "Cave":
+            case "Cave 1":
                 InitializeSumRuleQuestions();
                 break;
-            case "Forest 3":
+            case "Dungeon":
                 InitializeProductRuleQuestions();
                 break;
             default:

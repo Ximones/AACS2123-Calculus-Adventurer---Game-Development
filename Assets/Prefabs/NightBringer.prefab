@@ -159,6 +159,7 @@ MonoBehaviour:
   animatorPlayer: {fileID: 0}
   animatorEnemy: {fileID: 5926392737219686825}
   playerBehaviour: {fileID: 0}
+  battleHandler: {fileID: 0}
   spellEnemy: {fileID: 0}
   animatorSpell: {fileID: 0}
 --- !u!61 &582221065139423897

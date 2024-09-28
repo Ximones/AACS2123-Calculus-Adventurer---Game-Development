@@ -111,6 +111,7 @@ MonoBehaviour:
   animatorPlayer: {fileID: 0}
   animatorEnemy: {fileID: 8238613380652054043}
   playerBehaviour: {fileID: 0}
+  battleHandler: {fileID: 0}
 --- !u!95 &8238613380652054043
 Animator:
   serializedVersion: 5

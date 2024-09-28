@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3317685806423601847
 Transform:
   m_ObjectHideFlags: 0
@@ -111,6 +111,7 @@ MonoBehaviour:
   animatorPlayer: {fileID: 0}
   animatorEnemy: {fileID: 1773952891450535727}
   playerBehaviour: {fileID: 0}
+  battleHandler: {fileID: 0}
 --- !u!95 &1773952891450535727
 Animator:
   serializedVersion: 5
