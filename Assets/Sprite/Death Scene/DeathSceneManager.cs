@@ -88,5 +88,36 @@ public class DeathSceneManager : MonoBehaviour
             player.GetComponent<PlayerController>().enabled = true;
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("OnCollisionEnter2D method called");
+        Debug.Log("Collided with: " + collision.gameObject.name);
+
+        if (collision.gameObject.CompareTag("Death"))
+        {
+            Debug.Log("Collision with Death object detected");
+
+            // Get the player component
+            GameObject player = GameObject.FindWithTag("Player");
+            if (player != null)
+            {
+                PlayerController playerController = player.GetComponent<PlayerController>();
+                if (playerController != null)
+                {
+                    Debug.Log("Player component found");
+                    ShowDeathScene(false);
+                }
+                else
+                {
+                    Debug.LogWarning("PlayerController component not found on player GameObject");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Player GameObject not found");
+            }
+        }
+    }
 }
 
