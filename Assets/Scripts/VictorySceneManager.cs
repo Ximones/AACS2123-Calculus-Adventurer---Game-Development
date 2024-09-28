@@ -71,7 +71,7 @@ public class VictorySceneManager : MonoBehaviour
             PlayerController.enabled = true;
         }
 
-        SceneManager.LoadScene("MainMenu"); // Load the main menu scene
+        SceneManager.LoadScene("Main Menu"); // Load the main menu scene
     }
 
     private void PlayButtonClickSound()
