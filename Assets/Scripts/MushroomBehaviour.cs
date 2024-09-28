@@ -76,6 +76,7 @@ public class MushroomBehaviour : Enemy
         animatorEnemy.SetInteger("AnimState", 2);  // Mushroom attack animation
         // Assume PlayerBehaviour is available and hooked up
         playerBehaviour.TakeDamage(normalDamage, 1);
+        battleHandler.UpdateDamageText(normalDamage, false);
         StartCoroutine(ReturnToOriginalPosition());
     }
 
@@ -85,6 +86,7 @@ public class MushroomBehaviour : Enemy
         animatorEnemy.SetInteger("AnimState", 6);  // Mushroom attack animation
         // Assume PlayerBehaviour is available and hooked up
         playerBehaviour.TakeDamage(criticalDamage, 0.5f);
+        battleHandler.UpdateDamageText(criticalDamage, true);
         StartCoroutine(ReturnToOriginalPosition());
     }
 

@@ -75,7 +75,8 @@ protected override void Attack()
     Debug.Log("Goblin attacks!");
     animatorEnemy.SetInteger("AnimState", 2);  // Goblin attack animation
                                                // Assume PlayerBehaviour is available and hooked up
-        playerBehaviour.TakeDamage(normalDamage, 1);
+    playerBehaviour.TakeDamage(normalDamage, 1);
+    battleHandler.UpdateDamageText(normalDamage,false);
     StartCoroutine(ReturnToOriginalPosition());
 }
 
@@ -84,7 +85,8 @@ protected override void Attack2()
     Debug.Log("Goblin attacks!");
     animatorEnemy.SetInteger("AnimState", 6);  // Goblin attack animation
                                                // Assume PlayerBehaviour is available and hooked up
-        playerBehaviour.TakeDamage(criticalDamage, 1);
+    playerBehaviour.TakeDamage(criticalDamage, 1);
+    battleHandler.UpdateDamageText(criticalDamage, true);
     StartCoroutine(ReturnToOriginalPosition());
 }
 

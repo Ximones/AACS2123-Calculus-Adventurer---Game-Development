@@ -33,7 +33,7 @@ public class NightBringerBehaviour : Enemy
         enemyHealth = 100;
         moveSpeed = 4f;
         normalDamage = 50;
-        criticalDamage = 50;
+        criticalDamage = 100;
         Debug.Log("NightBringer initialized");
     }
 
@@ -80,7 +80,7 @@ public class NightBringerBehaviour : Enemy
         // Regular attack animation and behavior
         animatorEnemy.SetInteger("AnimState", 2);  // Attack animation
         playerBehaviour.TakeDamage(normalDamage, 0.2f);  // Player takes damage
-
+        battleHandler.UpdateDamageText(normalDamage, false);
         // Return to original position after attacking
         StartCoroutine(ReturnToOriginalPosition());
     }
@@ -116,10 +116,12 @@ public class NightBringerBehaviour : Enemy
     private IEnumerator DeactivateSpell()
     {
         yield return new WaitForSeconds(1f);  // Wait for spell to finish
+
         spellEnemy.SetActive(false);  // Deactivate the spell
 
         // Apply spell damage to the player
         playerBehaviour.TakeDamage(criticalDamage, 0);
+        battleHandler.UpdateDamageText(criticalDamage, true);
 
         // Return to idle
         StartCoroutine(ReturnToIdle());
