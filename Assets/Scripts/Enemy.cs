@@ -18,6 +18,8 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected Animator animatorPlayer;
     [SerializeField] protected Animator animatorEnemy;
     [SerializeField] protected PlayerBehaviour playerBehaviour;
+
+    [SerializeField] protected BattleHandler battleHandler;
     protected bool isMoving = false;
     protected bool isDetected = false;
 
@@ -98,6 +100,7 @@ public abstract class Enemy : MonoBehaviour
         enemyHealth -= playerDamage;
         if (enemyHealth <= 0)
         {
+            enemyHealth = 0;
             Die();
         }
         else

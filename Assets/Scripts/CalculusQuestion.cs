@@ -12,15 +12,12 @@ public class CalculusQuestion : MonoBehaviour
     public TextMeshProUGUI questionText;
     public TextMeshProUGUI incorrectAnswerText;
     public TextMeshProUGUI healthText;
-    public TextMeshProUGUI characterTurnText;
-    public TextMeshProUGUI playerDamageText;
-    public TextMeshProUGUI enemyDamageText;
 
     public TMP_InputField answerInput;
 
     public Button submitButton;
     public Button backButton;
-    
+
     public AudioSource buttonClickAudioSource;
     public GameObject questionPanel;
     public DeathSceneManager deathSceneManager;
@@ -36,10 +33,11 @@ public class CalculusQuestion : MonoBehaviour
 
     void Start()
     {
+        
         submitButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(CheckAnswer)));
-        UpdateHealthText();
         InitializeQuestions();
         incorrectAnswerText.text = "";
+        
     }
 
     private IEnumerator HandleButtonClick(System.Action action)
@@ -116,7 +114,7 @@ public class CalculusQuestion : MonoBehaviour
         answerInput.text = "";
         incorrectAnswerText.text = "";
         FocusInputField(); // Focus the input field
-        UpdateHealthText();
+        
     }
 
     public void CheckAnswer()
@@ -133,14 +131,14 @@ public class CalculusQuestion : MonoBehaviour
                 incorrectAnswerText.text = "Incorrect answer, please try again.";
                 playerAns = -1;
             }
-            UpdateHealthText();
+            
         }
         else
         {
             incorrectAnswerText.text = "Invalid answer format, please try again.";
             playerAns = -1;
         }
-            UpdateHealthText();
+           
     }
 
 
@@ -152,12 +150,15 @@ public class CalculusQuestion : MonoBehaviour
         }
     }
 
-    private void UpdateHealthText()
+    public void UpdateHealthText()
     {
         float enemyHealth = enemyBehaviour.getEnemyHealth();
+        
         healthText.text = "Player Health: " + playerBehaviour.playerHealth + "/100" + "\nEnemy Health: " + enemyHealth + "/100";
       
     }
+
+
 
     private void FocusInputField()
     {
@@ -174,6 +175,7 @@ public class CalculusQuestion : MonoBehaviour
     {
         return playerAns;
     }
+
 
 }
 

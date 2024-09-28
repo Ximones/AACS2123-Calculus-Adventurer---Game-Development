@@ -76,6 +76,7 @@ public class SkeletonBehaviour : Enemy
         // Assume PlayerBehaviour is available and hooked up
         StartCoroutine(ReturnToOriginalPosition());
         playerBehaviour.TakeDamage(normalDamage, 0);
+        battleHandler.UpdateDamageText(normalDamage, false);
     }
 
     protected override void Attack2()
@@ -85,6 +86,7 @@ public class SkeletonBehaviour : Enemy
         // Assume PlayerBehaviour is available and hooked up
         StartCoroutine(ReturnToOriginalPosition());
         playerBehaviour.TakeDamage(criticalDamage, 1);
+        battleHandler.UpdateDamageText(normalDamage, true);
     }
 
 

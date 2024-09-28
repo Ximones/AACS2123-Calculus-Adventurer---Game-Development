@@ -12,6 +12,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] GameObject characterPlayer;
     [SerializeField] GameObject characterEnemy;
     [SerializeField] GameObject characterDie;
+    [SerializeField] BattleHandler battleHandler;
 
     public Enemy enemyBehaviour;
 
@@ -144,10 +145,12 @@ public class PlayerBehaviour : MonoBehaviour
         yield return new WaitForSeconds(1); // Optional delay after attack
         if (isCrit)
         {
+            battleHandler.UpdateDamageText(criticalDamage, true);
             enemyBehaviour.TakeDamage(criticalDamage);
         }
         else
         {
+            battleHandler.UpdateDamageText(normalDamage, false);
             enemyBehaviour.TakeDamage(normalDamage);
         }
             
@@ -189,6 +192,7 @@ public class PlayerBehaviour : MonoBehaviour
         playerHealth -= enemyDamage;
         if (playerHealth <= 0)
         {
+            playerHealth = 0;
             StartCoroutine(PlayerDie(second));
         }
         else
