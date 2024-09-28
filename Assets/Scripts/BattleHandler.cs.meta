@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4a3dd22bda60ae8499de9404d8d7314d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playerBehaviour: {fileID: 9172890336057284993, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
+  - enemyBehaviour: {fileID: 2038989039883326173, guid: c1159ce411bd4044081e66b20fc86137, type: 3}
+  - calculusQuestion: {fileID: 2416767293888739345, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 0e0997ebed621be49925b5c9445b21f7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - animatorPlayer: {fileID: 9188208013778323649, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
+  - animatorEnemy: {fileID: 1773952891450535727, guid: ddcca5869ee6f6145b13ef337bc7cceb, type: 3}
+  - transformPlayer: {fileID: 4402476458041058974, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
+  - transformEnemy: {fileID: 3317685806423601847, guid: ddcca5869ee6f6145b13ef337bc7cceb, type: 3}
+  - characterPlayer: {fileID: 8380393807244744100, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
+  - characterEnemy: {fileID: 8319200899814993672, guid: 2fa1d37feadaa4248abfe94b6224083b, type: 3}
+  - characterDie: {fileID: 8302736349353886458, guid: 939be5d6e56b71d4f8531521caa51f76, type: 3}
+  - enemyBehaviour: {fileID: 6360144802914566353, guid: 2fa1d37feadaa4248abfe94b6224083b, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

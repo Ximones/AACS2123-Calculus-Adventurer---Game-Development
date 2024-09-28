@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Enemy
+  - Death
+  - Spell
+  - Die
+  - Portal
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Sky
+    uniqueID: 133106383
+    locked: 0
+  - name: Background
+    uniqueID: 428684643
+    locked: 0
+  - name: Decoration
+    uniqueID: 3283646665
+    locked: 0
+  - name: Player
+    uniqueID: 2737037733
+    locked: 0
+  - name: Land
+    uniqueID: 3262205763
+    locked: 0
+  - name: Portal Next Level
+    uniqueID: 4283115647
+    locked: 0
+  - name: UI
+    uniqueID: 3806227745
+    locked: 0
