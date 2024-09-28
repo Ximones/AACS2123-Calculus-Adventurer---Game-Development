@@ -24,7 +24,13 @@ public class VictorySceneManager : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) // Player hit portal colider then set victory screen as true
     {
         if (other.CompareTag(playerTag))  // Check for player collision
+        {
+            if (PlayerController != null)
+            {
+                PlayerController.enabled = false; // Disable player movement
+            }
             ShowVictoryScreen();
+        }
     }
 
     public void ShowVictoryScreen()

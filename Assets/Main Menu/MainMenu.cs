@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour
     IEnumerator Wait()
     {
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("Dungeon 1");
+        SceneManager.LoadScene("Level 1");
     }
 
     public void playGame()
