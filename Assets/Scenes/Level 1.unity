@@ -1718,22 +1718,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 175008115}
-    - target: {fileID: 5016967813235525403, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8194491537946720974, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
-      propertyPath: m_SortingLayer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8194491537946720974, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8194491537946720974, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -488739551
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17097,7 +17081,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7237028133073884898, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
   m_PrefabInstance: {fileID: 936849757}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2134843367}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00e0863524e6719419717839d3496354, type: 3}
@@ -17455,6 +17439,11 @@ Canvas:
   m_SortingLayerID: -488739551
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &825717313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7162942266357771129, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
+  m_PrefabInstance: {fileID: 217049380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &844722940
 GameObject:
   m_ObjectHideFlags: 0
@@ -18084,14 +18073,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 56465504922844386, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
-      propertyPath: deathSceneManager
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1814716246961279499, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5384255320948641977, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.5
@@ -18167,7 +18148,7 @@ PrefabInstance:
     - target: {fileID: 6076912484560519212, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: deathSceneManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1158409690}
     - target: {fileID: 6076912484560519212, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: incorrectAnswerText
       value: 
@@ -18199,10 +18180,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8762800464092793439, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2134843374}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
 --- !u!1 &943812423
 GameObject:
@@ -19349,6 +19327,7 @@ GameObject:
   - component: {fileID: 1158409689}
   - component: {fileID: 1158409688}
   - component: {fileID: 1158409687}
+  - component: {fileID: 1158409690}
   - component: {fileID: 1158409691}
   - component: {fileID: 1158409692}
   m_Layer: 0
@@ -19408,6 +19387,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1158409690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158409686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f6e8c81542fe7409bea8a3269e88db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathSceneCanvas: {fileID: 825717313}
+  reviveButton: {fileID: 530939551}
+  restartButton: {fileID: 1468695368}
+  quitButton: {fileID: 1827668616}
+  buttonClickSound: {fileID: 1158409691}
 --- !u!82 &1158409691
 AudioSource:
   m_ObjectHideFlags: 0
@@ -36536,11 +36532,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1238833240 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3883707007119356316, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
-  m_PrefabInstance: {fileID: 217049380}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1248433584
 GameObject:
   m_ObjectHideFlags: 0
@@ -41894,23 +41885,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD
 --- !u!251 &2116535602
 PlatformEffector2D:
-=======
---- !u!1 &2134843367 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8762800464092793439, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
-  m_PrefabInstance: {fileID: 936849757}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2134843374
-MonoBehaviour:
->>>>>>> 7b76ec46a6163e5cb820515bdb56db1fb43b0ccd
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 2116535598}
   m_Enabled: 1
   m_UseColliderMask: 1
@@ -41924,19 +41904,6 @@ MonoBehaviour:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
-=======
-  m_GameObject: {fileID: 2134843367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3a5e0f06ee8817408e65fb6e6e8a0fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathSceneCanvas: {fileID: 1238833240}
-  reviveButton: {fileID: 530939551}
-  restartButton: {fileID: 1468695368}
-  quitButton: {fileID: 1827668616}
-  buttonClickSound: {fileID: 1158409691}
->>>>>>> 7b76ec46a6163e5cb820515bdb56db1fb43b0ccd
 --- !u!1001 &7155558517419937998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41964,10 +41931,6 @@ PrefabInstance:
     - target: {fileID: 2787970567788038312, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: m_Name
       value: Next Level Portal
-      objectReference: {fileID: 0}
-    - target: {fileID: 2787970567788038312, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3097279252746999018, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: PlayerController
