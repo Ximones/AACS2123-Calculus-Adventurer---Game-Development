@@ -86,7 +86,7 @@ public class SkeletonBehaviour : Enemy
         // Assume PlayerBehaviour is available and hooked up
         StartCoroutine(ReturnToOriginalPosition());
         playerBehaviour.TakeDamage(criticalDamage, 1);
-        battleHandler.UpdateDamageText(normalDamage, true);
+        battleHandler.UpdateDamageText(criticalDamage, true);
     }
 
 
