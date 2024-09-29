@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class SkeletonBehaviour : Enemy
 {
+    [SerializeField] private AudioClip attackClip;
+    [SerializeField] private AudioClip specialAttackClip;
+    [SerializeField] private AudioClip walkClip;
+
+    private AudioSource audioSource;
+
     protected override void Init()
     {
+        // Initialize audio source
+        audioSource = gameObject.AddComponent<AudioSource>();
+
         enemyName = "Skeleton";
         enemyHealth = 100;
         moveSpeed = 5f;
@@ -13,12 +22,15 @@ public class SkeletonBehaviour : Enemy
         criticalDamage = 60;
         Debug.Log("Skeleton initialized");
     }
+
     public override void Move()
     {
         Debug.Log("Skeleton moves!");
         isMoving = true;
+        PlaySound(walkClip);  // Play walking sound
         StartCoroutine(WalkToPlayer());
     }
+
     private IEnumerator WalkToPlayer()
     {
         Vector3 targetPosition = transformPlayer.position;
@@ -58,38 +70,35 @@ public class SkeletonBehaviour : Enemy
         }
 
         // After reaching the player, perform attack
-    
-     if (Random.Range(1, 3) == 1)
-     {
-         Attack();
-     }
-     else
-     {
-        Attack2();
-     }
-}
+        if (Random.Range(1, 3) == 1)
+        {
+            Attack();
+        }
+        else
+        {
+            Attack2();
+        }
+    }
 
     protected override void Attack()
     {
         Debug.Log("Skeleton attacks!");
         animatorEnemy.SetInteger("AnimState", 2);  // Skeleton attack animation
-        // Assume PlayerBehaviour is available and hooked up
-        StartCoroutine(ReturnToOriginalPosition());
+        PlaySound(attackClip);  // Play attack sound
         playerBehaviour.TakeDamage(normalDamage, 0);
         battleHandler.UpdateDamageText(normalDamage, false);
+        StartCoroutine(ReturnToOriginalPosition());
     }
 
     protected override void Attack2()
     {
         Debug.Log("Skeleton attacks!");
-        animatorEnemy.SetInteger("AnimState", 6);  // Skeleton attack animation
-        // Assume PlayerBehaviour is available and hooked up
-        StartCoroutine(ReturnToOriginalPosition());
+        animatorEnemy.SetInteger("AnimState", 6);  // Skeleton special attack animation
+        PlaySound(specialAttackClip);  // Play special attack sound
         playerBehaviour.TakeDamage(criticalDamage, 1);
         battleHandler.UpdateDamageText(criticalDamage, true);
+        StartCoroutine(ReturnToOriginalPosition());
     }
-
-
 
     private IEnumerator ReturnToOriginalPosition()
     {
@@ -142,5 +151,12 @@ public class SkeletonBehaviour : Enemy
         isMoving = false;
     }
 
-
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            audioSource.clip = clip;
+            audioSource.Play();
+        }
+    }
 }

@@ -582,6 +582,14 @@ PrefabInstance:
       value: Skeleton
       objectReference: {fileID: 0}
     - target: {fileID: 1679754477079472519, guid: ddcca5869ee6f6145b13ef337bc7cceb, type: 3}
+      propertyPath: walkClip
+      value: 
+      objectReference: {fileID: 8300000, guid: df7087e4d8a8bb546bc08ce68632903f, type: 3}
+    - target: {fileID: 1679754477079472519, guid: ddcca5869ee6f6145b13ef337bc7cceb, type: 3}
+      propertyPath: attackClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 56703418e3aed4c47a5f6622816b8e41, type: 3}
+    - target: {fileID: 1679754477079472519, guid: ddcca5869ee6f6145b13ef337bc7cceb, type: 3}
       propertyPath: battleHandler
       value: 
       objectReference: {fileID: 954062272}
@@ -597,6 +605,10 @@ PrefabInstance:
       propertyPath: transformPlayer
       value: 
       objectReference: {fileID: 967269066}
+    - target: {fileID: 1679754477079472519, guid: ddcca5869ee6f6145b13ef337bc7cceb, type: 3}
+      propertyPath: specialAttackClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 56703418e3aed4c47a5f6622816b8e41, type: 3}
     - target: {fileID: 1679754477079472519, guid: ddcca5869ee6f6145b13ef337bc7cceb, type: 3}
       propertyPath: originalPosition.x
       value: 5.63
@@ -851,7 +863,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
