@@ -35,10 +35,12 @@ public class CalculusQuestion : MonoBehaviour
     public int playerAns = 0;
 
     public GameObject deathScene;
+    public GameObject victoryScene;
 
     void Start()
     {
         deathScene.SetActive(false);
+        victoryScene.SetActive(false);
         submitButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(CheckAnswer)));
         InitializeQuestions();
         incorrectAnswerText.text = "";
@@ -176,6 +178,11 @@ public class CalculusQuestion : MonoBehaviour
         {
             deathSceneActive();
         }
+
+        if (enemyBehaviour.getEnemyHealth() <= 0)
+        {
+            victorySceneActive();
+        }
     }
 
 
@@ -189,6 +196,17 @@ public class CalculusQuestion : MonoBehaviour
         yield return new WaitForSeconds(1.2f);
 
         deathScene.SetActive(true);
+    }
+    private void victorySceneActive()
+    {
+        StartCoroutine(ActivateVictorySceneAfterDelay());
+    }
+
+    private IEnumerator ActivateVictorySceneAfterDelay()
+    {
+        yield return new WaitForSeconds(1.2f);
+
+        victoryScene.SetActive(true);
     }
 
 
