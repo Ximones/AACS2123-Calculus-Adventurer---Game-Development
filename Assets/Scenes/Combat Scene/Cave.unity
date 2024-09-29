@@ -2667,6 +2667,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: df7087e4d8a8bb546bc08ce68632903f, type: 3}
     - target: {fileID: 2038989039883326173, guid: c1159ce411bd4044081e66b20fc86137, type: 3}
+      propertyPath: enemyName
+      value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 2038989039883326173, guid: c1159ce411bd4044081e66b20fc86137, type: 3}
       propertyPath: attackClip
       value: 
       objectReference: {fileID: 8300000, guid: 56703418e3aed4c47a5f6622816b8e41, type: 3}
@@ -2689,7 +2693,7 @@ PrefabInstance:
     - target: {fileID: 2038989039883326173, guid: c1159ce411bd4044081e66b20fc86137, type: 3}
       propertyPath: specialAttackClip
       value: 
-      objectReference: {fileID: 8300000, guid: e1e2d06fe0d78194b9c7c8cc88414d0d, type: 3}
+      objectReference: {fileID: 8300000, guid: 56703418e3aed4c47a5f6622816b8e41, type: 3}
     - target: {fileID: 2038989039883326173, guid: c1159ce411bd4044081e66b20fc86137, type: 3}
       propertyPath: originalPosition.x
       value: 5.86
@@ -2864,6 +2868,10 @@ PrefabInstance:
     - target: {fileID: 4057967634712431511, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
       propertyPath: m_Name
       value: 'Victory Screen '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057967634712431511, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4565895736236299213, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
       propertyPath: m_LocalScale.x
@@ -3915,18 +3923,6 @@ PrefabInstance:
     - target: {fileID: 2874691418787709039, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
       propertyPath: m_Name
       value: CalculusQuestion
-      objectReference: {fileID: 0}
-    - target: {fileID: 3978123995862638198, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3978123995862638198, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 348
-      objectReference: {fileID: 0}
-    - target: {fileID: 3978123995862638198, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 242
       objectReference: {fileID: 0}
     - target: {fileID: 6266972710223275593, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
       propertyPath: m_Pivot.x
