@@ -4,22 +4,30 @@ using UnityEngine;
 
 public class MushroomBehaviour : Enemy
 {
+    [SerializeField] AudioClip walkClip; // Audio clip for walking
+    [SerializeField] AudioClip attackClip; // Audio clip for attacking
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     protected override void Init()
     {
-
         enemyHealth = 100;
         moveSpeed = 5f;
         normalDamage = 20;
         criticalDamage = 40;
         Debug.Log("Mushroom initialized");
+
+        // Initialize audio source
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
+
     public override void Move()
     {
         Debug.Log("Mushroom moves!");
         isMoving = true;
         StartCoroutine(WalkToPlayer());
     }
+
     private IEnumerator WalkToPlayer()
     {
         Vector3 targetPosition = transformPlayer.position;
@@ -37,6 +45,7 @@ public class MushroomBehaviour : Enemy
         }
 
         animatorEnemy.SetInteger("AnimState", 1);  // Walking animation
+        PlayLoopingAudioClip(walkClip); // Play walking sound
 
         // Walk towards the player
         while (Vector3.Distance(transformEnemy.position, targetPosition) > attackRange)
@@ -58,22 +67,24 @@ public class MushroomBehaviour : Enemy
             yield return null;  // Wait for the next frame
         }
 
-        // After reaching the player, perform attack
+        // After reaching the player, stop walking sound and perform attack
+        StopLoopingAudioClip();
 
-         if (Random.Range(1, 3) == 1)
-         {
+        if (Random.Range(1, 3) == 1)
+        {
             Attack();
-         }
-         else
-         {
+        }
+        else
+        {
             Attack2();
-         }
+        }
     }
 
     protected override void Attack()
     {
         Debug.Log("Mushroom attacks!");
         animatorEnemy.SetInteger("AnimState", 2);  // Mushroom attack animation
+        StartCoroutine(PlayAttackSoundMultipleTimes(3)); // Play attack sound 3 times
         // Assume PlayerBehaviour is available and hooked up
         playerBehaviour.TakeDamage(normalDamage, 1);
         battleHandler.UpdateDamageText(normalDamage, false);
@@ -82,15 +93,14 @@ public class MushroomBehaviour : Enemy
 
     protected override void Attack2()
     {
-        Debug.Log("Goblin attacks!");
+        Debug.Log("Mushroom attacks!");
         animatorEnemy.SetInteger("AnimState", 6);  // Mushroom attack animation
+        StartCoroutine(PlayAttackSoundMultipleTimes(3)); // Play attack sound 3 times
         // Assume PlayerBehaviour is available and hooked up
         playerBehaviour.TakeDamage(criticalDamage, 0.5f);
         battleHandler.UpdateDamageText(criticalDamage, true);
         StartCoroutine(ReturnToOriginalPosition());
     }
-
-
 
     private IEnumerator ReturnToOriginalPosition()
     {
@@ -104,6 +114,7 @@ public class MushroomBehaviour : Enemy
         }
 
         animatorEnemy.SetInteger("AnimState", 1);  // Walking animation
+        PlayLoopingAudioClip(walkClip); // Play walking sound
 
         // Save the original Y position to keep it constant during movement
         float originalY = transformEnemy.position.y;
@@ -133,7 +144,8 @@ public class MushroomBehaviour : Enemy
             yield return null;  // Wait for the next frame
         }
 
-        // After reaching the original position, switch to idle state
+        // After reaching the original position, stop walking sound and switch to idle state
+        StopLoopingAudioClip();
         animatorEnemy.SetInteger("AnimState", 0);  // Idle animation
 
         // Ensure the enemy is facing left (original direction)
@@ -141,5 +153,41 @@ public class MushroomBehaviour : Enemy
 
         // Set the enemy as no longer moving
         isMoving = false;
+    }
+
+    private IEnumerator PlayAttackSoundMultipleTimes(int times)
+    {
+        for (int i = 0; i < times; i++)
+        {
+            PlayAudioClip(attackClip);
+            yield return new WaitForSeconds(attackClip.length);
+        }
+    }
+
+    private void PlayAudioClip(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+    }
+
+    private void PlayLoopingAudioClip(AudioClip clip)
+    {
+        if (clip != null && !audioSource.isPlaying)
+        {
+            audioSource.clip = clip;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+    }
+
+    private void StopLoopingAudioClip()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+            audioSource.loop = false;
+        }
     }
 }
