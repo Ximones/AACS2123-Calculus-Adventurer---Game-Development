@@ -71,12 +71,12 @@ public class CalculusQuestion : MonoBehaviour
 
     private void InitializePowerRuleQuestions()
     {
-        questions.Add(new Question("Use the power rule to find the derivative of y = x^15.\n What is the derivative of y", 15, 14));
+        questions.Add(new Question("Use the power rule to find the derivative of y = x^15.\n What is the derivative of y?", 15, 14));
         questions.Add(new Question("Apply the power rule to find the derivative of y = x^99.\n What is the result?", 99, 98));
-        questions.Add(new Question("What is the derivative of 7x^4?", 28, 3));
-        questions.Add(new Question("What is the derivative of 2x^5?", 10, 4));
-        questions.Add(new Question("What is the derivative of 6x^6?", 36, 5));
-        questions.Add(new Question("What is the derivative of 5x^7?", 35, 6));
+        questions.Add(new Question("Use the power rule to find the derivative of y = 7x^4.\n What is the derivative of y?", 28, 3));
+        questions.Add(new Question("Apply the power rule to find the derivative of y = 2x^5.\n What is the result?", 10, 4));
+        questions.Add(new Question("Use the power rule to find the derivative of y = 6x^6.\n What is the derivative of y?", 36, 5));
+        questions.Add(new Question("Apply the power rule to find the derivative of y = 5x^7.\n What is the result?", 35, 6));
     }
 
     private void InitializeSumRuleQuestions()
@@ -125,6 +125,7 @@ public class CalculusQuestion : MonoBehaviour
         {
             if (coefficient == correctCoefficient && exponent == correctExponent)
             {
+
                 playerAns = 1;
             }
             else
