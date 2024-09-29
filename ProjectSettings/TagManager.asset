@@ -11,6 +11,8 @@ TagManager:
   - Die
   - Portal
   - Damage
+  - mushroom1
+  - mushroom2
   layers:
   - Default
   - TransparentFX
