@@ -49,6 +49,8 @@ public class GameManager : MonoBehaviour
 
         // Once the scene is loaded, restore the saved state
         StartCoroutine(WaitForLevel1Load());
+
+        saveManager.SaveSceneState(gameObjectsInLevel1);
     }
 
     private IEnumerator WaitForLevel1Load()
