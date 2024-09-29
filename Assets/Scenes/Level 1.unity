@@ -945,7 +945,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 11.421186
   orthographic: 1
   orthographic size: 13
   m_Depth: -1
@@ -2118,6 +2118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224430857}
   - component: {fileID: 224430856}
+  - component: {fileID: 224430858}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -2180,6 +2181,22 @@ Transform:
   - {fileID: 369362177}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &224430858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224430855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4700f9f03ad19f94baf0367cb7a9c988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Width: 2
+  m_Damping: 1
+  m_MinFOV: 3
+  m_MaxFOV: 60
 --- !u!1 &254938625
 GameObject:
   m_ObjectHideFlags: 0
@@ -42002,6 +42019,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 264738911464672525, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 122.504
+      objectReference: {fileID: 0}
+    - target: {fileID: 264738911464672525, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.85858
       objectReference: {fileID: 0}
@@ -42015,7 +42036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 264738911464672525, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -96
+      value: -92.782
       objectReference: {fileID: 0}
     - target: {fileID: 264738911464672525, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -42027,11 +42048,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1567161414422410029, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: m_LocalScale.x
-      value: 458.9824
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1567161414422410029, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: m_LocalScale.y
-      value: 251.006
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1567161414422410029, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: m_LocalScale.z
@@ -42043,7 +42064,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2787970567788038312, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3097279252746999018, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: PlayerController
