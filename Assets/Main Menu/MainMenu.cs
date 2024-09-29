@@ -37,7 +37,7 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("Level 1");
     }
 

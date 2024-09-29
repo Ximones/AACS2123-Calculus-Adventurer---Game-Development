@@ -34,9 +34,11 @@ public class CalculusQuestion : MonoBehaviour
     private int correctExponent;
     public int playerAns = 0;
 
+    public GameObject deathScene;
+
     void Start()
     {
-        
+        deathScene.SetActive(false);
         submitButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(CheckAnswer)));
         InitializeQuestions();
         incorrectAnswerText.text = "";
@@ -169,11 +171,25 @@ public class CalculusQuestion : MonoBehaviour
 
         healthText.text = "Player : " + playerBehaviour.playerHealth + "/100"; 
         enemyHealthText.text = enemyName+" : " + enemyHealth + "/100";
-
+        
+        if (playerBehaviour.playerHealth <= 0)
+        {
+            deathSceneActive();
+        }
     }
 
 
-      
+    private void deathSceneActive()
+    {
+        StartCoroutine(ActivateDeathSceneAfterDelay());
+    }
+
+    private IEnumerator ActivateDeathSceneAfterDelay()
+    {
+        yield return new WaitForSeconds(1.2f);
+
+        deathScene.SetActive(true);
+    }
 
 
 
