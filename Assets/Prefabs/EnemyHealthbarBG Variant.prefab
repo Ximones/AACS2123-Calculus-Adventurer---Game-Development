@@ -69,7 +69,8 @@ PrefabInstance:
       value: EnemyHealthBar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8679493232123074747, guid: dbe43693ff0827a409df97e7b6e6791d, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe43693ff0827a409df97e7b6e6791d, type: 3}

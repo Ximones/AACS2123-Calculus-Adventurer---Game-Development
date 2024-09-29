@@ -163,8 +163,8 @@ public class CalculusQuestion : MonoBehaviour
         string enemyName = enemyBehaviour.getEnemyName();
         float enemyHealth = enemyBehaviour.getEnemyHealth();
         
-        float playerHealthPercent = playerBehaviour.playerHealth / 100f; // Assuming health is out of 100
-        float enemyHealthPercent = enemyHealth / 100f; // Assuming health is out of 100
+        float playerHealthPercent = playerBehaviour.playerHealth; // Assuming health is out of 100
+        float enemyHealthPercent = enemyHealth; // Assuming health is out of 100
         
         healthBar.localScale = new Vector3(playerHealthPercent, healthBar.localScale.y, healthBar.localScale.z); // Scale only on X-axis
         enemyHealthBar.localScale = new Vector3(enemyHealthPercent, enemyHealthBar.localScale.y, enemyHealthBar.localScale.z); // Scale only on X-axis
