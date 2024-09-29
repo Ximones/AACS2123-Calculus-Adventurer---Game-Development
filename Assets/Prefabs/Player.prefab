@@ -142,7 +142,6 @@ GameObject:
   - component: {fileID: 7237028133073884898}
   - component: {fileID: 4429772729733016317}
   - component: {fileID: 6463536125000063899}
-  - component: {fileID: 56465504922844386}
   - component: {fileID: 3892347421159955605}
   m_Layer: 0
   m_Name: Player
@@ -165,7 +164,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2227351472801132151}
-  - {fileID: 1114144648624666927}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6763747470576312939
@@ -335,30 +333,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0040366054, y: -0.15605977}
   m_Size: {x: 0.25081056, y: 0.55}
   m_Direction: 0
---- !u!114 &56465504922844386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8762800464092793439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4ecba1c82fdcf840a6198cb7ee0bc3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questionText: {fileID: 0}
-  incorrectAnswerText: {fileID: 0}
-  healthText: {fileID: 0}
-  answerInput: {fileID: 0}
-  submitButton: {fileID: 0}
-  backButton: {fileID: 0}
-  buttonClickAudioSource: {fileID: 0}
-  questionPanel: {fileID: 0}
-  deathSceneManager: {fileID: 3892347421159955605}
-  playerBehaviour: {fileID: 0}
-  enemyBehaviour: {fileID: 0}
-  playerAns: 0
 --- !u!114 &3892347421159955605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,65 +350,3 @@ MonoBehaviour:
   restartButton: {fileID: 0}
   quitButton: {fileID: 0}
   buttonClickClip: {fileID: 8300000, guid: 51366f8397d580246bfe5efe69b23988, type: 3}
---- !u!1001 &6600697796146495049
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 5384255320948641977}
-    m_Modifications:
-    - target: {fileID: 4103091876006972501, guid: 34fb3948e9dde664ea59e81f0cf245f8, type: 3}
-      propertyPath: m_Name
-      value: HealthBarBg
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119370498174289766, guid: 34fb3948e9dde664ea59e81f0cf245f8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.033
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119370498174289766, guid: 34fb3948e9dde664ea59e81f0cf245f8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.301
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119370498174289766, guid: 34fb3948e9dde664ea59e81f0cf245f8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119370498174289766, guid: 34fb3948e9dde664ea59e81f0cf245f8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119370498174289766, guid: 34fb3948e9dde664ea59e81f0cf245f8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119370498174289766, guid: 34fb3948e9dde664ea59e81f0cf245f8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119370498174289766, guid: 34fb3948e9dde664ea59e81f0cf245f8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119370498174289766, guid: 34fb3948e9dde664ea59e81f0cf245f8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119370498174289766, guid: 34fb3948e9dde664ea59e81f0cf245f8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119370498174289766, guid: 34fb3948e9dde664ea59e81f0cf245f8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 34fb3948e9dde664ea59e81f0cf245f8, type: 3}
---- !u!4 &1114144648624666927 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6119370498174289766, guid: 34fb3948e9dde664ea59e81f0cf245f8, type: 3}
-  m_PrefabInstance: {fileID: 6600697796146495049}
-  m_PrefabAsset: {fileID: 0}

@@ -6,10 +6,13 @@ public class SaveManager : MonoBehaviour
 {
     // List of saved GameObject states
     public List<GameObjectState> savedObjects = new List<GameObjectState>();
-
+    
     // Save the state of all GameObjects in the scene
+
+
     public void SaveSceneState(GameObject[] gameObjectsToSave)
     {
+
         savedObjects.Clear();  // Clear any previous saves
 
         foreach (var obj in gameObjectsToSave)
@@ -21,8 +24,13 @@ public class SaveManager : MonoBehaviour
     // Restore the state of the GameObjects in the scene
     public void LoadSceneState()
     {
-        foreach (var state in savedObjects)
+        // Clear the existing GameManager's array since we will update it
+        GameManager.Instance.gameObjectsInLevel1 = new GameObject[savedObjects.Count];
+
+        for (int i = 0; i < savedObjects.Count; i++)
         {
+            var state = savedObjects[i];
+
             // Find the GameObject in the scene by name
             GameObject obj = GameObject.Find(state.objectName);
 
@@ -32,6 +40,9 @@ public class SaveManager : MonoBehaviour
                 obj.transform.position = state.position;
                 obj.transform.rotation = state.rotation;
                 obj.SetActive(state.isActive);
+
+                // Update GameManager's array with the restored objects
+                GameManager.Instance.gameObjectsInLevel1[i] = obj;
             }
         }
     }

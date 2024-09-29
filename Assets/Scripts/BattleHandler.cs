@@ -92,7 +92,9 @@ public class BattleHandler : MonoBehaviour
     private void EndCombat()
     {
         // Notify GameManager to return to the previous scene
+        
         GameManager.Instance.ReturnToLevel1();
+        
     }
 
     public void UpdateDamageText(float damageShow, bool isCrit)
