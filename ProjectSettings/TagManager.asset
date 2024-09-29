@@ -69,3 +69,9 @@ TagManager:
   - name: UI
     uniqueID: 3806227745
     locked: 0
+  - name: HealthBar
+    uniqueID: 3271799075
+    locked: 0
+  - name: HealthBarBg
+    uniqueID: 3935159883
+    locked: 0
