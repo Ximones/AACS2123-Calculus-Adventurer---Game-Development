@@ -6,6 +6,7 @@ public class BattleHandler : MonoBehaviour
 {
     public PlayerBehaviour playerBehaviour;
     public Enemy enemyBehaviour;  // Assuming this is your enemy behavior script
+
     public CalculusQuestion calculusQuestion;     // Your question-handling script
     public TextMeshProUGUI damageText;
     public GameObject damageObject;
@@ -83,16 +84,15 @@ public class BattleHandler : MonoBehaviour
         {
             Debug.Log("Enemy has been defeated!");
             EndCombat();
+
         }
 
     }
 
     private void EndCombat()
     {
-        Debug.Log("Combat ended, returning to previous scene.");
-
-        // Return to the previous scene and restore player state
-        GameManager.Instance.ReturnToPreviousScene();
+        // Notify GameManager to return to the previous scene
+        GameManager.Instance.ReturnToLevel1();
     }
 
     public void UpdateDamageText(float damageShow, bool isCrit)

@@ -179,10 +179,10 @@ public class CalculusQuestion : MonoBehaviour
             deathSceneActive();
         }
 
-        if (enemyBehaviour.getEnemyHealth() <= 0)
-        {
-            victorySceneActive();
-        }
+       // if (enemyBehaviour.getEnemyHealth() <= 0)
+       // {
+       //     victorySceneActive();
+       // }
     }
 
 
@@ -206,7 +206,7 @@ public class CalculusQuestion : MonoBehaviour
     {
         yield return new WaitForSeconds(1.2f);
 
-        victoryScene.SetActive(true);
+        victoryScene.SetActive(false);
     }
 
 

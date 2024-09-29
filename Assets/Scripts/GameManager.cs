@@ -1,61 +1,67 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    public Color TeamColor; // new variable declared
 
-    public static GameObject currentEnemy;  // Static reference to the enemy that initiated combat
-    private Vector3 savedPlayerPosition;  // Store player’s position before combat
-   
+    // List of objects to save from Level 1
+    public GameObject[] gameObjectsInLevel1;
+    public string sceneName = "Forest";
+    // Reference to the SaveManager
+    public SaveManager saveManager;
+
     private void Awake()
     {
-        // start of new code
-        if (Instance != null)
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
         {
             Destroy(gameObject);
-            return;
         }
-        // end of new code
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
-   
-    public static void SetEnemyObject(GameObject objectEnemy)
-    {
-        currentEnemy = objectEnemy;
     }
 
-    public void SavePlayerPosition(Vector3 position)
+    private void Start()
     {
-        savedPlayerPosition = position;
+        saveManager = GetComponent<SaveManager>();
     }
 
-    public void ReturnToPreviousScene()
+    // Call this when transitioning to the combat scene
+    public void EnterCombatScene()
     {
-        SceneManager.LoadScene("Level 1");  // Replace with your overworld scene name
-        StartCoroutine(WaitForSceneLoad());  // Start coroutine to wait for scene load and restore player state
+        // Save the current state of Level 1 before leaving
+        saveManager.SaveSceneState(gameObjectsInLevel1);
+
+        // Load the combat scene
+        SceneManager.LoadScene(sceneName);
     }
 
-    private IEnumerator WaitForSceneLoad()
+    // Call this when returning from the combat scene
+    public void ReturnToLevel1()
     {
-        yield return new WaitUntil(() => SceneManager.GetActiveScene().name == "Level 1");  // Replace with the correct overworld scene name
+        // Load Level 1 scene
+        SceneManager.LoadScene("Level 1");
 
-        PlayerController player = FindObjectOfType<PlayerController>();
-        if (player != null)
-        {
-            player.transform.position = savedPlayerPosition;  // Restore player’s position
-            player.enabled = true;  // Enable player movement
-        }
+        // Once the scene is loaded, restore the saved state
+        StartCoroutine(WaitForLevel1Load());
+    }
 
-        // Destroy the enemy that triggered combat
-        if (currentEnemy != null)
-        {
-            Destroy(currentEnemy);  // Remove the enemy object from the scene
-            currentEnemy = null;  // Clear reference after destroying the enemy
-        }
+    private IEnumerator WaitForLevel1Load()
+    {
+        yield return new WaitUntil(() => SceneManager.GetActiveScene().name == "Level 1");
+
+        // Restore the saved GameObject states after the scene is loaded
+        saveManager.LoadSceneState();
+    }
+
+    // Mark an enemy for destruction
+    public void MarkEnemyForDestruction(GameObject enemy)
+    {
+       Destroy(enemy);  // Deactivate the enemy, so it won't be restored
     }
 }
