@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] gameObjectsInLevel1;
     public string sceneName = "Forest";
     // Reference to the SaveManager
-    public SaveManager saveManager;
+    private SaveManager saveManager;
 
     private void Awake()
     {
@@ -29,6 +29,12 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         saveManager = GetComponent<SaveManager>();
+
+        // Check if we are returning to "Level 1" and restore saved state
+        if (SceneManager.GetActiveScene().name == "Level 1")
+        {
+            saveManager.LoadSceneState();  // Restore saved game objects
+        }
     }
 
     // Call this when transitioning to the combat scene
@@ -50,7 +56,6 @@ public class GameManager : MonoBehaviour
         // Once the scene is loaded, restore the saved state
         StartCoroutine(WaitForLevel1Load());
 
-        saveManager.SaveSceneState(gameObjectsInLevel1);
     }
 
     private IEnumerator WaitForLevel1Load()
