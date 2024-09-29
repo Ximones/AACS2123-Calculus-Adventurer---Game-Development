@@ -2,18 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     public AudioClip buttonHItSounds;
     static AudioSource audioSrc;
-    // Start is called before the first frame update
-    void Start()
+
+    public Slider backgroundVolumeSlider;  //Option Audio Settings
+    public AudioMixer backgroundMixer;
+    private float backgroundValue;
+ 
+    public void Start()
     {
+
+        //Set for Audio Value for avoid value back to default
+        backgroundMixer.GetFloat("Background",out backgroundValue);
+        backgroundVolumeSlider.value = backgroundValue;
+  
         audioSrc = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
+    //Set Audio Value by Slider
+    public void SetVolume()
+    {
+        backgroundMixer.SetFloat("Background",backgroundVolumeSlider.value);
+    }
+
     void Update()
     {
         
@@ -34,6 +50,7 @@ public class MainMenu : MonoBehaviour
     public void optionGame()
     {
         audioSrc.PlayOneShot(buttonHItSounds);
+
     }
 
     public void quitGame()
