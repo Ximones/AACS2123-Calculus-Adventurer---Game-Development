@@ -27,7 +27,7 @@ public class SkeletonBehaviour : Enemy
     {
         Debug.Log("Skeleton moves!");
         isMoving = true;
-        PlaySound(walkClip);  // Play walking sound
+        PlaySound(walkClip, true);  // Play walking sound
         StartCoroutine(WalkToPlayer());
     }
 
@@ -68,6 +68,9 @@ public class SkeletonBehaviour : Enemy
             transformEnemy.position = Vector3.MoveTowards(transformEnemy.position, targetPosition, moveSpeed * Time.deltaTime);
             yield return null;  // Wait for the next frame
         }
+
+        audioSource.loop = false;
+        audioSource.Stop();
 
         // After reaching the player, perform attack
         if (Random.Range(1, 3) == 1)
@@ -151,11 +154,12 @@ public class SkeletonBehaviour : Enemy
         isMoving = false;
     }
 
-    private void PlaySound(AudioClip clip)
+    private void PlaySound(AudioClip clip, bool loop = false)
     {
         if (clip != null)
         {
             audioSource.clip = clip;
+            audioSource.loop = loop;
             audioSource.Play();
         }
     }
