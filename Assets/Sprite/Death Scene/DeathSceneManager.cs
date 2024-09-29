@@ -11,7 +11,7 @@ public class DeathSceneManager : MonoBehaviour
     public Button reviveButton;
     public Button restartButton;
     public Button quitButton;
-    public AudioSource buttonClickSound;
+    public AudioClip buttonClickClip; // Changed from AudioSource to AudioClip
 
     void Start()
     {
@@ -63,9 +63,14 @@ public class DeathSceneManager : MonoBehaviour
 
     private void PlayButtonClickSound()
     {
-        if (buttonClickSound != null && buttonClickSound.clip != null)
+        if (buttonClickClip != null)
         {
-            buttonClickSound.Play();
+            Debug.Log("Playing button click sound");
+            AudioSource.PlayClipAtPoint(buttonClickClip, Camera.main.transform.position);
+        }
+        else
+        {
+            Debug.LogWarning("Button click sound clip is not assigned");
         }
     }
 
@@ -88,5 +93,13 @@ public class DeathSceneManager : MonoBehaviour
             player.GetComponent<PlayerController>().enabled = true;
         }
     }
-}
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("OnCollisionEnter2D method called");
+        if (collision.gameObject.CompareTag("Death"))
+        {
+            ShowDeathScene(false);
+        }
+    }
+}
