@@ -3,95 +3,103 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GoblinBehaviour : Enemy
-{ 
+{
+    [SerializeField] private AudioClip attackClip;
+    [SerializeField] private AudioClip specialAttackClip;
+    [SerializeField] private AudioClip walkClip;
+
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     protected override void Init()
-{
-
-    enemyName = "Goblin";
-    enemyHealth = 100;
-    moveSpeed = 5f;
-    normalDamage = 20;
-    criticalDamage = 40;
-    Debug.Log("Goblin initialized");
-}
-public override void Move()
-{
-    Debug.Log("Goblin moves!");
-    isMoving = true;
-    StartCoroutine(WalkToPlayer());
-}
-private IEnumerator WalkToPlayer()
-{
-    Vector3 targetPosition = transformPlayer.position;
-
-    // Determine which direction to face before starting to walk
-    if (transformEnemy.position.x > targetPosition.x)
     {
-        // Player is to the left, face left
-        transformEnemy.localScale = new Vector3(-5, 3.6f, 1); // Face left (original scale)
-    }
-    else
-    {
-        // Player is to the right, face right
-        transformEnemy.localScale = new Vector3(5, 3.6f, 1);  // Flip to face right
+        // Initialize audio source
+        audioSource = gameObject.AddComponent<AudioSource>();
+
+        enemyName = "Goblin";
+        enemyHealth = 100;
+        moveSpeed = 5f;
+        normalDamage = 20;
+        criticalDamage = 40;
+        Debug.Log("Goblin initialized");
     }
 
-    animatorEnemy.SetInteger("AnimState", 1);  // Walking animation
-
-    // Walk towards the player
-    while (Vector3.Distance(transformEnemy.position, targetPosition) > attackRange)
+    public override void Move()
     {
-        // Ensure scale remains correct every frame
+        Debug.Log("Goblin moves!");
+        isMoving = true;
+        PlaySound(walkClip);  // Play walking sound
+        StartCoroutine(WalkToPlayer());
+    }
+
+    private IEnumerator WalkToPlayer()
+    {
+        Vector3 targetPosition = transformPlayer.position;
+
+        // Determine which direction to face before starting to walk
         if (transformEnemy.position.x > targetPosition.x)
         {
-            // Keep facing left if moving left
-            transformEnemy.localScale = new Vector3(-5, 3.6f, 1);
+            // Player is to the left, face left
+            transformEnemy.localScale = new Vector3(-5, 3.6f, 1); // Face left (original scale)
         }
         else
         {
-            // Keep facing right if moving right
-            transformEnemy.localScale = new Vector3(5, 3.6f, 1);
+            // Player is to the right, face right
+            transformEnemy.localScale = new Vector3(5, 3.6f, 1);  // Flip to face right
         }
 
-        // Move towards the target
-        transformEnemy.position = Vector3.MoveTowards(transformEnemy.position, targetPosition, moveSpeed * Time.deltaTime);
-        yield return null;  // Wait for the next frame
+        animatorEnemy.SetInteger("AnimState", 1);  // Walking animation
+
+        // Walk towards the player
+        while (Vector3.Distance(transformEnemy.position, targetPosition) > attackRange)
+        {
+            // Ensure scale remains correct every frame
+            if (transformEnemy.position.x > targetPosition.x)
+            {
+                // Keep facing left if moving left
+                transformEnemy.localScale = new Vector3(-5, 3.6f, 1);
+            }
+            else
+            {
+                // Keep facing right if moving right
+                transformEnemy.localScale = new Vector3(5, 3.6f, 1);
+            }
+
+            // Move towards the target
+            transformEnemy.position = Vector3.MoveTowards(transformEnemy.position, targetPosition, moveSpeed * Time.deltaTime);
+            yield return null;  // Wait for the next frame
+        }
+
+        // After reaching the player, perform attack
+        if (Random.Range(1, 3) == 1)
+        {
+            Attack();
+        }
+        else
+        {
+            Attack2();
+        }
     }
 
-    // After reaching the player, perform attack
-
-    if (Random.Range(1, 3) == 1)
+    protected override void Attack()
     {
-        Attack();
+        Debug.Log("Goblin attacks!");
+        animatorEnemy.SetInteger("AnimState", 2);  // Goblin attack animation
+        PlaySound(attackClip);  // Play attack sound
+        playerBehaviour.TakeDamage(normalDamage, 1);
+        battleHandler.UpdateDamageText(normalDamage, false);
+        StartCoroutine(ReturnToOriginalPosition());
     }
-    else
+
+    protected override void Attack2()
     {
-        Attack2();
+        Debug.Log("Goblin attacks!");
+        animatorEnemy.SetInteger("AnimState", 6);  // Goblin special attack animation
+        PlaySound(specialAttackClip);  // Play special attack sound
+        playerBehaviour.TakeDamage(criticalDamage, 1);
+        battleHandler.UpdateDamageText(criticalDamage, true);
+        StartCoroutine(ReturnToOriginalPosition());
     }
-}
-
-protected override void Attack()
-{
-    Debug.Log("Goblin attacks!");
-    animatorEnemy.SetInteger("AnimState", 2);  // Goblin attack animation
-                                               // Assume PlayerBehaviour is available and hooked up
-    playerBehaviour.TakeDamage(normalDamage, 1);
-    battleHandler.UpdateDamageText(normalDamage,false);
-    StartCoroutine(ReturnToOriginalPosition());
-}
-
-protected override void Attack2()
-{
-    Debug.Log("Goblin attacks!");
-    animatorEnemy.SetInteger("AnimState", 6);  // Goblin attack animation
-                                               // Assume PlayerBehaviour is available and hooked up
-    playerBehaviour.TakeDamage(criticalDamage, 1);
-    battleHandler.UpdateDamageText(criticalDamage, true);
-    StartCoroutine(ReturnToOriginalPosition());
-}
-
-
 
     private IEnumerator ReturnToOriginalPosition()
     {
@@ -142,5 +150,14 @@ protected override void Attack2()
 
         // Set the enemy as no longer moving
         isMoving = false;
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            audioSource.clip = clip;
+            audioSource.Play();
+        }
     }
 }
