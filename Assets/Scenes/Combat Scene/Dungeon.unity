@@ -811,6 +811,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!224 &667678193 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5755703433193237479, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
+  m_PrefabInstance: {fileID: 1354515043}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &673963128 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 793491793010037688, guid: 540ec64481a51ca4f99e91d28be29f19, type: 3}
@@ -860,6 +865,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4542540472280723574, guid: 147e0c53269fb204799054d7e93fafca, type: 3}
   m_PrefabInstance: {fileID: 136983243}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1014426229 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 704934298489265499, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
+  m_PrefabInstance: {fileID: 1354515043}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1089865141
 GameObject:
@@ -1029,11 +1039,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!224 &1119975952 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 625822026334607271, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
-  m_PrefabInstance: {fileID: 1354515043}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1354515043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1045,6 +1050,14 @@ PrefabInstance:
     - target: {fileID: 2874691418787709039, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
       propertyPath: m_Name
       value: CalculusQuestion
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295761412841468603, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
+      propertyPath: m_margin.x
+      value: -81.833435
+      objectReference: {fileID: 0}
+    - target: {fileID: 5295761412841468603, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
+      propertyPath: m_margin.z
+      value: 104.9119
       objectReference: {fileID: 0}
     - target: {fileID: 5762664349115837076, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
       propertyPath: m_IsActive
@@ -1832,11 +1845,6 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!224 &1750693444 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3589246424479142856, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
-  m_PrefabInstance: {fileID: 1354515043}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1884615416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2226,7 +2234,7 @@ PrefabInstance:
     - target: {fileID: 2416767293888739345, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: healthBar
       value: 
-      objectReference: {fileID: 1750693444}
+      objectReference: {fileID: 1014426229}
     - target: {fileID: 2416767293888739345, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: backButton
       value: 
@@ -2262,7 +2270,7 @@ PrefabInstance:
     - target: {fileID: 2416767293888739345, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: enemyHealthBar
       value: 
-      objectReference: {fileID: 1119975952}
+      objectReference: {fileID: 667678193}
     - target: {fileID: 2416767293888739345, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: enemyHealthText
       value: 
