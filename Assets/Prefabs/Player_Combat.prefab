@@ -200,7 +200,11 @@ MonoBehaviour:
   characterPlayer: {fileID: 8380393807244744100}
   characterEnemy: {fileID: 0}
   characterDie: {fileID: 0}
+  battleHandler: {fileID: 0}
   enemyBehaviour: {fileID: 0}
+  walkClip: {fileID: 8300000, guid: df7087e4d8a8bb546bc08ce68632903f, type: 3}
+  attackClip: {fileID: 8300000, guid: 56703418e3aed4c47a5f6622816b8e41, type: 3}
+  damageClip: {fileID: 8300000, guid: 82068008eeda9472db932c326194a7b1, type: 3}
   moveSpeed: 4
   attackRange: 2
   playerHealth: 100

@@ -16,6 +16,11 @@ public class PlayerBehaviour : MonoBehaviour
 
     public Enemy enemyBehaviour;
 
+    [SerializeField] AudioClip walkClip; // Audio clip for walking
+    [SerializeField] AudioClip attackClip; // Audio clip for attacking
+    [SerializeField] AudioClip damageClip; // Audio clip for taking damage
+    private AudioSource audioSource;
+
     bool isDetected = false;
     public float moveSpeed = 5f;
     public float attackRange = 1f;
@@ -25,6 +30,7 @@ public class PlayerBehaviour : MonoBehaviour
     public float criticalDamage = 20;
     public bool isMoving = false;
     public bool isCrit = false;
+
     private void Start()
     {
         if (characterPlayer == null)
@@ -87,6 +93,8 @@ public class PlayerBehaviour : MonoBehaviour
             Debug.Log("Found enemyTransform");
         }
 
+        // Initialize audio source
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     public void WalkToTarget()
@@ -98,12 +106,12 @@ public class PlayerBehaviour : MonoBehaviour
 
     private IEnumerator WalkToEnemy()
     {
-
         originalPosition = characterPlayer.transform.position;
         Vector3 targetPosition = transformEnemy.position;
 
         // Start walking animation
         animatorPlayer.SetInteger("AnimState", 1);  // Walk animation
+        PlayLoopingAudioClip(walkClip); // Play walking sound
 
         // Move toward the enemy until within attack range
         while (Vector3.Distance(transformPlayer.position, targetPosition) > attackRange)
@@ -115,6 +123,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         // Reached attack range, stop walking
         animatorPlayer.SetInteger("AnimState", 0);  // Idle animation
+        StopLoopingAudioClip(); // Stop walking sound
 
         // Trigger attack
         if (Random.Range(1, 3) == 1)
@@ -132,11 +141,14 @@ public class PlayerBehaviour : MonoBehaviour
     public void Attack()
     {
         animatorPlayer.SetInteger("AnimState", 2);  // Attack animation
+        PlayAudioClip(attackClip); // Play attack sound
         StartCoroutine(ReturnToOriginalPosition());
     }
+
     public void Attack2()
     {
         animatorPlayer.SetInteger("AnimState", 6);  // Attack animation
+        PlayAudioClip(attackClip); // Play attack sound
         StartCoroutine(ReturnToOriginalPosition());
     }
 
@@ -153,9 +165,8 @@ public class PlayerBehaviour : MonoBehaviour
             battleHandler.UpdateDamageText(normalDamage, false);
             enemyBehaviour.TakeDamage(normalDamage);
         }
-            
+
         animatorPlayer.SetInteger("AnimState", -1);  // Walk back to original position
-        
 
         while (Vector3.Distance(transformPlayer.position, originalPosition) > 0.1f)
         {
@@ -163,7 +174,7 @@ public class PlayerBehaviour : MonoBehaviour
             yield return null;
         }
         animatorPlayer.SetInteger("AnimState", 0);  // Back to idle
-        
+
         isMoving = false;
         isCrit = false;
     }
@@ -172,7 +183,6 @@ public class PlayerBehaviour : MonoBehaviour
     {
         yield return new WaitForSeconds(0.6f);   // Walk back to original position
         animatorPlayer.SetInteger("AnimState", 0);
-
     }
 
     public IEnumerator delayAnimation(float enemyDamage)
@@ -190,6 +200,7 @@ public class PlayerBehaviour : MonoBehaviour
     public void TakeDamage(float enemyDamage, float second)
     {
         playerHealth -= enemyDamage;
+        PlayAudioClip(damageClip); // Play damage sound
         if (playerHealth <= 0)
         {
             playerHealth = 0;
@@ -209,11 +220,10 @@ public class PlayerBehaviour : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))  // Ensure it's the enemy
         {
             if (!isDetected)
-            { 
-            Debug.Log("Enemy collision detected");
-            isDetected = true;
+            {
+                Debug.Log("Enemy collision detected");
+                isDetected = true;
             }
-
         }
     }
 
@@ -247,5 +257,32 @@ public class PlayerBehaviour : MonoBehaviour
         yield return new WaitForSeconds(1.2f);
         characterDie.SetActive(true);
         characterPlayer.SetActive(false);
+    }
+
+    private void PlayAudioClip(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+    }
+
+    private void PlayLoopingAudioClip(AudioClip clip)
+    {
+        if (clip != null && !audioSource.isPlaying)
+        {
+            audioSource.clip = clip;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+    }
+
+    private void StopLoopingAudioClip()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+            audioSource.loop = false;
+        }
     }
 }
