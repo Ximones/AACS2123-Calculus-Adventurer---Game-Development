@@ -11,6 +11,7 @@ public class MushroomBehaviour : Enemy
     // Start is called before the first frame update
     protected override void Init()
     {
+        enemyName = "Mushroom";
         enemyHealth = 100;
         moveSpeed = 5f;
         normalDamage = 20;

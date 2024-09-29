@@ -12,6 +12,7 @@ public class CalculusQuestion : MonoBehaviour
     public TextMeshProUGUI questionText;
     public TextMeshProUGUI incorrectAnswerText;
     public TextMeshProUGUI healthText;
+    public TextMeshProUGUI enemyHealthText;
 
     public TMP_InputField answerInput;
 
@@ -26,6 +27,8 @@ public class CalculusQuestion : MonoBehaviour
     public Enemy enemyBehaviour;
     private List<Question> questions = new List<Question>();
 
+    public RectTransform healthBar;
+    public RectTransform enemyHealthBar;
     
     private int correctCoefficient;
     private int correctExponent;
@@ -126,18 +129,19 @@ public class CalculusQuestion : MonoBehaviour
             if (coefficient == correctCoefficient && exponent == correctExponent)
             {
 
+                incorrectAnswerText.text = "Correct.You are smarter than i think !!";
                 playerAns = 1;
             }
             else
             {
-                incorrectAnswerText.text = "Incorrect answer, please try again.";
+                incorrectAnswerText.text = "Incorrect answer.Try Harder Noob";
                 playerAns = -1;
             }
             
         }
         else
         {
-            incorrectAnswerText.text = "Invalid answer format, please try again.";
+            incorrectAnswerText.text = "Invalid answer format.Answer better please";
             playerAns = -1;
         }
            
@@ -154,11 +158,22 @@ public class CalculusQuestion : MonoBehaviour
 
     public void UpdateHealthText()
     {
+        string enemyName = enemyBehaviour.getEnemyName();
         float enemyHealth = enemyBehaviour.getEnemyHealth();
         
-        healthText.text = "Player Health: " + playerBehaviour.playerHealth + "/100" + "\nEnemy Health: " + enemyHealth + "/100";
-      
+        float playerHealthPercent = playerBehaviour.playerHealth / 100f; // Assuming health is out of 100
+        float enemyHealthPercent = enemyHealth / 100f; // Assuming health is out of 100
+        
+        healthBar.localScale = new Vector3(playerHealthPercent, healthBar.localScale.y, healthBar.localScale.z); // Scale only on X-axis
+        enemyHealthBar.localScale = new Vector3(enemyHealthPercent, enemyHealthBar.localScale.y, enemyHealthBar.localScale.z); // Scale only on X-axis
+
+        healthText.text = "Player : " + playerBehaviour.playerHealth + "/100"; 
+        enemyHealthText.text = enemyName+" : " + enemyHealth + "/100";
+
     }
+
+
+      
 
 
 

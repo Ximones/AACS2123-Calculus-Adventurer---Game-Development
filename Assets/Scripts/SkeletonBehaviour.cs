@@ -6,7 +6,7 @@ public class SkeletonBehaviour : Enemy
 {
     protected override void Init()
     {
-        
+        enemyName = "Skeleton";
         enemyHealth = 100;
         moveSpeed = 5f;
         normalDamage = 30;

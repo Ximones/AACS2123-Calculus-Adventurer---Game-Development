@@ -8,6 +8,7 @@ public class GoblinBehaviour : Enemy
     protected override void Init()
 {
 
+    enemyName = "Goblin";
     enemyHealth = 100;
     moveSpeed = 5f;
     normalDamage = 20;
