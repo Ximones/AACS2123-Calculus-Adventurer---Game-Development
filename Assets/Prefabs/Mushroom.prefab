@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3605649332928645161
 Transform:
   m_ObjectHideFlags: 0
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b7eb4dbe5ff6142b45b17eb88858e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyName: 
   enemyHealth: 100
   moveSpeed: 2
   normalDamage: 20
@@ -108,7 +109,7 @@ MonoBehaviour:
   transformPlayer: {fileID: 0}
   transformEnemy: {fileID: 3605649332928645161}
   originalPosition: {x: 5.21, y: 0.67, z: 0}
-  animatorPlayer: {fileID: 0}
+  animatorPlayer: {fileID: 8238613380652054043}
   animatorEnemy: {fileID: 8238613380652054043}
   playerBehaviour: {fileID: 0}
   battleHandler: {fileID: 0}

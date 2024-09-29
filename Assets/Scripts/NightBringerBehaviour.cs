@@ -30,6 +30,7 @@ public class NightBringerBehaviour : Enemy
         }
 
         // Set enemy-specific stats
+        enemyName = "Night Bringer";
         enemyHealth = 100;
         moveSpeed = 4f;
         normalDamage = 50;

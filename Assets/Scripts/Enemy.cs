@@ -5,6 +5,7 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
+    [SerializeField] protected string enemyName;
     [SerializeField] protected float enemyHealth;
     [SerializeField] protected float moveSpeed;
     [SerializeField] protected float normalDamage;
@@ -160,6 +161,11 @@ public abstract class Enemy : MonoBehaviour
                 
             }
         }
+    }
+
+    public string getEnemyName()
+    {
+        return this.enemyName;
     }
 
     public float getEnemyHealth()
