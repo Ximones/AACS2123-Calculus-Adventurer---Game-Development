@@ -164,25 +164,27 @@ public class CalculusQuestion : MonoBehaviour
     {
         string enemyName = enemyBehaviour.getEnemyName();
         float enemyHealth = enemyBehaviour.getEnemyHealth();
-        
-        float playerHealthPercent = playerBehaviour.playerHealth; // Assuming health is out of 100
-        float enemyHealthPercent = enemyHealth; // Assuming health is out of 100
-        
-        healthBar.localScale = new Vector3(playerHealthPercent, healthBar.localScale.y, healthBar.localScale.z); // Scale only on X-axis
-        enemyHealthBar.localScale = new Vector3(enemyHealthPercent, enemyHealthBar.localScale.y, enemyHealthBar.localScale.z); // Scale only on X-axis
 
-        healthText.text = "Player : " + playerBehaviour.playerHealth + "/100"; 
-        enemyHealthText.text = enemyName+" : " + enemyHealth + "/100";
-        
+        float maxHealth = 100f; // maximum health is 100
+
+        float playerHealthPercent = playerBehaviour.playerHealth / maxHealth;
+        float enemyHealthPercent = enemyHealth / maxHealth;
+
+        healthBar.localScale = new Vector3(playerHealthPercent * 200, healthBar.localScale.y, healthBar.localScale.z); // Scale only on X-axis
+        enemyHealthBar.localScale = new Vector3(enemyHealthPercent * 200, enemyHealthBar.localScale.y, enemyHealthBar.localScale.z); // Scale only on X-axis
+
+        healthText.text = "Player : " + playerBehaviour.playerHealth + "/100";
+        enemyHealthText.text = enemyName + " : " + enemyHealth + "/100";
+
         if (playerBehaviour.playerHealth <= 0)
         {
             deathSceneActive();
         }
 
-       // if (enemyBehaviour.getEnemyHealth() <= 0)
-       // {
-       //     victorySceneActive();
-       // }
+        // if (enemyBehaviour.getEnemyHealth() <= 0)
+        // {
+        //     victorySceneActive();
+        // }
     }
 
 

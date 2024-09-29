@@ -1854,6 +1854,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6360144802914566353, guid: 2fa1d37feadaa4248abfe94b6224083b, type: 3}
+      propertyPath: spellClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 83829ff414f47a048b5387e4ab33571c, type: 3}
+    - target: {fileID: 6360144802914566353, guid: 2fa1d37feadaa4248abfe94b6224083b, type: 3}
       propertyPath: spellEnemy
       value: 
       objectReference: {fileID: 960140343}
@@ -1877,6 +1881,10 @@ PrefabInstance:
       propertyPath: transformPlayer
       value: 
       objectReference: {fileID: 1600664293}
+    - target: {fileID: 6360144802914566353, guid: 2fa1d37feadaa4248abfe94b6224083b, type: 3}
+      propertyPath: specialAttackClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
     - target: {fileID: 6360144802914566353, guid: 2fa1d37feadaa4248abfe94b6224083b, type: 3}
       propertyPath: originalPosition.x
       value: 2.15
