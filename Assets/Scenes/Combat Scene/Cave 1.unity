@@ -1148,7 +1148,7 @@ MonoBehaviour:
   returnLevelButton: {fileID: 1739817709}
   buttonClickAudioSource: {fileID: 776341269}
   playerTag: Player
-  gameManager: {fileID: 6592845711198663393, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+  battleHandler: {fileID: 954062272}
   PlayerController: {fileID: 0}
 --- !u!1001 &954062271
 PrefabInstance:
@@ -1274,6 +1274,18 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1678245899}
+    - target: {fileID: 2836115100828386696, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836115100828386696, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -488739551
+      objectReference: {fileID: 0}
+    - target: {fileID: 4019957110890905169, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7991746292658419427, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: m_Name
       value: BattleHandler

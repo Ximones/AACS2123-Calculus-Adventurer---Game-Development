@@ -1171,10 +1171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5384255320948641977, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1598545365}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
 --- !u!1 &403479961
@@ -84720,11 +84717,6 @@ MonoBehaviour:
   moveSpeed: 10
   chaseSpeed: 20
   chaseRange: 8
---- !u!4 &1598545365 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4281237902451134130, guid: 5c82116979ba59246a016501714514af, type: 3}
-  m_PrefabInstance: {fileID: 6061966915462376475}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1650330045
 GameObject:
   m_ObjectHideFlags: 0
@@ -89664,47 +89656,23 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1886046564}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 112090436780269859, guid: 5c82116979ba59246a016501714514af, type: 3}
-      propertyPath: m_Name
-      value: Double Jump
-      objectReference: {fileID: 0}
-    - target: {fileID: 1095895507410767340, guid: 5c82116979ba59246a016501714514af, type: 3}
-      propertyPath: m_Name
-      value: Border cooldown Dash
-      objectReference: {fileID: 0}
     - target: {fileID: 1641392798029078733, guid: 5c82116979ba59246a016501714514af, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 47.227905
       objectReference: {fileID: 0}
-    - target: {fileID: 3710287159925320522, guid: 5c82116979ba59246a016501714514af, type: 3}
-      propertyPath: m_Name
-      value: Mask Double jump Cooldown
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281237902451134130, guid: 5c82116979ba59246a016501714514af, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.28571427
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281237902451134130, guid: 5c82116979ba59246a016501714514af, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.28571427
-      objectReference: {fileID: 0}
-    - target: {fileID: 4281237902451134130, guid: 5c82116979ba59246a016501714514af, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4281237902451134130, guid: 5c82116979ba59246a016501714514af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.65866315
+      value: -4.2053213
       objectReference: {fileID: 0}
     - target: {fileID: 4281237902451134130, guid: 5c82116979ba59246a016501714514af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3497977
+      value: 7.8442926
       objectReference: {fileID: 0}
     - target: {fileID: 4281237902451134130, guid: 5c82116979ba59246a016501714514af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.012344088
       objectReference: {fileID: 0}
     - target: {fileID: 4281237902451134130, guid: 5c82116979ba59246a016501714514af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -89712,15 +89680,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4281237902451134130, guid: 5c82116979ba59246a016501714514af, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4281237902451134130, guid: 5c82116979ba59246a016501714514af, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4281237902451134130, guid: 5c82116979ba59246a016501714514af, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4281237902451134130, guid: 5c82116979ba59246a016501714514af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -89734,10 +89702,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6111815861339645385, guid: 5c82116979ba59246a016501714514af, type: 3}
-      propertyPath: m_Name
-      value: Dash
-      objectReference: {fileID: 0}
     - target: {fileID: 6727289815201952459, guid: 5c82116979ba59246a016501714514af, type: 3}
       propertyPath: m_Camera
       value: 
@@ -89746,17 +89710,9 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1537025268}
-    - target: {fileID: 7843004295103077263, guid: 5c82116979ba59246a016501714514af, type: 3}
-      propertyPath: m_Name
-      value: Mask Dash cooldown
-      objectReference: {fileID: 0}
     - target: {fileID: 7974074446504490569, guid: 5c82116979ba59246a016501714514af, type: 3}
       propertyPath: m_Name
-      value: 'Skill '
-      objectReference: {fileID: 0}
-    - target: {fileID: 8101347173192513021, guid: 5c82116979ba59246a016501714514af, type: 3}
-      propertyPath: m_Name
-      value: Border cooldown double Jump
+      value: Skill Cooldown UI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -89782,3 +89738,4 @@ SceneRoots:
   - {fileID: 1247041690}
   - {fileID: 788522048}
   - {fileID: 1985741824}
+  - {fileID: 6061966915462376475}

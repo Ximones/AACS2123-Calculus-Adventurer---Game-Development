@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 135091245}
   - component: {fileID: 135091246}
   - component: {fileID: 135091247}
-  - component: {fileID: 135091248}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -400,26 +399,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &135091248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135091241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9ce6c2f7046e6741818231b7618c2d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  victoryCanvas: {fileID: 544329140}
-  nextLevelButton: {fileID: 0}
-  backToMenuButton: {fileID: 0}
-  returnLevelButton: {fileID: 937120741}
-  buttonClickAudioSource: {fileID: 135091247}
-  playerTag: Player
-  gameManager: {fileID: 6592845711198663393, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-  PlayerController: {fileID: 0}
 --- !u!1 &282141740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,34 +1857,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 135091248}
-    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EndCombat
-      objectReference: {fileID: 0}
-    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: VictorySceneManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 4057967634712431511, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
       propertyPath: m_Name
       value: 'Victory Screen '
@@ -1989,17 +1940,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3883707007119356316, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
   m_PrefabInstance: {fileID: 1417200702}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &937120741 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
-  m_PrefabInstance: {fileID: 544329139}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &952505081 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4450803387976256916, guid: c276e1b3e0c38624798ebd17624637ef, type: 3}

@@ -509,7 +509,6 @@ GameObject:
   - component: {fileID: 686012580}
   - component: {fileID: 686012581}
   - component: {fileID: 686012583}
-  - component: {fileID: 686012584}
   - component: {fileID: 686012582}
   m_Layer: 0
   m_Name: EventSystem
@@ -788,26 +787,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restartLevel: Level 2
   SFX: {fileID: 8300000, guid: 51366f8397d580246bfe5efe69b23988, type: 3}
---- !u!114 &686012584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 686012576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9ce6c2f7046e6741818231b7618c2d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  victoryCanvas: {fileID: 1056304946}
-  nextLevelButton: {fileID: 0}
-  backToMenuButton: {fileID: 0}
-  returnLevelButton: {fileID: 2104074697}
-  buttonClickAudioSource: {fileID: 686012582}
-  playerTag: Player
-  gameManager: {fileID: 6592845711198663393, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-  PlayerController: {fileID: 0}
 --- !u!1 &689460742 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 793491793010037688, guid: 540ec64481a51ca4f99e91d28be29f19, type: 3}
@@ -2886,34 +2865,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 686012584}
-    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EndCombat
-      objectReference: {fileID: 0}
-    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: VictorySceneManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 4057967634712431511, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
       propertyPath: m_Name
       value: 'Victory Screen '
@@ -4200,17 +4151,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2104074697 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
-  m_PrefabInstance: {fileID: 1056304945}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2125298075
 PrefabInstance:
   m_ObjectHideFlags: 0
