@@ -15725,6 +15725,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 422017075}
   gameManager: {fileID: 2083347170}
+  combatSceneName: Forest
 --- !u!1 &424890510
 GameObject:
   m_ObjectHideFlags: 0
@@ -17260,6 +17261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 625985560}
   gameManager: {fileID: 2083347170}
+  combatSceneName: Forest
 --- !u!1 &630123468
 GameObject:
   m_ObjectHideFlags: 0
@@ -20598,6 +20600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1101346282}
   gameManager: {fileID: 2083347170}
+  combatSceneName: Forest
 --- !u!1 &1116442848
 GameObject:
   m_ObjectHideFlags: 0
@@ -42422,6 +42425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1854633534}
   gameManager: {fileID: 2083347170}
+  combatSceneName: Forest
 --- !u!95 &1854633542 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8238613380652054043, guid: c276e1b3e0c38624798ebd17624637ef, type: 3}
@@ -43584,6 +43588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1961627539}
   gameManager: {fileID: 2083347170}
+  combatSceneName: Forest
 --- !u!1 &1966000585
 GameObject:
   m_ObjectHideFlags: 0

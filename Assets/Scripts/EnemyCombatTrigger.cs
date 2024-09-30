@@ -4,6 +4,7 @@ public class EnemyCombatTrigger : MonoBehaviour
 {
     public GameObject enemy;
     public GameManager gameManager;
+    public string combatSceneName;
 
     private void Start()
     {
@@ -15,7 +16,7 @@ public class EnemyCombatTrigger : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             gameManager.MarkEnemyForDestruction(enemy);  // Mark the enemy for destruction
-            gameManager.EnterCombatScene();  // Enter combat scene
+            gameManager.EnterCombatScene(combatSceneName);  // Enter combat scene
         }
     }
 }

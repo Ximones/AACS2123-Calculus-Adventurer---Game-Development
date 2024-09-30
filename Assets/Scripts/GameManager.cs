@@ -9,8 +9,7 @@ public class GameManager : MonoBehaviour
 
     // Array to store the game objects in Level 1
     public GameObject[] gameObjectsInLevel1;
-    public string combatSceneName = "";  // Scene to load for combat
-    public string mapSceneName = "";  // Scene to load for combat
+    public string mapSceneName = "";  // Scene to quit for combat
     public SaveManager saveManager;      // Reference to SaveManager
     private void Awake()
     {
@@ -38,7 +37,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Call this method when transitioning to the combat scene
-    public void EnterCombatScene()
+    public void EnterCombatScene(string combatSceneName)
     {
 
         // Save the current state of Level 1 before leaving
