@@ -1653,7 +1653,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 314747519836271123, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -193.4
+      value: -136
       objectReference: {fileID: 0}
     - target: {fileID: 435474095965675590, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_Color.a
@@ -1825,7 +1825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6501342355504654941, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 200.7
+      value: 151
       objectReference: {fileID: 0}
     - target: {fileID: 6553724246369023169, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_LocalScale.x

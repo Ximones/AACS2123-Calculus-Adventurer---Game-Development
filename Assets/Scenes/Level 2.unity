@@ -1012,7 +1012,7 @@ PrefabInstance:
     - target: {fileID: 3892347421159955605, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: reviveButton
       value: 
-      objectReference: {fileID: 1778083587}
+      objectReference: {fileID: 0}
     - target: {fileID: 3892347421159955605, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: restartButton
       value: 
@@ -1068,6 +1068,10 @@ PrefabInstance:
     - target: {fileID: 5384255320948641977, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237028133073884898, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
+      propertyPath: jumpForce
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7237028133073884898, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: inCooldown
@@ -80760,7 +80764,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 314747519836271123, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -207
+      value: -136
       objectReference: {fileID: 0}
     - target: {fileID: 2955113343619535579, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_Pivot.x
@@ -80860,7 +80864,7 @@ PrefabInstance:
       objectReference: {fileID: 1537025268}
     - target: {fileID: 6501342355504654941, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 211
+      value: 151
       objectReference: {fileID: 0}
     - target: {fileID: 6553724246369023169, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_LocalScale.x
@@ -85175,17 +85179,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3429308229340846641, guid: 2d840af036641cc4aadf3147927e4293, type: 3}
   m_PrefabInstance: {fileID: 1771050288}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1778083587 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7872660201755585742, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
-  m_PrefabInstance: {fileID: 1247041690}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1856011864
 PrefabInstance:
   m_ObjectHideFlags: 0

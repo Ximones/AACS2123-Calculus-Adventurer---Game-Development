@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class DeathSceneManager : MonoBehaviour
 {
     public GameObject deathSceneCanvas; // Reference to the death scene canvas
-    public Button reviveButton;
     public Button restartButton;
     public Button quitButton;
     public AudioClip buttonClickClip; // Changed from AudioSource to AudioClip
@@ -17,10 +16,8 @@ public class DeathSceneManager : MonoBehaviour
     {
         Debug.Log("DeathSceneManager Start method called");
         deathSceneCanvas.SetActive(false); // Ensure the death scene canvas is hidden at the start
-        reviveButton.gameObject.SetActive(false);
         restartButton.gameObject.SetActive(false);
         quitButton.gameObject.SetActive(false);
-        reviveButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(Revive)));
         restartButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(Restart)));
         quitButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(Quit)));
     }
@@ -29,7 +26,6 @@ public class DeathSceneManager : MonoBehaviour
     {
         Debug.Log("ShowDeathScene method called");
         deathSceneCanvas.SetActive(true);
-        reviveButton.gameObject.SetActive(showReviveButton);
         restartButton.gameObject.SetActive(true);
         quitButton.gameObject.SetActive(true);
         DisablePlayerMovement();
@@ -42,13 +38,6 @@ public class DeathSceneManager : MonoBehaviour
         action.Invoke();
     }
 
-    private void Revive()
-    {
-        Debug.Log("Revive method called");
-        deathSceneCanvas.SetActive(false);
-        EnablePlayerMovement();
-    }
-
     private void Restart()
     {
         Debug.Log("Restart method called");
@@ -59,6 +48,7 @@ public class DeathSceneManager : MonoBehaviour
     private void Quit()
     {
         Debug.Log("Quit method called");
+        Destroy(GameManager.Instance.gameObject);
         SceneManager.LoadScene("Main Menu");
     }
 

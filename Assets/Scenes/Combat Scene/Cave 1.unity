@@ -1145,10 +1145,8 @@ MonoBehaviour:
   victoryCanvas: {fileID: 480363199}
   nextLevelButton: {fileID: 0}
   backToMenuButton: {fileID: 0}
-  returnLevelButton: {fileID: 1739817709}
   buttonClickAudioSource: {fileID: 776341269}
   playerTag: Player
-  gameManager: {fileID: 0}
   PlayerController: {fileID: 0}
 --- !u!1001 &954062271
 PrefabInstance:
@@ -3764,7 +3762,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 314747519836271123, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -186
+      value: -136
       objectReference: {fileID: 0}
     - target: {fileID: 435474095965675590, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_SortingOrder
@@ -3932,7 +3930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6501342355504654941, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 185
+      value: 151
       objectReference: {fileID: 0}
     - target: {fileID: 6553724246369023169, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_LocalScale.x

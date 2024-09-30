@@ -442,7 +442,7 @@ Transform:
   m_GameObject: {fileID: 92813576}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 900.6, y: 40.11, z: -10}
+  m_LocalPosition: {x: -0.19, y: 0.01, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -515,17 +515,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3429308229340846641, guid: 2d840af036641cc4aadf3147927e4293, type: 3}
   m_PrefabInstance: {fileID: 126891044}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &132134338 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7872660201755585742, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
-  m_PrefabInstance: {fileID: 1269719739}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &147162201
 GameObject:
   m_ObjectHideFlags: 0
@@ -2053,7 +2042,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 900.6, y: 40.11, z: -10}
+  m_LocalPosition: {x: -0.19, y: 0.01, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14253,7 +14242,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 314747519836271123, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -191
+      value: -136
       objectReference: {fileID: 0}
     - target: {fileID: 2813317676110955376, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_IsActive
@@ -14361,7 +14350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6501342355504654941, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 192
+      value: 151
       objectReference: {fileID: 0}
     - target: {fileID: 6553724246369023169, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_LocalScale.x
@@ -14979,11 +14968,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5384255320948641977, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 900.6
+      value: -0.19
       objectReference: {fileID: 0}
     - target: {fileID: 5384255320948641977, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40.11
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5384255320948641977, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15024,6 +15013,10 @@ PrefabInstance:
     - target: {fileID: 6763747470576312939, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: m_SortingLayerID
       value: -1557929563
+      objectReference: {fileID: 0}
+    - target: {fileID: 7237028133073884898, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
+      propertyPath: jumpForce
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8762800464092793439, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: m_Name
@@ -20541,7 +20534,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathSceneCanvas: {fileID: 273536772}
-  reviveButton: {fileID: 132134338}
   restartButton: {fileID: 2099567061}
   quitButton: {fileID: 1063461957}
   buttonClickClip: {fileID: 8300000, guid: 51366f8397d580246bfe5efe69b23988, type: 3}

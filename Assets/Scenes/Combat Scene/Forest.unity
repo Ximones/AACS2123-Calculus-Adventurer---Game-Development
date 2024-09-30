@@ -2156,9 +2156,17 @@ PrefabInstance:
       value: Mushroom
       objectReference: {fileID: 0}
     - target: {fileID: 3426924299915620311, guid: c276e1b3e0c38624798ebd17624637ef, type: 3}
+      propertyPath: normalDamage
+      value: 111
+      objectReference: {fileID: 0}
+    - target: {fileID: 3426924299915620311, guid: c276e1b3e0c38624798ebd17624637ef, type: 3}
       propertyPath: battleHandler
       value: 
       objectReference: {fileID: 7307809163213887228}
+    - target: {fileID: 3426924299915620311, guid: c276e1b3e0c38624798ebd17624637ef, type: 3}
+      propertyPath: criticalDamage
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 3426924299915620311, guid: c276e1b3e0c38624798ebd17624637ef, type: 3}
       propertyPath: playerBehaviour
       value: 
@@ -2294,11 +2302,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 314747519836271123, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -199.7
+      value: -136
       objectReference: {fileID: 0}
     - target: {fileID: 314747519836271123, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -85.4
+      value: -106.9
       objectReference: {fileID: 0}
     - target: {fileID: 435474095965675590, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_Color.a
@@ -2482,11 +2490,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6501342355504654941, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 218.1
+      value: 151
       objectReference: {fileID: 0}
     - target: {fileID: 6501342355504654941, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -81.3
+      value: -106.9
       objectReference: {fileID: 0}
     - target: {fileID: 6553724246369023169, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_LocalScale.x
@@ -2529,7 +2537,8 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2304057057889658222, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
