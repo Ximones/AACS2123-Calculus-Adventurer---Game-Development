@@ -1152,11 +1152,11 @@ PrefabInstance:
     - target: {fileID: 7237028133073884898, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: dashTextCooldown
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1062796633}
     - target: {fileID: 7237028133073884898, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: jumpTextCooldown
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 929819600}
     - target: {fileID: 7237028133073884898, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: dashImageCooldown
       value: 
@@ -14190,6 +14190,17 @@ Transform:
   - {fileID: 2042798217}
   m_Father: {fileID: 2078191648}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &929819600 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7142649145957461090, guid: 5c82116979ba59246a016501714514af, type: 3}
+  m_PrefabInstance: {fileID: 6061966915462376475}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &941144360
 GameObject:
   m_ObjectHideFlags: 0
@@ -14686,6 +14697,8 @@ MonoBehaviour:
   playerController: {fileID: 1886046568}
   jumpImageCooldown: {fileID: 1583799470}
   dashImageCooldown: {fileID: 2047240246}
+  jumpTextCooldown: {fileID: 929819600}
+  dashTextCooldown: {fileID: 1062796633}
 --- !u!1001 &978806782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15210,6 +15223,17 @@ MonoBehaviour:
   parallaxEffectMultiplier: {x: 0.5, y: 0.6}
   infiniteHorizontal: 1
   infiniteVertical: 0
+--- !u!114 &1062796633 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2138488876658082759, guid: 5c82116979ba59246a016501714514af, type: 3}
+  m_PrefabInstance: {fileID: 6061966915462376475}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1145532508
 GameObject:
   m_ObjectHideFlags: 0
@@ -85580,15 +85604,15 @@ PrefabInstance:
       objectReference: {fileID: 1537025268}
     - target: {fileID: 5806211489896625697, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: m_LocalScale.x
-      value: 13.7438
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5806211489896625697, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: m_LocalScale.y
-      value: 13.7438
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5806211489896625697, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5295476
+      value: 0.77903
       objectReference: {fileID: 0}
     - target: {fileID: 5806211489896625697, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: m_LocalPosition.x
@@ -85598,10 +85622,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 96
       objectReference: {fileID: 0}
-    - target: {fileID: 5908273807257989613, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 90438cb54f28810478c2332ef6b96dc1, type: 3}
     - target: {fileID: 6897670686511667802, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -85621,10 +85641,6 @@ PrefabInstance:
     - target: {fileID: 6897670686511667802, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -195
-      objectReference: {fileID: 0}
-    - target: {fileID: 8490043709737667671, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -89715,9 +89731,7 @@ PrefabInstance:
       value: Skill Cooldown UI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 8598189320558333158, guid: 5c82116979ba59246a016501714514af, type: 3}
-    - {fileID: 2367537815993906461, guid: 5c82116979ba59246a016501714514af, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c82116979ba59246a016501714514af, type: 3}
