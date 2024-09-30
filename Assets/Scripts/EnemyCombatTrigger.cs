@@ -10,12 +10,13 @@ public class EnemyCombatTrigger : MonoBehaviour
         gameManager = GameManager.Instance;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             gameManager.MarkEnemyForDestruction(enemy);  // Mark the enemy for destruction
             gameManager.EnterCombatScene();  // Enter combat scene
         }
     }
 }
+
