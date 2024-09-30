@@ -35,6 +35,7 @@ public class SkillCooldown : MonoBehaviour
         if (playerController.isJumpCooldown)
         {
             jumpTextCooldown.gameObject.SetActive(true); // Show text if cooldown active
+            jumpImageCooldown.gameObject.SetActive(true);
             jumpImageCooldown.fillAmount -= 1f / playerController.jumpCooldown * Time.deltaTime;
 
             // Ensure that fillAmount stays between 0 and 1
@@ -42,6 +43,7 @@ public class SkillCooldown : MonoBehaviour
             {
                 jumpImageCooldown.fillAmount = 0f;
                 jumpTextCooldown.gameObject.SetActive(false); // Hide text when cooldown is complete
+                jumpImageCooldown.gameObject.SetActive(false);
             }
         }
         else
@@ -54,6 +56,7 @@ public class SkillCooldown : MonoBehaviour
         if (playerController.isDashCooldown)
         {
             dashTextCooldown.gameObject.SetActive(true); // Show text if cooldown active
+            dashImageCooldown.gameObject.SetActive(true); 
             dashImageCooldown.fillAmount -= 1f / playerController.dashCooldown * Time.deltaTime;
 
             // Ensure that fillAmount stays between 0 and 1
@@ -67,6 +70,7 @@ public class SkillCooldown : MonoBehaviour
         {
             // Reset dash fill amount only when cooldown is not active
             dashImageCooldown.fillAmount = 1f;
+            dashImageCooldown.gameObject.SetActive(false);
         }
     }
 }
