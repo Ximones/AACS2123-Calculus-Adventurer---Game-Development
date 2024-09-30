@@ -232,43 +232,7 @@ public class CalculusQuestion : MonoBehaviour
 
         healthText.text = "Player : " + playerBehaviour.playerHealth + "/100";
         enemyHealthText.text = enemyName + " : " + enemyHealth + "/100";
-
-       // if (playerBehaviour.playerHealth <= 0)
-       // {
-       //     
-       // }
-       //
-       // if (enemyBehaviour.getEnemyHealth() <= 0)
-       // {
-       //      
-       // }
     }
-
-
-  //  private void deathSceneActive()
-  //  {
-  //      StartCoroutine(ActivateDeathSceneAfterDelay());
-  //  }
-  //
-  //  private IEnumerator ActivateDeathSceneAfterDelay()
-  //  {
-  //      yield return new WaitForSeconds(1.2f);
-  //
-  //      deathScene.SetActive(true);
-  //  }
-  //  private void victorySceneActive()
-  //  {
-  //      StartCoroutine(ActivateVictorySceneAfterDelay());
-  //  }
-  //
-  //  private IEnumerator ActivateVictorySceneAfterDelay()
-  //  {
-  //      yield return new WaitForSeconds(1.2f);
-  //
-  //      victoryScene.SetActive(true);
-  //  }
-
-
 
     private void FocusInputField()
     {

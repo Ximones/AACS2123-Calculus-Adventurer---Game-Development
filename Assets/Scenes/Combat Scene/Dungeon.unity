@@ -794,7 +794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f2d98785b0e3cf4bab861a47cae0d72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restartLevel: Level 3 New
+  restartLevel: Level 3
   SFX: {fileID: 8300000, guid: 51366f8397d580246bfe5efe69b23988, type: 3}
 --- !u!82 &453725892
 AudioSource:

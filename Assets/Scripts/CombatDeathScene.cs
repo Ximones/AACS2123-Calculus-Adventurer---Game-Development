@@ -23,8 +23,11 @@ public class CombatDeathScene : MonoBehaviour
     }
     IEnumerator waitRestart()
     {
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(restartLevel);
+        yield return new WaitForSeconds(1f);
+
+        Debug.Log("Restart method called");
+        Destroy(GameManager.Instance.gameObject);
+        SceneManager.LoadScene(restartLevel); // Reload the current scene
     }
 
     public void Restart()
