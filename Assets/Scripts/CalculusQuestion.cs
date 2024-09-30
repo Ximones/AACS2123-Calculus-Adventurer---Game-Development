@@ -73,6 +73,8 @@ public class CalculusQuestion : MonoBehaviour
                 break;
             case "Dungeon":
             case "Dungeon 1":
+            case "Dungeon 2":
+            case "Dungeon 3":
                 InitializeProductRuleQuestions();
                 break;
             default:

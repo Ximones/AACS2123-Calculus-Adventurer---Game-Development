@@ -269,26 +269,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red_Slime
       objectReference: {fileID: 0}
-    - target: {fileID: 568687499530833584, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 1398389694216511501, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
+      propertyPath: attackRange
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 2629739606317430189, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
+    - target: {fileID: 1398389694216511501, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
       propertyPath: battleHandler
       value: 
       objectReference: {fileID: 2100575956}
-    - target: {fileID: 2629739606317430189, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
-      propertyPath: animatorPlayer
-      value: 
-      objectReference: {fileID: 1600664294}
-    - target: {fileID: 2629739606317430189, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
+    - target: {fileID: 1398389694216511501, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
       propertyPath: playerBehaviour
       value: 
       objectReference: {fileID: 1600664292}
-    - target: {fileID: 2629739606317430189, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
-      propertyPath: transformPlayer
-      value: 
-      objectReference: {fileID: 1600664293}
+    - target: {fileID: 5651063468937794328, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
+      propertyPath: m_Size.x
+      value: 1.3782291
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651063468937794328, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.93102485
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651063468937794328, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.031772137
+      objectReference: {fileID: 0}
+    - target: {fileID: 5651063468937794328, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.034487575
+      objectReference: {fileID: 0}
     - target: {fileID: 7532067830915032205, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.31
@@ -339,6 +347,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 568687499530833584, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
   m_PrefabInstance: {fileID: 38084388}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &38084390 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1398389694216511501, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
+  m_PrefabInstance: {fileID: 38084388}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38084389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6bce0568414ef64980a24131b8eae03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &38084391 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 776500933492883621, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
@@ -349,17 +368,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7532067830915032205, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
   m_PrefabInstance: {fileID: 38084388}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &38084394 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2629739606317430189, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
-  m_PrefabInstance: {fileID: 38084388}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38084389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6bce0568414ef64980a24131b8eae03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &184479019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,7 +1608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9172890336057284993, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
       propertyPath: attackRange
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9172890336057284993, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
       propertyPath: characterDie
@@ -1621,7 +1629,7 @@ PrefabInstance:
     - target: {fileID: 9172890336057284993, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
       propertyPath: enemyBehaviour
       value: 
-      objectReference: {fileID: 38084394}
+      objectReference: {fileID: 38084390}
     - target: {fileID: 9172890336057284993, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
       propertyPath: transformEnemy
       value: 
@@ -1642,16 +1650,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e0997ebed621be49925b5c9445b21f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1600664293 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4402476458041058974, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
-  m_PrefabInstance: {fileID: 1600664291}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1600664294 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 9188208013778323649, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
-  m_PrefabInstance: {fileID: 1600664291}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1601324752 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5295761412841468603, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
@@ -2399,7 +2397,7 @@ PrefabInstance:
     - target: {fileID: 2416767293888739345, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: enemyBehaviour
       value: 
-      objectReference: {fileID: 38084394}
+      objectReference: {fileID: 38084390}
     - target: {fileID: 2416767293888739345, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: enemyHealthBar
       value: 
@@ -2423,7 +2421,7 @@ PrefabInstance:
     - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: enemyBehaviour
       value: 
-      objectReference: {fileID: 38084394}
+      objectReference: {fileID: 38084390}
     - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: playerBehaviour
       value: 

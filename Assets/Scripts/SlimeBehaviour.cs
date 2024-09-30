@@ -12,11 +12,11 @@ public class SlimeBehaviour : Enemy
     // Start is called before the first frame update
     protected override void Init()
     {
-        enemyName = "Red Slime";
+        enemyName = "Slime";
         enemyHealth = 100;
         moveSpeed = 5f;
-        normalDamage = 20;
-        criticalDamage = 30;
+        normalDamage = 10;
+        criticalDamage = 20;
         Debug.Log("Slime initialized");
 
         // Initialize audio source
