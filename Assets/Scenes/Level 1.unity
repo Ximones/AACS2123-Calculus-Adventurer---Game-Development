@@ -3887,7 +3887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 422017075}
-  gameManager: {fileID: 2083347170}
+  gameManager: {fileID: 7714975189507609945}
   combatSceneName: Forest
 --- !u!1 &424890510
 GameObject:
@@ -5423,7 +5423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 625985560}
-  gameManager: {fileID: 2083347170}
+  gameManager: {fileID: 7714975189507609945}
   combatSceneName: Forest
 --- !u!1 &630123468
 GameObject:
@@ -8808,7 +8808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1101346282}
-  gameManager: {fileID: 2083347170}
+  gameManager: {fileID: 7714975189507609945}
   combatSceneName: Forest
 --- !u!1 &1116442848
 GameObject:
@@ -39317,7 +39317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1854633534}
-  gameManager: {fileID: 2083347170}
+  gameManager: {fileID: 7714975189507609945}
   combatSceneName: Forest
 --- !u!95 &1854633542 stripped
 Animator:
@@ -40480,7 +40480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1961627539}
-  gameManager: {fileID: 2083347170}
+  gameManager: {fileID: 7714975189507609945}
   combatSceneName: Forest
 --- !u!4 &1966000587 stripped
 Transform:
@@ -40934,17 +40934,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 540049804185916612, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
   m_PrefabInstance: {fileID: 7714975189507609943}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2083347170 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6592845711198663393, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-  m_PrefabInstance: {fileID: 7714975189507609943}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083347168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15a0a85fb6cda44aba05a99602af5a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2086860560
 GameObject:
   m_ObjectHideFlags: 0
@@ -42591,7 +42580,7 @@ PrefabInstance:
     - target: {fileID: 3097279252746999018, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: gameManager
       value: 
-      objectReference: {fileID: 2083347170}
+      objectReference: {fileID: 0}
     - target: {fileID: 3097279252746999018, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: PlayerController
       value: 
@@ -42797,11 +42786,41 @@ PrefabInstance:
       propertyPath: savedObjects.Array.size
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6592845711198663393, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 540049804185916612, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7714975189507609945}
   m_SourcePrefab: {fileID: 100100000, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+--- !u!114 &7714975189507609944 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7868572815598817946, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+  m_PrefabInstance: {fileID: 7714975189507609943}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083347168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20e02d78b069e72478b1d49566310392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7714975189507609945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083347168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878b0e53f4ddb924ca7b8b64c0db4abe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectsInLevel: []
+  mapSceneName: Level 1
+  saveManager: {fileID: 7714975189507609944}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

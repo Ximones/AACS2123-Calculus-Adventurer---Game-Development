@@ -23,7 +23,7 @@ public class CalculusQuestion : MonoBehaviour
 
     public AudioSource buttonClickAudioSource;
     public GameObject questionPanel;
-    public DeathSceneManager deathSceneManager;
+    //public DeathSceneManager deathSceneManager;
 
     public PlayerBehaviour playerBehaviour;
     public Enemy enemyBehaviour;

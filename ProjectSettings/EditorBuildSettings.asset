@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 3.unity
     guid: 35546e0ad9ad1c648b9aacf68c9884ac
   - enabled: 1
+    path: Assets/Scenes/Combat Scene/Forest.unity
+    guid: 0fa189eed580e444e9533e00a510409e
+  - enabled: 1
     path: Assets/Scenes/Combat Scene/Cave.unity
     guid: 5e17be72e7c7b694a8f7d0e11f6031e3
   - enabled: 1
@@ -27,18 +30,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Combat Scene/Dungeon.unity
     guid: 278c9e196c1a9ce47a09e5dbb6ec644a
   - enabled: 1
-    path: Assets/Scenes/Combat Scene/Forest.unity
-    guid: 0fa189eed580e444e9533e00a510409e
-  - enabled: 1
-    path: Assets/Scenes/Combat Scene/Dungeon 3.unity
-    guid: 721f991c83e238c4284612bc618b9f5c
-  - enabled: 1
     path: Assets/Scenes/Combat Scene/Dungeon 1.unity
     guid: eb21be1df6ca5a048a5c6da678160941
   - enabled: 1
     path: Assets/Scenes/Combat Scene/Dungeon 2.unity
     guid: d01bc7c4c8f4c514b815cc10db276334
   - enabled: 1
-    path: Assets/Scenes/Combat Scene/Forest 1.unity
-    guid: 70860d8c1b1aa484fbbfdd50c962d0b2
+    path: Assets/Scenes/Combat Scene/Dungeon 3.unity
+    guid: 721f991c83e238c4284612bc618b9f5c
   m_configObjects: {}

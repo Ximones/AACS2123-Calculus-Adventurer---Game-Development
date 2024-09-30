@@ -376,6 +376,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BattleHandler
       objectReference: {fileID: 0}
+    - target: {fileID: 7991746292658419427, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: m_TagString
+      value: Manager
+      objectReference: {fileID: 0}
     - target: {fileID: 8213467279996268440, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: m_fontColor.b
       value: 0.050943315
@@ -2915,7 +2919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4057967634712431511, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4565895736236299213, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
       propertyPath: m_LocalScale.x

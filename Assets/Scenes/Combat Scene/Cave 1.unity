@@ -1148,7 +1148,7 @@ MonoBehaviour:
   returnLevelButton: {fileID: 1739817709}
   buttonClickAudioSource: {fileID: 776341269}
   playerTag: Player
-  battleHandler: {fileID: 954062272}
+  gameManager: {fileID: 0}
   PlayerController: {fileID: 0}
 --- !u!1001 &954062271
 PrefabInstance:
@@ -1259,6 +1259,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 954062273}
     - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: deathScene
+      value: 
+      objectReference: {fileID: 599986998}
+    - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: victoryScene
+      value: 
+      objectReference: {fileID: 480363199}
+    - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: enemyBehaviour
       value: 
       objectReference: {fileID: 575725709}
@@ -1267,9 +1275,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 967269065}
     - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: returnLevelButton
+      value: 
+      objectReference: {fileID: 1739817709}
+    - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: victorySceneManager
       value: 
       objectReference: {fileID: 776341270}
+    - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: buttonClickAudioSource
+      value: 
+      objectReference: {fileID: 776341266}
     - target: {fileID: 2836115100828386696, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: m_Camera
       value: 
@@ -3243,6 +3259,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 991728421}
     - target: {fileID: 9172890336057284993, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
+      propertyPath: normalDamage
+      value: 111
+      objectReference: {fileID: 0}
+    - target: {fileID: 9172890336057284993, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
       propertyPath: animatorEnemy
       value: 
       objectReference: {fileID: 575725710}
@@ -3254,6 +3274,10 @@ PrefabInstance:
       propertyPath: characterEnemy
       value: 
       objectReference: {fileID: 575725712}
+    - target: {fileID: 9172890336057284993, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
+      propertyPath: criticalDamage
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 9172890336057284993, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
       propertyPath: enemyBehaviour
       value: 

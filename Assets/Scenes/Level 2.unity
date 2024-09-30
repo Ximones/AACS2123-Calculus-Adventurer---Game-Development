@@ -353,82 +353,6 @@ Transform:
   - {fileID: 1707910363}
   m_Father: {fileID: 525002265}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &91756605
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 540049804185916612, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-      propertyPath: m_Name
-      value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6592845711198663393, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-      propertyPath: mapSceneName
-      value: Level 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6592845711198663393, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-      propertyPath: combatSceneName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.9528572
-      objectReference: {fileID: 0}
-    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.3759016
-      objectReference: {fileID: 0}
-    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.08473147
-      objectReference: {fileID: 0}
-    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
---- !u!114 &91756606 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6592845711198663393, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
-  m_PrefabInstance: {fileID: 91756605}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15a0a85fb6cda44aba05a99602af5a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &109407316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,7 +974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 308783807}
-  gameManager: {fileID: 91756606}
+  gameManager: {fileID: 1299147856}
   combatSceneName: Cave 1
 --- !u!114 &308783811
 MonoBehaviour:
@@ -12859,7 +12783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 654651260}
-  gameManager: {fileID: 91756606}
+  gameManager: {fileID: 1299147856}
   combatSceneName: Cave 1
 --- !u!114 &654651264
 MonoBehaviour:
@@ -13563,7 +13487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 792105211}
-  gameManager: {fileID: 91756606}
+  gameManager: {fileID: 1299147856}
   combatSceneName: Cave 1
 --- !u!114 &792105215
 MonoBehaviour:
@@ -81059,6 +80983,117 @@ MonoBehaviour:
   parallaxEffectMultiplier: {x: 0.8, y: 0.85}
   infiniteHorizontal: 1
   infiniteVertical: 0
+--- !u!1001 &1299147854
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 540049804185916612, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592845711198663393, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      propertyPath: mapSceneName
+      value: Level 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.9528572
+      objectReference: {fileID: 0}
+    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.3759016
+      objectReference: {fileID: 0}
+    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.08473147
+      objectReference: {fileID: 0}
+    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6935539967247641255, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 540049804185916612, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1299147856}
+    - targetCorrespondingSourceObject: {fileID: 540049804185916612, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1299147857}
+  m_SourcePrefab: {fileID: 100100000, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+--- !u!1 &1299147855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 540049804185916612, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+  m_PrefabInstance: {fileID: 1299147854}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1299147856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299147855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878b0e53f4ddb924ca7b8b64c0db4abe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectsInLevel: []
+  mapSceneName: Level 2
+  saveManager: {fileID: 1299147858}
+--- !u!114 &1299147857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299147855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20e02d78b069e72478b1d49566310392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savedObjects: []
+--- !u!114 &1299147858 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7868572815598817946, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+  m_PrefabInstance: {fileID: 1299147854}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299147855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20e02d78b069e72478b1d49566310392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1315846751
 GameObject:
   m_ObjectHideFlags: 0
@@ -84620,7 +84655,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1285066739926482923, guid: c1159ce411bd4044081e66b20fc86137, type: 3}
       propertyPath: m_Name
-      value: Goblin  (2)
+      value: Goblins (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4309330889853533506, guid: c1159ce411bd4044081e66b20fc86137, type: 3}
       propertyPath: m_Size.x
@@ -84718,7 +84753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1591089695}
-  gameManager: {fileID: 91756606}
+  gameManager: {fileID: 1299147856}
   combatSceneName: Cave
 --- !u!114 &1591089699
 MonoBehaviour:
@@ -85316,7 +85351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1869633681}
-  gameManager: {fileID: 91756606}
+  gameManager: {fileID: 1299147856}
   combatSceneName: Cave 1
 --- !u!4 &1869633684 stripped
 Transform:
@@ -85541,6 +85576,10 @@ PrefabInstance:
     - target: {fileID: 2787970567788038312, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: m_Name
       value: Next Level Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097279252746999018, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
+      propertyPath: gameManager
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3097279252746999018, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: PlayerController
@@ -86112,7 +86151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1914774289}
-  gameManager: {fileID: 91756606}
+  gameManager: {fileID: 1299147856}
   combatSceneName: Cave
 --- !u!114 &1914774291
 MonoBehaviour:
@@ -87066,7 +87105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2033588195}
-  gameManager: {fileID: 91756606}
+  gameManager: {fileID: 1299147856}
   combatSceneName: Cave 1
 --- !u!114 &2033588199
 MonoBehaviour:
@@ -87249,7 +87288,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1285066739926482923, guid: c1159ce411bd4044081e66b20fc86137, type: 3}
       propertyPath: m_Name
-      value: Goblin  (1)
+      value: Goblin (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4309330889853533506, guid: c1159ce411bd4044081e66b20fc86137, type: 3}
       propertyPath: m_Size.x
@@ -87347,7 +87386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2045742400}
-  gameManager: {fileID: 91756606}
+  gameManager: {fileID: 1299147856}
   combatSceneName: Cave
 --- !u!114 &2045742404
 MonoBehaviour:
@@ -89746,10 +89785,10 @@ SceneRoots:
   - {fileID: 525002265}
   - {fileID: 34450880}
   - {fileID: 2055121855}
-  - {fileID: 91756605}
   - {fileID: 1887879330}
   - {fileID: 963128769}
   - {fileID: 1247041690}
   - {fileID: 788522048}
   - {fileID: 1985741824}
   - {fileID: 6061966915462376475}
+  - {fileID: 1299147854}

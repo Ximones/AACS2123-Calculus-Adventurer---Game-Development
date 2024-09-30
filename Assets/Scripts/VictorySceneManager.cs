@@ -9,29 +9,28 @@ public class VictorySceneManager : MonoBehaviour
     public GameObject victoryCanvas; 
     public Button nextLevelButton;
     public Button backToMenuButton;
-    public Button returnLevelButton;
     
     public AudioSource buttonClickAudioSource;
     public string playerTag = "Player";
 
-    public GameManager gameManager;
+    //public GameManager gameManager;
     public PlayerController PlayerController;
 
     void Start()
     {
-        if (gameManager == null)
-        {
-            gameManager = GameManager.Instance;
-        }
-        else
-        {
-            Debug.Log("Found gameManager handler");
-        }
+      // if (gameManager == null)
+      // {
+      //     gameManager = GameManager.Instance;
+      // }
+      // else
+      // {
+      //     Debug.Log("Found gameManager handler");
+      // }
 
         victoryCanvas.SetActive(false); 
         nextLevelButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(NextLevel)));
         backToMenuButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(BackToMenu)));
-        returnLevelButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(EndCombat)));
+        //returnLevelButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(EndCombat)));
     }
 
     void OnTriggerEnter2D(Collider2D other) // Player hit portal colider then set victory screen as true
@@ -83,18 +82,17 @@ public class VictorySceneManager : MonoBehaviour
         }
     }
 
-    public void EndCombat()
-    {
-        if (gameManager != null)
-        {
-            GameManager.Instance.ReturnToLevel();
-        }
-        else
-        {
-            Debug.LogError("GameManager not found.");
-        }
-    }
-
+   //public void EndCombat()
+   //{
+   //    if (gameManager != null)
+   //    {
+   //        GameManager.Instance.ReturnToLevel();
+   //    }
+   //    else
+   //    {
+   //        Debug.LogError("GameManager not found.");
+   //    }
+   //}
     private void BackToMenu()
     {
         if (PlayerController != null)
