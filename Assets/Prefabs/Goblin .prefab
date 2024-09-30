@@ -82,7 +82,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 1.5, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -152,7 +152,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.5, y: 1.5}
-    newSize: {x: 1, y: 2}
+    newSize: {x: 1.5, y: 1.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a907be54b7909540a9305614e3661fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyName: 
   enemyHealth: 100
   moveSpeed: 3
   normalDamage: 20
@@ -184,6 +185,9 @@ MonoBehaviour:
   animatorEnemy: {fileID: 5560797155149751661}
   playerBehaviour: {fileID: 0}
   battleHandler: {fileID: 0}
+  attackClip: {fileID: 0}
+  specialAttackClip: {fileID: 0}
+  walkClip: {fileID: 0}
 --- !u!95 &5560797155149751661
 Animator:
   serializedVersion: 5
