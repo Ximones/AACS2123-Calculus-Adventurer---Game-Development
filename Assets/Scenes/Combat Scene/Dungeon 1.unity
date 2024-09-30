@@ -2089,6 +2089,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4057967634712431511, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
   m_PrefabInstance: {fileID: 1929841903}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1929841905 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
+  m_PrefabInstance: {fileID: 1929841903}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2076579423
 GameObject:
   m_ObjectHideFlags: 0
@@ -2417,6 +2428,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100575959}
     - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: deathScene
+      value: 
+      objectReference: {fileID: 301558920}
+    - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: victoryScene
+      value: 
+      objectReference: {fileID: 1929841904}
+    - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: enemyBehaviour
       value: 
       objectReference: {fileID: 1349780366}
@@ -2424,6 +2443,14 @@ PrefabInstance:
       propertyPath: playerBehaviour
       value: 
       objectReference: {fileID: 1600664292}
+    - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: returnLevelButton
+      value: 
+      objectReference: {fileID: 1929841905}
+    - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: buttonClickAudioSource
+      value: 
+      objectReference: {fileID: 453725889}
     - target: {fileID: 2836115100828386696, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: m_Camera
       value: 
