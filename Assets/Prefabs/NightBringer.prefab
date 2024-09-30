@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7126878470265946966
 Transform:
   m_ObjectHideFlags: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86289d1ce03610a48a8bac7aa8ede65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: 
+  enemyName: Night Bringer
   enemyHealth: 100
   moveSpeed: 4
   normalDamage: 50
@@ -156,7 +156,7 @@ MonoBehaviour:
   attackRange: 3
   transformPlayer: {fileID: 0}
   transformEnemy: {fileID: 7126878470265946966}
-  originalPosition: {x: 4.17, y: 2.01, z: 0}
+  originalPosition: {x: 2.15, y: 1.98, z: 0}
   animatorPlayer: {fileID: 0}
   animatorEnemy: {fileID: 5926392737219686825}
   playerBehaviour: {fileID: 0}
@@ -165,6 +165,8 @@ MonoBehaviour:
   animatorSpell: {fileID: 0}
   walkClip: {fileID: 8300000, guid: df7087e4d8a8bb546bc08ce68632903f, type: 3}
   attackClip: {fileID: 8300000, guid: 56703418e3aed4c47a5f6622816b8e41, type: 3}
+  specialAttackClip: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
+  spellClip: {fileID: 8300000, guid: 83829ff414f47a048b5387e4ab33571c, type: 3}
 --- !u!61 &582221065139423897
 BoxCollider2D:
   m_ObjectHideFlags: 0
