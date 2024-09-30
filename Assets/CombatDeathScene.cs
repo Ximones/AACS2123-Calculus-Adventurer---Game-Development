@@ -35,7 +35,7 @@ public class CombatDeathScene : MonoBehaviour
     IEnumerator waitQuit()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(restartLevel);
+        SceneManager.LoadScene("Main Menu");
     }
     public void Quit()
     {
