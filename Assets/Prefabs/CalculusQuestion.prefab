@@ -310,7 +310,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 652.7, y: -89.42}
+  m_AnchoredPosition: {x: 614.6, y: -89.42}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &9187644417684032579
@@ -353,7 +353,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -488739551
   m_SortingLayer: 9
-  m_SortingOrder: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2a92f093a772f5042a39c43184523962, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -407,7 +407,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 68.29999, y: -90.42}
+  m_AnchoredPosition: {x: 52.100006, y: -90.42}
   m_SizeDelta: {x: 0.99, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &4536684405517432013
@@ -450,7 +450,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -488739551
   m_SortingLayer: 9
-  m_SortingOrder: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2a92f093a772f5042a39c43184523962, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -1801,7 +1801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6022210301155514935, guid: dbe43693ff0827a409df97e7b6e6791d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -320.2
+      value: -337.5
       objectReference: {fileID: 0}
     - target: {fileID: 6022210301155514935, guid: dbe43693ff0827a409df97e7b6e6791d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1875,7 +1875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8923593234308775731, guid: 320bb09cc73f4f649892b6acd746f1e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 261.5
+      value: 224.7
       objectReference: {fileID: 0}
     - target: {fileID: 8923593234308775731, guid: 320bb09cc73f4f649892b6acd746f1e2, type: 3}
       propertyPath: m_LocalPosition.y
