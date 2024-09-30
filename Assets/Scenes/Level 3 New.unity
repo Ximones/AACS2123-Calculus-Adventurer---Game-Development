@@ -1821,6 +1821,11 @@ Transform:
   - {fileID: 572741611}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &507656758 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3429308229340846641, guid: 2d840af036641cc4aadf3147927e4293, type: 3}
+  m_PrefabInstance: {fileID: 1492977229}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &511750161
 GameObject:
   m_ObjectHideFlags: 0
@@ -3220,6 +3225,10 @@ PrefabInstance:
       value: 1.8715444
       objectReference: {fileID: 0}
     - target: {fileID: 7126878470265946966, guid: 2fa1d37feadaa4248abfe94b6224083b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -4.586393
+      objectReference: {fileID: 0}
+    - target: {fileID: 7126878470265946966, guid: 2fa1d37feadaa4248abfe94b6224083b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 883.82
       objectReference: {fileID: 0}
@@ -3292,8 +3301,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7feb78c152ce82d4d976358ea00dacb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoint1: {fileID: 720818169}
-  waypoint2: {fileID: 1990638123}
+  waypoint1: {fileID: 1990638123}
+  waypoint2: {fileID: 720818169}
   enemy: {fileID: 733741641}
   player: {fileID: 966185367}
   animator: {fileID: 733741642}
@@ -14168,8 +14177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7feb78c152ce82d4d976358ea00dacb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoint1: {fileID: 1382529105}
-  waypoint2: {fileID: 1136292818}
+  waypoint1: {fileID: 1463622216}
+  waypoint2: {fileID: 507656758}
   enemy: {fileID: 1457418384}
   player: {fileID: 966185367}
   animator: {fileID: 1457418383}
@@ -14257,6 +14266,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3429308229340846641, guid: 2d840af036641cc4aadf3147927e4293, type: 3}
   m_PrefabInstance: {fileID: 1460789408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1463622216 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3429308229340846641, guid: 2d840af036641cc4aadf3147927e4293, type: 3}
+  m_PrefabInstance: {fileID: 1732210979}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1469563287
 GameObject:
@@ -19736,7 +19750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3429308229340846641, guid: 2d840af036641cc4aadf3147927e4293, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 888.2
+      value: 884.75
       objectReference: {fileID: 0}
     - target: {fileID: 3429308229340846641, guid: 2d840af036641cc4aadf3147927e4293, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20970,7 +20984,7 @@ MonoBehaviour:
   waypoint1: {fileID: 2012873796}
   waypoint2: {fileID: 825994282}
   enemy: {fileID: 546274692108916381}
-  player: {fileID: 0}
+  player: {fileID: 966185367}
   animator: {fileID: 546274692108916379}
   originalposition: {x: 356.74, y: 7.13, z: 0}
   moveSpeed: 5
