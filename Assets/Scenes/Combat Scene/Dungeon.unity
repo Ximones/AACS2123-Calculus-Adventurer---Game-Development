@@ -269,6 +269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red_Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 568687499530833584, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2629739606317430189, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
       propertyPath: battleHandler
       value: 
