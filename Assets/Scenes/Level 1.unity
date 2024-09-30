@@ -19329,7 +19329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7237028133073884898, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: jumpForce
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7237028133073884898, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: playerSpeed
@@ -44620,9 +44620,21 @@ PrefabInstance:
       value: Manager
       objectReference: {fileID: 0}
     - target: {fileID: 6592845711198663393, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      propertyPath: sceneName
+      value: Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592845711198663393, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 2083347168}
+    - target: {fileID: 6592845711198663393, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      propertyPath: mapSceneName
+      value: Level 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592845711198663393, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+      propertyPath: combatSceneName
+      value: Forest
+      objectReference: {fileID: 0}
     - target: {fileID: 6592845711198663393, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
       propertyPath: gameObjectsInLevel1.Array.size
       value: 0

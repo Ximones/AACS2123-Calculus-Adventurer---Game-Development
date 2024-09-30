@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
 
     // Array to store the game objects in Level 1
     public GameObject[] gameObjectsInLevel1;
-    public string sceneName = "Combat";  // Scene to load for combat
+    public string combatSceneName = "";  // Scene to load for combat
+    public string mapSceneName = "";  // Scene to load for combat
     public SaveManager saveManager;      // Reference to SaveManager
     private void Awake()
     {
@@ -43,14 +44,14 @@ public class GameManager : MonoBehaviour
         // Save the current state of Level 1 before leaving
         saveManager.SaveSceneState(gameObjectsInLevel1);
         // Load the combat scene
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(combatSceneName);
     }
 
     // Call this method when returning from the combat scene
     public void ReturnToLevel1()
     {
         // Load Level 1 scene
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene(mapSceneName);
   
         StartCoroutine(WaitForLevel1Load());
     }
@@ -59,7 +60,7 @@ public class GameManager : MonoBehaviour
    private IEnumerator WaitForLevel1Load()
    {
        // Wait until the Level 1 scene is fully loaded
-       yield return new WaitUntil(() => SceneManager.GetActiveScene().name == "Level 1");
+       yield return new WaitUntil(() => SceneManager.GetActiveScene().name == mapSceneName);
         saveManager.LoadSceneState();
 
     }
