@@ -56,7 +56,7 @@ public class SkillCooldown : MonoBehaviour
         if (playerController.isDashCooldown)
         {
             dashTextCooldown.gameObject.SetActive(true); // Show text if cooldown active
-            dashImageCooldown.gameObject.SetActive(true); 
+            dashImageCooldown.gameObject.SetActive(true);
             dashImageCooldown.fillAmount -= 1f / playerController.dashCooldown * Time.deltaTime;
 
             // Ensure that fillAmount stays between 0 and 1
