@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(WaitForLevel1Load());
     }
 
+
    private IEnumerator WaitForLevel1Load()
    {
        // Wait until the Level 1 scene is fully loaded

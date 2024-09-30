@@ -52,6 +52,7 @@ public class DeathSceneManager : MonoBehaviour
     private void Restart()
     {
         Debug.Log("Restart method called");
+        Destroy(GameManager.Instance.gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reload the current scene
     }
 
