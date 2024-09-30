@@ -42694,6 +42694,10 @@ PrefabInstance:
       value: Next Level Portal
       objectReference: {fileID: 0}
     - target: {fileID: 3097279252746999018, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 2083347170}
+    - target: {fileID: 3097279252746999018, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: PlayerController
       value: 
       objectReference: {fileID: 739383034}

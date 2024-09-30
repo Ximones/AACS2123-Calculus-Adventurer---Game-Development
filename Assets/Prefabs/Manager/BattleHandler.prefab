@@ -59,8 +59,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -488739551
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &4019957110890905169
 MonoBehaviour:
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -169,6 +169,7 @@ MonoBehaviour:
   questionText: {fileID: 0}
   incorrectAnswerText: {fileID: 0}
   healthText: {fileID: 0}
+  enemyHealthText: {fileID: 0}
   answerInput: {fileID: 0}
   submitButton: {fileID: 0}
   backButton: {fileID: 0}
@@ -177,7 +178,11 @@ MonoBehaviour:
   deathSceneManager: {fileID: 0}
   playerBehaviour: {fileID: 0}
   enemyBehaviour: {fileID: 0}
+  healthBar: {fileID: 0}
+  enemyHealthBar: {fileID: 0}
   playerAns: 0
+  deathScene: {fileID: 0}
+  victoryScene: {fileID: 0}
 --- !u!1001 &3435750416759955018
 PrefabInstance:
   m_ObjectHideFlags: 0
