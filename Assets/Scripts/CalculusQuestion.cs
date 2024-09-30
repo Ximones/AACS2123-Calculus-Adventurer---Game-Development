@@ -72,6 +72,7 @@ public class CalculusQuestion : MonoBehaviour
                 InitializeSumRuleQuestions();
                 break;
             case "Dungeon":
+            case "Dungeon 1":
                 InitializeProductRuleQuestions();
                 break;
             default:
@@ -133,6 +134,7 @@ public class CalculusQuestion : MonoBehaviour
         else
         {
             incorrectAnswerText.text = "Invalid characters in input. Please use only numbers, x, y, +, -, *, ^.";
+            playerAns = -1;
         }
     }
 
