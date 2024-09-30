@@ -291,8 +291,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1032761533
-  m_SortingLayer: 5
+  m_SortingLayerID: 428684643
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 109407317}
   - component: {fileID: 109407320}
   m_Layer: 0
-  m_Name: Stair
+  m_Name: Stair 2
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -821,7 +821,7 @@ GameObject:
   - component: {fileID: 298293376}
   - component: {fileID: 298293375}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: Wall 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1154,11 +1154,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
---- !u!1 &397986221 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8762800464092793439, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
-  m_PrefabInstance: {fileID: 397986220}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &403479961
 GameObject:
   m_ObjectHideFlags: 3
@@ -13074,7 +13069,7 @@ GameObject:
   - component: {fileID: 689856170}
   - component: {fileID: 689856173}
   m_Layer: 0
-  m_Name: Platform With Ending Room
+  m_Name: Land Platform With Ending Room
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14002,7 +13997,7 @@ GameObject:
   - component: {fileID: 882195077}
   - component: {fileID: 882195080}
   m_Layer: 0
-  m_Name: Floating Ground
+  m_Name: Floating Ground 2 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14338,7 +14333,7 @@ GameObject:
   - component: {fileID: 947489683}
   - component: {fileID: 947489686}
   m_Layer: 0
-  m_Name: Floating Ground
+  m_Name: Floating Ground 1 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14730,7 +14725,7 @@ GameObject:
   - component: {fileID: 985101131}
   - component: {fileID: 985101130}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: Wall 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14880,7 +14875,7 @@ GameObject:
   - component: {fileID: 999189861}
   - component: {fileID: 999189864}
   m_Layer: 0
-  m_Name: 'Floating Ground '
+  m_Name: Floating Ground 1 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80624,7 +80619,7 @@ GameObject:
   - component: {fileID: 1239177402}
   - component: {fileID: 1239177405}
   m_Layer: 0
-  m_Name: Stair
+  m_Name: Stair 1
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83401,7 +83396,7 @@ GameObject:
   - component: {fileID: 1395807545}
   - component: {fileID: 1395807548}
   m_Layer: 0
-  m_Name: Floating Ground
+  m_Name: Floating Ground 2 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83551,7 +83546,7 @@ GameObject:
   - component: {fileID: 1442673634}
   - component: {fileID: 1442673633}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: Wall 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84651,7 +84646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35096f41fe1ce74f9b1df6b47268ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 397986221}
+  enemy: {fileID: 1591089695}
   gameManager: {fileID: 91756606}
   combatSceneName: Cave
 --- !u!114 &1591089699
@@ -86030,7 +86025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35096f41fe1ce74f9b1df6b47268ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 397986221}
+  enemy: {fileID: 1914774289}
   gameManager: {fileID: 91756606}
   combatSceneName: Cave
 --- !u!114 &1914774291
@@ -86077,7 +86072,7 @@ GameObject:
   - component: {fileID: 1917970308}
   - component: {fileID: 1917970311}
   m_Layer: 0
-  m_Name: Floating Ground Corner
+  m_Name: Floating Ground 1 Corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87210,7 +87205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a35096f41fe1ce74f9b1df6b47268ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 397986221}
+  enemy: {fileID: 2045742400}
   gameManager: {fileID: 91756606}
   combatSceneName: Cave
 --- !u!114 &2045742404
@@ -87293,7 +87288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2078191648}
   m_Layer: 0
-  m_Name: Platform
+  m_Name: Land Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
