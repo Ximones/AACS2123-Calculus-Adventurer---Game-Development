@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,7 +13,9 @@ public class PlayerController : MonoBehaviour
     public bool isLanding = true;
     public bool canMove = true;
     public bool canDash = true;
+
     public bool isJumpCooldown = false;
+
     public bool isDashCooldown = false;
 
     public float jumpForce = 7f;
@@ -70,6 +74,7 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         HandleJumping();
         HandleDash();
+
     }
 
     private void HandleMovement()
@@ -133,6 +138,7 @@ public class PlayerController : MonoBehaviour
 
     private void HandleDash()
     {
+
         if (isDashCooldown == true || dashCount > 1)
         {
             StartCoroutine(DashCooldown());

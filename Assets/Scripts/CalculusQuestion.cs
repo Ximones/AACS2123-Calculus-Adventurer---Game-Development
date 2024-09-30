@@ -70,6 +70,9 @@ public class CalculusQuestion : MonoBehaviour
             case "Dungeon":
                 InitializeProductRuleQuestions();
                 break;
+            case "Dungeon 1":
+                InitializeProductRuleQuestions();
+                break;
             default:
                 Debug.LogError("No questions set for this level.");
                 break;
