@@ -1857,9 +1857,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7307809163213887228}
+    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EndCombat
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BattleHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4057967634712431511, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
       propertyPath: m_Name
       value: 'Victory Screen '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4057967634712431511, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4565895736236299213, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
       propertyPath: m_LocalScale.x
@@ -1924,6 +1956,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4057967634712431511, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
   m_PrefabInstance: {fileID: 544329139}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &544329141 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3628693519366476058, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
+  m_PrefabInstance: {fileID: 544329139}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &565666518 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1974260343734581824, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
@@ -2631,7 +2674,7 @@ PrefabInstance:
       objectReference: {fileID: 1321199935}
     - target: {fileID: 9172890336057284993, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
       propertyPath: normalDamage
-      value: 20
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 9172890336057284993, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
       propertyPath: animatorEnemy
@@ -2647,7 +2690,7 @@ PrefabInstance:
       objectReference: {fileID: 952505081}
     - target: {fileID: 9172890336057284993, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
       propertyPath: criticalDamage
-      value: 30
+      value: 111
       objectReference: {fileID: 0}
     - target: {fileID: 9172890336057284993, guid: c9101a2c3ceaf0146b7fcf6379e4d8f3, type: 3}
       propertyPath: enemyBehaviour
@@ -2775,6 +2818,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7307809163213887230}
     - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: deathScene
+      value: 
+      objectReference: {fileID: 689984261}
+    - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: victoryScene
+      value: 
+      objectReference: {fileID: 544329140}
+    - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: enemyBehaviour
       value: 
       objectReference: {fileID: 1068371552}
@@ -2782,6 +2833,14 @@ PrefabInstance:
       propertyPath: playerBehaviour
       value: 
       objectReference: {fileID: 1770160769}
+    - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: returnLevelButton
+      value: 
+      objectReference: {fileID: 544329141}
+    - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: buttonClickAudioSource
+      value: 
+      objectReference: {fileID: 135091245}
     - target: {fileID: 2836115100828386696, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: m_Camera
       value: 

@@ -1,14 +1,19 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleHandler : MonoBehaviour
 {
+    public AudioSource buttonClickAudioSource;
+    public Button returnLevelButton;
     public PlayerBehaviour playerBehaviour;
     public Enemy enemyBehaviour;  // Assuming this is your enemy behavior script
 
     public CalculusQuestion calculusQuestion;     // Your question-handling script
     public TextMeshProUGUI damageText;
+    public GameObject deathScene;
+    public GameObject victoryScene;
     public GameObject damageObject;
     public Animator damageAnimator;
     private bool isShowingDamage = false;
@@ -16,6 +21,10 @@ public class BattleHandler : MonoBehaviour
     private void Start()
     {
         damageText.text = "";
+        deathScene.SetActive(false);
+        victoryScene.SetActive(false);
+
+        returnLevelButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(EndCombat)));
 
         if (damageObject == null)
         {
@@ -79,12 +88,55 @@ public class BattleHandler : MonoBehaviour
         if (playerBehaviour.playerHealth <= 0)
         {
             Debug.Log("Player has been defeated!");
+            deathSceneActive();
         }
         else if (enemyBehaviour.getEnemyHealth() <= 0)
         {
             Debug.Log("Enemy has been defeated!");
+            victorySceneActive();
+            
         }
 
+    }
+
+    private void deathSceneActive()
+    {
+        StartCoroutine(ActivateDeathSceneAfterDelay());
+    }
+
+    private IEnumerator ActivateDeathSceneAfterDelay()
+    {
+        yield return new WaitForSeconds(1.2f);
+
+        deathScene.SetActive(true);
+    }
+    private void victorySceneActive()
+    {
+        StartCoroutine(ActivateVictorySceneAfterDelay());
+    }
+
+    private IEnumerator ActivateVictorySceneAfterDelay()
+    {
+        yield return new WaitForSeconds(1.2f);
+
+        victoryScene.SetActive(true);
+    }
+    private IEnumerator HandleButtonClick(System.Action action)
+    {
+        PlayButtonClickSound();
+        yield return new WaitForSeconds(0.2f); // Wait for 0.2 seconds
+        action.Invoke();
+    }
+    private void PlayButtonClickSound()
+    {
+        if (buttonClickAudioSource != null && buttonClickAudioSource.clip != null)
+        {
+            buttonClickAudioSource.Play();
+        }
+    }
+    public void EndCombat()
+    {
+        GameManager.Instance.ReturnToLevel();
     }
 
     public void UpdateDamageText(float damageShow, bool isCrit)
