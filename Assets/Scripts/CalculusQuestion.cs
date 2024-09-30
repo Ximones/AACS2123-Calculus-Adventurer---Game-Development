@@ -144,7 +144,7 @@ public class CalculusQuestion : MonoBehaviour
     private bool IsValidInput(string input)
     {
         // Regex to allow only digits, x, y, +, -, *, and ^
-        return Regex.IsMatch(input, @"^[0-9xy\+\-\*\^]+$");
+        return Regex.IsMatch(input, @"^[0-9xy\+\-\*\/\^]+$");
     }
 
     // Normalize expressions
