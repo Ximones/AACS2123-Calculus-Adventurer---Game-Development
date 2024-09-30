@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Call this method when returning from the combat scene
-    public void ReturnToLevel1()
+    public void ReturnToLevel()
     {
         // Load Level 1 scene
         SceneManager.LoadScene(mapSceneName);

@@ -3,7 +3,14 @@ guid: e9ce6c2f7046e6741818231b7618c2d8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - victoryCanvas: {instanceID: 0}
+  - nextLevelButton: {instanceID: 0}
+  - backToMenuButton: {instanceID: 0}
+  - returnLevelButton: {instanceID: 0}
+  - buttonClickAudioSource: {instanceID: 0}
+  - gameManager: {fileID: 6592845711198663393, guid: 4a93ed9108a0e8149b18e13dcb418def, type: 3}
+  - PlayerController: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -83,18 +83,8 @@ public class BattleHandler : MonoBehaviour
         else if (enemyBehaviour.getEnemyHealth() <= 0)
         {
             Debug.Log("Enemy has been defeated!");
-            EndCombat();
-
         }
 
-    }
-
-    private void EndCombat()
-    {
-        // Notify GameManager to return to the previous scene
-        
-        GameManager.Instance.ReturnToLevel1();
-        
     }
 
     public void UpdateDamageText(float damageShow, bool isCrit)
