@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -8,7 +10,7 @@ using UnityEngine.SceneManagement;
 
 public class CalculusQuestion : MonoBehaviour
 {
-   // public GameObject player;
+    // public GameObject player;
     public TextMeshProUGUI questionText;
     public TextMeshProUGUI incorrectAnswerText;
     public TextMeshProUGUI healthText;
@@ -25,17 +27,18 @@ public class CalculusQuestion : MonoBehaviour
 
     public PlayerBehaviour playerBehaviour;
     public Enemy enemyBehaviour;
-    private List<Question> questions = new List<Question>();
 
     public RectTransform healthBar;
     public RectTransform enemyHealthBar;
-    
-    private int correctCoefficient;
-    private int correctExponent;
+
+    private string correctAnswer;
+    private List<Question> questions = new List<Question>();
     public int playerAns = 0;
 
     public GameObject deathScene;
     public GameObject victoryScene;
+
+    private int currentQuestionIndex = -1;
 
     void Start()
     {
@@ -44,13 +47,14 @@ public class CalculusQuestion : MonoBehaviour
         submitButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(CheckAnswer)));
         InitializeQuestions();
         incorrectAnswerText.text = "";
-        
+        AskCalculusQuestion(); // Initialize the first question
+
     }
 
     private IEnumerator HandleButtonClick(System.Action action)
     {
         PlayButtonClickSound();
-        yield return new WaitForSeconds(0.5f); 
+        yield return new WaitForSeconds(0.5f);
         action.Invoke();
     }
 
@@ -70,9 +74,6 @@ public class CalculusQuestion : MonoBehaviour
             case "Dungeon":
                 InitializeProductRuleQuestions();
                 break;
-            case "Dungeon 1":
-                InitializeProductRuleQuestions();
-                break;
             default:
                 Debug.LogError("No questions set for this level.");
                 break;
@@ -81,32 +82,111 @@ public class CalculusQuestion : MonoBehaviour
 
     private void InitializePowerRuleQuestions()
     {
-        questions.Add(new Question("Use the power rule to find the derivative of y = x^15.\n What is the derivative of y?", 15, 14));
-        questions.Add(new Question("Apply the power rule to find the derivative of y = x^99.\n What is the result?", 99, 98));
-        questions.Add(new Question("Use the power rule to find the derivative of y = 7x^4.\n What is the derivative of y?", 28, 3));
-        questions.Add(new Question("Apply the power rule to find the derivative of y = 2x^5.\n What is the result?", 10, 4));
-        questions.Add(new Question("Use the power rule to find the derivative of y = 6x^6.\n What is the derivative of y?", 36, 5));
-        questions.Add(new Question("Apply the power rule to find the derivative of y = 5x^7.\n What is the result?", 35, 6));
+        questions.Add(new Question("Use the power rule to find the derivative of y = x^15.\n What is the derivative of y?", "15x^14"));
+        questions.Add(new Question("Apply the power rule to find the derivative of y = x^99.\n What is the result?", "99x^98"));
+        questions.Add(new Question("Use the power rule to find the derivative of y = 7x^4.\n What is the derivative of y?", "28x^3"));
+        questions.Add(new Question("Apply the power rule to find the derivative of y = 2x^5.\n What is the result?", "10x^4"));
+        questions.Add(new Question("Use the power rule to find the derivative of y = 6x^6.\n What is the derivative of y?", "36x^5"));
+        questions.Add(new Question("Apply the power rule to find the derivative of y = 5x^7.\n What is the result?", "35x^6"));
     }
 
     private void InitializeSumRuleQuestions()
     {
-        questions.Add(new Question("What is the derivative of (3x^2 + 2x)?", 8, 1));
-        questions.Add(new Question("What is the derivative of (4x^3 + x^2)?", 13, 2));
-        questions.Add(new Question("What is the derivative of (7x^4 + 3x^3)?", 31, 3));
-        questions.Add(new Question("What is the derivative of (2x^5 + 5x^2)?", 15, 4));
-        questions.Add(new Question("What is the derivative of (6x^6 + 4x^3)?", 40, 5));
-        questions.Add(new Question("What is the derivative of (5x^7 + 2x^4)?", 37, 6));
+        questions.Add(new Question("What is the derivative of y = 4x^2 + 5x^3?", "8x + 15x^2"));
+        questions.Add(new Question("What is the derivative of y = 6x^2 - 3x^3?", "12x - 9x^2"));
+        questions.Add(new Question("What is the derivative of y = (2x^2 - x)^2?", "16x^3 - 12x^2 + 2x"));
+        questions.Add(new Question("What is the derivative of y = x^10 - 5x^7 + 4x^5 - 2x^2 + 10x?", "10x^9 - 35x^6 + 20x^4 - 4x + 10"));
     }
 
     private void InitializeProductRuleQuestions()
     {
-        questions.Add(new Question("What is the derivative of (3x^2 * 2x)?", 12, 2));
-        questions.Add(new Question("What is the derivative of (4x^3 * x^2)?", 20, 4));
-        questions.Add(new Question("What is the derivative of (7x^4 * 3x^3)?", 63, 7));
-        questions.Add(new Question("What is the derivative of (2x^5 * 5x^2)?", 40, 7));
-        questions.Add(new Question("What is the derivative of (6x^6 * 4x^3)?", 144, 9));
-        questions.Add(new Question("What is the derivative of (5x^7 * 2x^4)?", 70, 11));
+        questions.Add(new Question("What is the derivative of y = (4x^2 + 2)(3x^3 - 1)?", "60x^4 + 18x^2 - 8x"));
+        questions.Add(new Question("What is the derivative of y = (2 - x^3)(3x^3 + x - 1)?", "-6x^5 - 4x^3 + 9x^2 + 2"));
+        questions.Add(new Question("What is the derivative of y = (x^2 + 1)(x - 5 - 1/x)?", "3x^2 - 10x + 1/x^2"));
+        questions.Add(new Question("What is the derivative of y = (x - 1/x)(x^2 - 1/x - 1)?", "3x^2 - 2 - 1/x^2 - 2/x^3"));
+    }
+
+    // Check answer method
+    public void CheckAnswer()
+    {
+        string userAnswer = answerInput.text.Replace(" ", ""); // Remove spaces
+
+        if (IsValidInput(userAnswer))
+        {
+            string normalizedUserAnswer = NormalizeExpression(userAnswer);
+            string normalizedCorrectAnswer = NormalizeExpression(correctAnswer);
+
+            if (normalizedUserAnswer == normalizedCorrectAnswer)
+            {
+                incorrectAnswerText.text = "Correct!";
+                playerAns = 1;
+                // Show the next question only if the answer is correct
+                AskCalculusQuestion();
+            }
+            else
+            {
+                incorrectAnswerText.text = "Incorrect answer. Try again!";
+                playerAns = -1;
+                UpdateHealthText();
+            }
+        }
+        else
+        {
+            incorrectAnswerText.text = "Invalid characters in input. Please use only numbers, x, y, +, -, *, ^.";
+        }
+    }
+
+    // Validate input regex
+    private bool IsValidInput(string input)
+    {
+        // Regex to allow only digits, x, y, +, -, *, and ^
+        return Regex.IsMatch(input, @"^[0-9xy\+\-\*\^]+$");
+    }
+
+    // Normalize expressions
+    private string NormalizeExpression(string expression)
+    {
+        // Remove spaces
+        expression = expression.Replace(" ", "");
+
+        // Standardize multiplication symbol
+        expression = expression.Replace("*", "");
+
+        // Split terms by + and - while preserving the operators
+        string[] terms = Regex.Split(expression, @"(?=[+-])");
+
+        // Sort terms in a way that makes mathematical sense
+        Array.Sort(terms, (a, b) =>
+        {
+            // Extract the power of x for each term
+            int powerA = GetPowerOfX(a);
+            int powerB = GetPowerOfX(b);
+
+            // Sort by power in descending order
+            return powerB.CompareTo(powerA);
+        });
+
+        return string.Join("", terms);
+    }
+
+    private int GetPowerOfX(string term)
+    {
+        // Match the power of x in the term
+        Match match = Regex.Match(term, @"x\^(\d+)");
+        if (match.Success)
+        {
+            return int.Parse(match.Groups[1].Value);
+        }
+        else if (term.Contains("x"))
+        {
+            // If the term contains x but no explicit power, it's x^1
+            return 1;
+        }
+        else
+        {
+            // If the term does not contain x, it's x^0
+            return 0;
+        }
     }
 
     public void TriggerEnemy()
@@ -116,44 +196,15 @@ public class CalculusQuestion : MonoBehaviour
 
     private void AskCalculusQuestion()
     {
-        int randomIndex = Random.Range(0, questions.Count);
-        Question selectedQuestion = questions[randomIndex];
+        currentQuestionIndex = (currentQuestionIndex + 1) % questions.Count;
+        Question selectedQuestion = questions[currentQuestionIndex];
         questionText.text = selectedQuestion.questionText;
-        correctCoefficient = selectedQuestion.correctCoefficient;
-        correctExponent = selectedQuestion.correctExponent;
+        correctAnswer = selectedQuestion.correctAnswer;
         questionPanel.SetActive(true);
         answerInput.text = "";
         incorrectAnswerText.text = "";
         FocusInputField(); // Focus the input field
-        
     }
-
-    public void CheckAnswer()
-    {
-        string[] answerParts = answerInput.text.Split('x');
-        if (answerParts.Length == 2 && int.TryParse(answerParts[0], out int coefficient) && int.TryParse(answerParts[1], out int exponent))
-        {
-            if (coefficient == correctCoefficient && exponent == correctExponent)
-            {
-
-                incorrectAnswerText.text = "Correct.You are smarter than i think !!";
-                playerAns = 1;
-            }
-            else
-            {
-                incorrectAnswerText.text = "Incorrect answer.Try Harder Noob";
-                playerAns = -1;
-            }
-            
-        }
-        else
-        {
-            incorrectAnswerText.text = "Invalid answer format.Answer better please";
-            playerAns = -1;
-        }
-           
-    }
-
 
     private void PlayButtonClickSound()
     {
@@ -239,13 +290,11 @@ public class CalculusQuestion : MonoBehaviour
 public class Question
 {
     public string questionText;
-    public int correctCoefficient;
-    public int correctExponent;
+    public string correctAnswer;
 
-    public Question(string questionText, int correctCoefficient, int correctExponent)
+    public Question(string questionText, string correctAnswer)
     {
         this.questionText = questionText;
-        this.correctCoefficient = correctCoefficient;
-        this.correctExponent = correctExponent;
+        this.correctAnswer = correctAnswer;
     }
 }
