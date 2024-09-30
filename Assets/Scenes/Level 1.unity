@@ -42580,6 +42580,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1347193027006589815, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2787970567788038312, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
       propertyPath: m_Name
       value: Next Level Portal
@@ -42632,6 +42636,22 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 175008115}
+    - target: {fileID: 5806211489896625697, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5806211489896625697, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5806211489896625697, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908273807257989613, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 90438cb54f28810478c2332ef6b96dc1, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
