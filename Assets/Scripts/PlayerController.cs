@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        canDash = true;
         if (playerBody == null)
             playerBody = GetComponent<Rigidbody2D>();
         else
@@ -139,20 +140,34 @@ public class PlayerController : MonoBehaviour
     private void HandleDash()
     {
 
-        if (isDashCooldown == true || dashCount > 1)
+        //if (isDashCooldown == true || dashCount > 1)
+        //{
+        //    StartCoroutine(DashCooldown());
+        //    isDashCooldown = false;
+        //    dashCount = 0;
+        //    return;
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.C) && isWalking)
+        //{
+        //    dashCount++;
+        //    canDash = true;
+        //    float playerHorizontalInput = Input.GetAxis("Horizontal");
+        //    StartCoroutine(PerformDash(playerHorizontalInput));
+        //}
+
+        // If dash cooldown is active or player has already dashed twice, don't allow dashing
+        if (isDashCooldown || dashCount > 1)
         {
-            StartCoroutine(DashCooldown());
-            isDashCooldown = false;
-            dashCount = 0;
             return;
         }
 
+        // Check if player presses dash key and is currently walking
         if (Input.GetKeyDown(KeyCode.C) && isWalking)
         {
-            dashCount++;
-            canDash = true;
+            dashCount++;  // Increase dash count
             float playerHorizontalInput = Input.GetAxis("Horizontal");
-            StartCoroutine(PerformDash(playerHorizontalInput));
+            StartCoroutine(PerformDash(playerHorizontalInput));  // Start dash coroutine
         }
     }
 
@@ -182,18 +197,43 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator PerformDash(float directionInput)
     {
-        playerAnimator.SetBool("CanDash", canDash);
+        //playerAnimator.SetBool("CanDash", canDash);
 
-        if (dashCount == 1 && Time.time >= lastDashTime + dashCooldown && isWalking && canDash)
+        //if (dashCount == 1 && Time.time >= lastDashTime + dashCooldown && isWalking && canDash)
+        //{
+        //    playerAnimator.SetTrigger("isDashStart");
+        //    float dashDirectionX = directionInput < 0 ? -1 : 1;
+        //    playerBody.AddForce(new Vector2(dashDirectionX * dashForce, 0), ForceMode2D.Impulse);
+        //    audioSource.PlayOneShot(dashClip); // Play dash sound effect
+        //    yield return new WaitForSeconds(0.5f);
+        //    isDashCooldown = true;
+        //    lastDashTime = Time.time;
+        //    DashCooldown();
+        //}
+
+        // Set animator and flags for dashing
+        canDash = false;
+        playerAnimator.SetBool("CanDash", true);
+
+        // Only dash if cooldown is not active and conditions are met
+        if (dashCount == 1 && Time.time >= lastDashTime + dashCooldown && isWalking)
         {
             playerAnimator.SetTrigger("isDashStart");
+
+            // Calculate dash direction and apply force
             float dashDirectionX = directionInput < 0 ? -1 : 1;
             playerBody.AddForce(new Vector2(dashDirectionX * dashForce, 0), ForceMode2D.Impulse);
             audioSource.PlayOneShot(dashClip); // Play dash sound effect
-            yield return new WaitForSeconds(0.5f);
+
+            // Set cooldown flags and timing
             isDashCooldown = true;
             lastDashTime = Time.time;
-            DashCooldown();
+
+            // Wait for dash duration before allowing cooldown
+            yield return new WaitForSeconds(0.5f);
+
+            // Start cooldown coroutine
+            StartCoroutine(DashCooldown());
         }
     }
 
@@ -241,7 +281,14 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator DashCooldown()
     {
+        playerAnimator.SetBool("CanDash", canDash);
         yield return new WaitForSeconds(dashCooldown);
+
+        // Reset dash count and cooldown state
+        dashCount = 0;
+        isDashCooldown = false;
+        canDash = true;  // Re-enable dashing after cooldown
+        
     }
 
     private bool checkValidJumpCount(int jumpCount)
