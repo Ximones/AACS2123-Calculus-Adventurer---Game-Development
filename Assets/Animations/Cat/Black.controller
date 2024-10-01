@@ -39,13 +39,13 @@ AnimatorStateMachine:
     m_Position: {x: -170, y: 280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4853890292037028893}
-    m_Position: {x: 210, y: 220, z: 0}
+    m_Position: {x: 180, y: 230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6427237299991681970}
     m_Position: {x: 390, y: 130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 228568103205114401}
-    m_Position: {x: 10, y: 150, z: 0}
+    m_Position: {x: -40, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5094307074991537796}
     m_Position: {x: 420, y: 390, z: 0}
@@ -452,7 +452,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cat
+  m_Name: Black
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: AnimState
@@ -482,7 +482,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Black_Streching
-  m_Speed: 1.3
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 5131083930055967234}
