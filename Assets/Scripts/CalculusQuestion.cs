@@ -90,6 +90,11 @@ public class CalculusQuestion : MonoBehaviour
         questions.Add(new Question("Apply the power rule to find the derivative of y = 2x^5.\n What is the result?", "10x^4"));
         questions.Add(new Question("Use the power rule to find the derivative of y = 6x^6.\n What is the derivative of y?", "36x^5"));
         questions.Add(new Question("Apply the power rule to find the derivative of y = 5x^7.\n What is the result?", "35x^6"));
+        questions.Add(new Question("Use the power rule to find the derivative of y = x^20.\n What is the derivative of y?", "20x^19"));
+        questions.Add(new Question("Apply the power rule to find the derivative of y = 3x^10.\n What is the result?", "30x^9"));
+        questions.Add(new Question("Use the power rule to find the derivative of y = 9x^8.\n What is the derivative of y?", "72x^7"));
+        questions.Add(new Question("Apply the power rule to find the derivative of y = 12x^3.\n What is the result?", "36x^2"));
+        questions.Add(new Question("Use the power rule to find the derivative of y = 5x^11.\n What is the derivative of y?", "55x^10"));
     }
 
     private void InitializeSumRuleQuestions()
@@ -98,6 +103,11 @@ public class CalculusQuestion : MonoBehaviour
         questions.Add(new Question("What is the derivative of y = 6x^2 - 3x^3?", "12x - 9x^2"));
         questions.Add(new Question("What is the derivative of y = (2x^2 - x)^2?", "16x^3 - 12x^2 + 2x"));
         questions.Add(new Question("What is the derivative of y = x^10 - 5x^7 + 4x^5 - 2x^2 + 10x?", "10x^9 - 35x^6 + 20x^4 - 4x + 10"));
+        questions.Add(new Question("What is the derivative of y = 3x^4 + 7x^2?", "12x^3 + 14x"));
+        questions.Add(new Question("What is the derivative of y = 5x^5 - 8x^3 + 6x?", "25x^4 - 24x^2 + 6"));
+        questions.Add(new Question("What is the derivative of y = x^6 - 4x^2 + 3?", "6x^5 - 8x"));
+        questions.Add(new Question("What is the derivative of y = 2x^7 + 3x^5 - x^3 + 5?", "14x^6 + 15x^4 - 3x^2"));
+        questions.Add(new Question("What is the derivative of y = 6x^3 + 4x^2 - 2x?", "18x^2 + 8x - 2"));
     }
 
     private void InitializeProductRuleQuestions()
@@ -106,6 +116,11 @@ public class CalculusQuestion : MonoBehaviour
         questions.Add(new Question("What is the derivative of y = (2 - x^3)(3x^3 + x - 1)?", "-6x^5 - 4x^3 + 9x^2 + 2"));
         questions.Add(new Question("What is the derivative of y = (x^2 + 1)(x - 5 - 1/x)?", "3x^2 - 10x + 1/x^2"));
         questions.Add(new Question("What is the derivative of y = (x - 1/x)(x^2 - 1/x - 1)?", "3x^2 - 2 - 1/x^2 - 2/x^3"));
+        questions.Add(new Question("What is the derivative of y = (x^2 + 3)(2x^4 - x)?", "10x^5 - 2x^3 - 3x + 3"));
+        questions.Add(new Question("What is the derivative of y = (x^3 + 2)(4x^2 - 3)?", "12x^4 + 8x^2 - 9x"));
+        questions.Add(new Question("What is the derivative of y = (x + 1)(x^2 - x + 2)?", "3x^2 - 2x + 3"));
+        questions.Add(new Question("What is the derivative of y = (x^4 + 1)(x^3 - 1)?", "7x^6 - x^3 - 1"));
+        questions.Add(new Question("What is the derivative of y = (x^5 - 2)(x^4 + x - 3)?", "9x^8 + x^5 - 12x^3 - x + 6"));
     }
 
     // Check answer method
