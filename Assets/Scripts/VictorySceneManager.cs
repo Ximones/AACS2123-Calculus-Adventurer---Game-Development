@@ -9,7 +9,6 @@ public class VictorySceneManager : MonoBehaviour
     public GameObject victoryCanvas; 
     public Button nextLevelButton;
     public Button backToMenuButton;
-    
     public AudioSource buttonClickAudioSource;
     public string playerTag = "Player";
 
@@ -23,6 +22,8 @@ public class VictorySceneManager : MonoBehaviour
         nextLevelButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(NextLevel)));
         backToMenuButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(BackToMenu)));
     }
+
+   
 
     void OnTriggerEnter2D(Collider2D other) // Player hit portal colider then set victory screen as true
     {
@@ -81,6 +82,7 @@ public class VictorySceneManager : MonoBehaviour
             PlayerController.enabled = true;
         }
 
+        Destroy(GameManager.Instance.gameObject);
         SceneManager.LoadScene("Main Menu"); // Load the main menu scene
     }
 

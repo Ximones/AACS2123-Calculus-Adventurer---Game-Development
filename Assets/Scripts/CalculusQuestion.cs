@@ -84,27 +84,27 @@ public class CalculusQuestion : MonoBehaviour
 
     private void InitializePowerRuleQuestions()
     {
-        questions.Add(new Question("Use the power rule to find the derivative of y = x^15.\n What is the derivative of y?", "15x^14"));
-        questions.Add(new Question("Apply the power rule to find the derivative of y = x^99.\n What is the result?", "99x^98"));
-        questions.Add(new Question("Use the power rule to find the derivative of y = 7x^4.\n What is the derivative of y?", "28x^3"));
-        questions.Add(new Question("Apply the power rule to find the derivative of y = 2x^5.\n What is the result?", "10x^4"));
-        questions.Add(new Question("Use the power rule to find the derivative of y = 6x^6.\n What is the derivative of y?", "36x^5"));
-        questions.Add(new Question("Apply the power rule to find the derivative of y = 5x^7.\n What is the result?", "35x^6"));
-        questions.Add(new Question("Use the power rule to find the derivative of y = x^20.\n What is the derivative of y?", "20x^19"));
-        questions.Add(new Question("Apply the power rule to find the derivative of y = 3x^10.\n What is the result?", "30x^9"));
-        questions.Add(new Question("Use the power rule to find the derivative of y = 9x^8.\n What is the derivative of y?", "72x^7"));
-        questions.Add(new Question("Apply the power rule to find the derivative of y = 12x^3.\n What is the result?", "36x^2"));
-        questions.Add(new Question("Use the power rule to find the derivative of y = 5x^11.\n What is the derivative of y?", "55x^10"));
-        questions.Add(new Question("Use the power rule to find the derivative of y = x^12.\n What is the derivative of y?", "12x^11"));
-        questions.Add(new Question("Apply the power rule to find the derivative of y = x^50.\n What is the result?", "50x^49"));
-        questions.Add(new Question("Use the power rule to find the derivative of y = 8x^9.\n What is the derivative of y?", "72x^8"));
-        questions.Add(new Question("Apply the power rule to find the derivative of y = 3x^4.\n What is the result?", "12x^3"));
-        questions.Add(new Question("Use the power rule to find the derivative of y = 5x^7.\n What is the derivative of y?", "35x^6"));
-        questions.Add(new Question("Apply the power rule to find the derivative of y = 4x^3.\n What is the result?", "12x^2"));
-        questions.Add(new Question("Use the power rule to find the derivative of y = 10x^6.\n What is the derivative of y?", "60x^5"));
-        questions.Add(new Question("Apply the power rule to find the derivative of y = 9x^8.\n What is the result?", "72x^7"));
-        questions.Add(new Question("Use the power rule to find the derivative of y = x^25.\n What is the derivative of y?", "25x^24"));
-        questions.Add(new Question("Apply the power rule to find the derivative of y = 6x^5.\n What is the result?", "30x^4"));
+        questions.Add(new Question("1.Use the power rule to find the derivative of y = x^15.\n What is the derivative of y?", "15x^14"));
+        questions.Add(new Question("2.Apply the power rule to find the derivative of y = x^99.\n What is the result?", "99x^98"));
+        questions.Add(new Question("3.Use the power rule to find the derivative of y = 7x^4.\n What is the derivative of y?", "28x^3"));
+        questions.Add(new Question("4.Apply the power rule to find the derivative of y = 2x^5.\n What is the result?", "10x^4"));
+        questions.Add(new Question("5.Use the power rule to find the derivative of y = 6x^6.\n What is the derivative of y?", "36x^5"));
+        questions.Add(new Question("6.Apply the power rule to find the derivative of y = 5x^7.\n What is the result?", "35x^6"));
+        questions.Add(new Question("7.Use the power rule to find the derivative of y = x^20.\n What is the derivative of y?", "20x^19"));
+        questions.Add(new Question("8.Apply the power rule to find the derivative of y = 3x^10.\n What is the result?", "30x^9"));
+        questions.Add(new Question("9.Use the power rule to find the derivative of y = 9x^8.\n What is the derivative of y?", "72x^7"));
+        questions.Add(new Question("10.Apply the power rule to find the derivative of y = 12x^3.\n What is the result?", "36x^2"));
+        questions.Add(new Question("11.Use the power rule to find the derivative of y = 5x^11.\n What is the derivative of y?", "55x^10"));
+        questions.Add(new Question("12.Use the power rule to find the derivative of y = x^12.\n What is the derivative of y?", "12x^11"));
+        questions.Add(new Question("13.Apply the power rule to find the derivative of y = x^50.\n What is the result?", "50x^49"));
+        questions.Add(new Question("14.Use the power rule to find the derivative of y = 8x^9.\n What is the derivative of y?", "72x^8"));
+        questions.Add(new Question("15.Apply the power rule to find the derivative of y = 3x^4.\n What is the result?", "12x^3"));
+        questions.Add(new Question("16.Use the power rule to find the derivative of y = 5x^7.\n What is the derivative of y?", "35x^6"));
+        questions.Add(new Question("17.Apply the power rule to find the derivative of y = 4x^3.\n What is the result?", "12x^2"));
+        questions.Add(new Question("18.Use the power rule to find the derivative of y = 10x^6.\n What is the derivative of y?", "60x^5"));
+        questions.Add(new Question("19.Apply the power rule to find the derivative of y = 9x^8.\n What is the result?", "72x^7"));
+        questions.Add(new Question("20.Use the power rule to find the derivative of y = x^25.\n What is the derivative of y?", "25x^24"));
+        questions.Add(new Question("21.Apply the power rule to find the derivative of y = 6x^5.\n What is the result?", "30x^4"));
     }
 
     private void InitializeSumRuleQuestions()
@@ -263,7 +263,12 @@ public class CalculusQuestion : MonoBehaviour
 
     private void AskCalculusQuestion()
     {
-        currentQuestionIndex = (currentQuestionIndex + 1) % questions.Count;
+        // currentQuestionIndex = (currentQuestionIndex + 1) % questions.Count;
+
+        //get random number index
+        System.Random random = new System.Random();
+        currentQuestionIndex = random.Next(0, questions.Count);
+        
         Question selectedQuestion = questions[currentQuestionIndex];
         questionText.text = selectedQuestion.questionText;
         correctAnswer = selectedQuestion.correctAnswer;

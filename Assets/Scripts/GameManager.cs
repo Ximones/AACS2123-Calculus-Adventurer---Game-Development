@@ -70,4 +70,15 @@ public class GameManager : MonoBehaviour
     {
         enemy.SetActive(false);  // Deactivate the enemy so it won't be restored
     }
+
+    public void TogglePause()
+    {
+        Time.timeScale = 0.0f; // Pause the game
+    }
+
+    public void StopPause()
+    {
+
+        Time.timeScale = 1.0f; // Resume normal time
+    }
 }
