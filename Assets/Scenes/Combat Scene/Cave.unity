@@ -281,6 +281,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1710006726}
     - target: {fileID: 2416767293888739345, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: hintImage
+      value: 
+      objectReference: {fileID: 1233916338}
+    - target: {fileID: 2416767293888739345, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: backButton
       value: 
       objectReference: {fileID: 1891882034}
@@ -292,6 +296,10 @@ PrefabInstance:
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1891882036}
+    - target: {fileID: 2416767293888739345, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: hintButton
+      value: 
+      objectReference: {fileID: 1891882034}
     - target: {fileID: 2416767293888739345, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: answerInput
       value: 
@@ -3012,6 +3020,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1233916338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1423297320345992938, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
+  m_PrefabInstance: {fileID: 1891882031}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1408304609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3982,7 +3995,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6514094072089881999, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
   m_PrefabInstance: {fileID: 1891882031}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1233916338}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
