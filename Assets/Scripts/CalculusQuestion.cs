@@ -18,8 +18,10 @@ public class CalculusQuestion : MonoBehaviour
 
     public TMP_InputField answerInput;
 
+    public GameObject hintImage;
+    public int hintCount = 0;
     public Button submitButton;
-    public Button backButton;
+    public Button hintButton;
 
     public AudioSource buttonClickAudioSource;
     public GameObject questionPanel;
@@ -41,8 +43,8 @@ public class CalculusQuestion : MonoBehaviour
 
     void Start()
     {
-
-        
+        hintImage.SetActive(false);
+        hintButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(showHints)));
         submitButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(CheckAnswer)));
         InitializeQuestions();
         incorrectAnswerText.text = "";
@@ -152,6 +154,23 @@ public class CalculusQuestion : MonoBehaviour
             incorrectAnswerText.text = "Invalid characters in input. Please use only numbers, x, y, +, -, *, ^.";
             playerAns = -1;
         }
+    }
+
+    public void showHints()
+    {
+
+        if(hintCount % 2 == 0)
+        {
+            
+            hintImage.SetActive(true);
+        }
+        else
+        {
+            hintImage.SetActive(false);
+        }
+
+        hintCount++;
+       
     }
 
     // Validate input regex
