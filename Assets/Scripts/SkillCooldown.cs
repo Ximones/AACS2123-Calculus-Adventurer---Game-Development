@@ -12,8 +12,6 @@ public class SkillCooldown : MonoBehaviour
     // UI elements for jump and dash cooldown
     public Image jumpImageCooldown;
     public Image dashImageCooldown;
-    public TMP_Text jumpTextCooldown;
-    public TMP_Text dashTextCooldown;
 
     void Start()
     {
@@ -23,8 +21,6 @@ public class SkillCooldown : MonoBehaviour
         }
 
         // Initialize cooldown UI as inactive or full
-        jumpTextCooldown.gameObject.SetActive(false);
-        dashTextCooldown.gameObject.SetActive(false);
         jumpImageCooldown.fillAmount = 1f;
         dashImageCooldown.fillAmount = 1f;
     }
@@ -34,7 +30,6 @@ public class SkillCooldown : MonoBehaviour
         // Handle Jump Cooldown UI
         if (playerController.isJumpCooldown)
         {
-            jumpTextCooldown.gameObject.SetActive(true); // Show text if cooldown active
             jumpImageCooldown.gameObject.SetActive(true);
             jumpImageCooldown.fillAmount -= 1f / playerController.jumpCooldown * Time.deltaTime;
 
@@ -42,7 +37,6 @@ public class SkillCooldown : MonoBehaviour
             if (jumpImageCooldown.fillAmount <= 0f)
             {
                 jumpImageCooldown.fillAmount = 0f;
-                jumpTextCooldown.gameObject.SetActive(false); // Hide text when cooldown is complete
                 jumpImageCooldown.gameObject.SetActive(false);
             }
         }
@@ -55,7 +49,6 @@ public class SkillCooldown : MonoBehaviour
         // Handle Dash Cooldown UI
         if (playerController.isDashCooldown)
         {
-            dashTextCooldown.gameObject.SetActive(true); // Show text if cooldown active
             dashImageCooldown.gameObject.SetActive(true);
             dashImageCooldown.fillAmount -= 1f / playerController.dashCooldown * Time.deltaTime;
 
@@ -63,7 +56,6 @@ public class SkillCooldown : MonoBehaviour
             if (dashImageCooldown.fillAmount <= 0f)
             {
                 dashImageCooldown.fillAmount = 0f;
-                dashTextCooldown.gameObject.SetActive(false); // Hide text when cooldown is complete
             }
         }
         else
