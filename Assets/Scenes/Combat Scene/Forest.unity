@@ -1909,6 +1909,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.2917
       objectReference: {fileID: 0}
+    - target: {fileID: 6217435182076687971, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7255794296348287178, guid: efe67b5f228b50a4fa4a735a9ecd12dc, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1986,6 +1990,11 @@ MonoBehaviour:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3883707007119356316, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
   m_PrefabInstance: {fileID: 1417200702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &918578002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1423297320345992938, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
+  m_PrefabInstance: {fileID: 976936265}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &819604347 stripped
 GameObject:
@@ -2214,7 +2223,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6514094072089881999, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
   m_PrefabInstance: {fileID: 976936265}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 918578002}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -2436,7 +2445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 435474095965675590, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2187000916407607666, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2569,6 +2578,10 @@ PrefabInstance:
     - target: {fileID: 5016967813235525403, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_SortingOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5270403668230786413, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6461570745797741483, guid: 8af58536c75a42941a8ffc7b8316d2a0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2880,10 +2893,6 @@ PrefabInstance:
       propertyPath: healthbar
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 2416767293888739345, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
-      propertyPath: hintImage
-      value: 
-      objectReference: {fileID: 819604347}
     - target: {fileID: 2416767293888739345, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: backButton
       value: 
