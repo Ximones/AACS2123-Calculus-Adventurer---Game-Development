@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class CatFollowPath : MonoBehaviour
 {
-    public Transform waypoint1;
-    public Transform waypoint2;
+    public Transform[] waypoints;
     public Transform cat;
     public Transform player;
     public Animator animator;
@@ -17,42 +16,44 @@ public class CatFollowPath : MonoBehaviour
     private bool isChasingPlayer = false;
     private bool isMoving = true;
 
+    private Coroutine currentCoroutine;  // Track the currently running coroutine
+
     void Start()
     {
-        cat.position = waypoint1.position;
-        StartCoroutine(FollowPath());
+        cat.position = waypoints[0].position;
+        currentCoroutine = StartCoroutine(FollowPath());
     }
 
     // Coroutine to follow waypoints
     IEnumerator FollowPath()
     {
-        while (true)
+        while (!isChasingPlayer && isMoving)
         {
-            if (!isChasingPlayer && isMoving)
+            animator.SetInteger("AnimState", 1); // Walking animation
+
+            Transform targetWaypoint = waypoints[waypointIndex].transform;
+
+            cat.position = Vector3.MoveTowards(cat.position, targetWaypoint.position, moveSpeed * Time.deltaTime);
+
+            if (Vector3.Distance(cat.position, targetWaypoint.position) < 0.1f)
             {
-                animator.SetInteger("AnimState", 1); // Walking animation
+                int animState = Random.Range(3, 8);
+                StartCoroutine(PerformIdleAction(animState));
 
-                Transform targetWaypoint = (waypointIndex == 0) ? waypoint1 : waypoint2;
-                cat.position = Vector3.MoveTowards(cat.position, targetWaypoint.position, moveSpeed * Time.deltaTime);
-
-                if (Vector3.Distance(cat.position, targetWaypoint.position) < 0.1f)
+                waypointIndex++;
+                if (waypointIndex == waypoints.Length)
                 {
-                    waypointIndex = (waypointIndex == 0) ? 1 : 0;
-
-                    int animState = Random.Range(4, 8);
-
-                    StartCoroutine(PerformIdleAction(animState));
-
+                    waypointIndex = 0;
                 }
-
-                // Flip the cat to face the direction of movement
-                if (cat.position.x < targetWaypoint.position.x)
-                    cat.localScale = new Vector3(Mathf.Abs(cat.localScale.x), cat.localScale.y, cat.localScale.z);
-                else
-                    cat.localScale = new Vector3(-Mathf.Abs(cat.localScale.x), cat.localScale.y, cat.localScale.z);
             }
 
-            yield return null; // Continue the coroutine
+            // Flip the cat to face the direction of movement
+            if (cat.position.x < targetWaypoint.position.x)
+                cat.localScale = new Vector3(Mathf.Abs(cat.localScale.x), cat.localScale.y, cat.localScale.z);
+            else
+                cat.localScale = new Vector3(-Mathf.Abs(cat.localScale.x), cat.localScale.y, cat.localScale.z);
+
+            yield return null;  // Continue the coroutine
         }
     }
 
@@ -63,7 +64,8 @@ public class CatFollowPath : MonoBehaviour
         {
             isChasingPlayer = true;
             isMoving = false;  // Stop following the path
-            StartCoroutine(ChasePlayer());
+            if (currentCoroutine != null) StopCoroutine(currentCoroutine);  // Stop FollowPath coroutine
+            currentCoroutine = StartCoroutine(ChasePlayer());  // Start chasing player
         }
     }
 
@@ -74,8 +76,8 @@ public class CatFollowPath : MonoBehaviour
         {
             isChasingPlayer = false;
             isMoving = true;  // Resume following the path
-            StopCoroutine(ChasePlayer());
-            StartCoroutine(FollowPath());  // Resume following path
+            if (currentCoroutine != null) StopCoroutine(currentCoroutine);  // Stop chasing player
+            currentCoroutine = StartCoroutine(FollowPath());  // Resume following path
         }
     }
 
@@ -110,22 +112,14 @@ public class CatFollowPath : MonoBehaviour
         // Wait for the idle animation to finish
         yield return new WaitForSeconds(1);
 
+        animator.SetInteger("AnimState", 0);
         // Resume moving
         isIdle = false;
         isMoving = true;
-        StartCoroutine(FollowPath());
-    }
 
-    // Trigger idle animations when cat is not chasing or following the player
-    public void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        if (!isChasingPlayer)  // Only restart FollowPath if not chasing player
         {
-            if (!isChasingPlayer && !isIdle)
-            {
-                int animState = Random.Range(4, 8);  // Select random idle action
-                StartCoroutine(PerformIdleAction(animState));
-            }
+            currentCoroutine = StartCoroutine(FollowPath());
         }
     }
 }
