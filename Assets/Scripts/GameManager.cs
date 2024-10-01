@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public static GameManager Instance;
+    public GameObject setting;
+    private bool isPaused = false;
 
     public List<GameObject> gameObjectsInLevel = new List<GameObject>();
     public string mapSceneName = "";  // Scene to quit for combat
@@ -39,6 +41,16 @@ public class GameManager : MonoBehaviour
             }
         }
 
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+
+            ToggleSetting();
+
+        }
     }
 
     // Call this method when transitioning to the combat scene
@@ -80,5 +92,21 @@ public class GameManager : MonoBehaviour
     {
 
         Time.timeScale = 1.0f; // Resume normal time
+    }
+
+    public void ToggleSetting()
+    {
+        isPaused = !isPaused;
+
+        if (isPaused)
+        {
+            setting.SetActive(true);
+            TogglePause();
+        }
+        else
+        {
+            setting.SetActive(false);
+            StopPause();
+        }
     }
 }

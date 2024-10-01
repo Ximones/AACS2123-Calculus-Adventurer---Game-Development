@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
+    
     public Slider backgroundVolumeSlider;  //Option Audio Settings
     public AudioMixer backgroundMixer;
     private float backgroundValue;
@@ -24,10 +25,7 @@ public class AudioManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     
 }

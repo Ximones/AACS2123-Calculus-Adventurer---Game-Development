@@ -1644,6 +1644,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 803159972002514490, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
   m_PrefabInstance: {fileID: 7155558517419937998}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &204885882 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 673034388691860882, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
+  m_PrefabInstance: {fileID: 7155558517419937998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &217049380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43938,6 +43943,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878b0e53f4ddb924ca7b8b64c0db4abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setting: {fileID: 1599754591}
+  portal: {fileID: 204885880}
+  portalAudio: {fileID: 204885882}
   gameObjectsInLevel: []
   mapSceneName: Level 1
   saveManager: {fileID: 7714975189507609944}
