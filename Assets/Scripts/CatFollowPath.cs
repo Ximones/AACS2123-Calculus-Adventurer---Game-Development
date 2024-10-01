@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class CatFollowPath : MonoBehaviour
 {
@@ -16,10 +18,21 @@ public class CatFollowPath : MonoBehaviour
     private bool isChasingPlayer = false;
     private bool isMoving = true;
 
+    public AudioSource backgroundMusic;  // Reference to the AudioSource for background music
+    public AudioClip newBackgroundMusic; // The new music to switch to after 20 seconds
+
+    public AudioSource MeowSound;
+    public AudioClip Meow;
+
     private Coroutine currentCoroutine;  // Track the currently running coroutine
+    private Coroutine meowCoroutine;  // To keep track of the meowing coroutine
+
+    private float timeInCollider = 0f;  // To track how long the player stays in the collider
+    private bool isMusicChanged = false; // To track if the music has been changed
 
     void Start()
     {
+        MeowSound = gameObject.AddComponent<AudioSource>();
         cat.position = waypoints[0].position;
         currentCoroutine = StartCoroutine(FollowPath());
     }
@@ -58,6 +71,55 @@ public class CatFollowPath : MonoBehaviour
     }
 
     // Detect when the player enters the chase range
+    //public void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Player"))
+    //    {
+    //        isChasingPlayer = true;
+    //        isMoving = false;  // Stop following the path
+    //        if (currentCoroutine != null) StopCoroutine(currentCoroutine);  // Stop FollowPath coroutine
+    //        currentCoroutine = StartCoroutine(ChasePlayer());  // Start chasing player
+
+    //        MeowSound.PlayOneShot(Meow);
+    //        // Start the coroutine to meow every 2 seconds
+    //        if (meowCoroutine == null)  // Prevent multiple coroutines
+    //        {
+    //            meowCoroutine = StartCoroutine(MeowEvery3Seconds());
+    //        }
+    //    }
+    //}
+
+    //IEnumerator MeowEvery3Seconds()
+    //{
+    //    // Initial wait for 2 seconds before the first meow
+    //    yield return new WaitForSeconds(2f);
+
+    //    while (true)  // Repeat the meow every 2 seconds
+    //    {
+    //        MeowSound.PlayOneShot(Meow);  // Play the meow sound
+    //        yield return new WaitForSeconds(2f);  // Wait for 2 seconds before meowing again
+    //    }
+    //}
+
+    //public void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Player"))
+    //    {
+    //        isChasingPlayer = false;
+    //        isMoving = true;  // Resume following the path
+    //        if (currentCoroutine != null) StopCoroutine(currentCoroutine);  // Stop chasing player
+    //        currentCoroutine = StartCoroutine(FollowPath());  // Resume following path
+
+    //        // Stop the meowing coroutine if the player exits the trigger
+    //        if (meowCoroutine != null)
+    //        {
+    //            StopCoroutine(meowCoroutine);
+    //            meowCoroutine = null;  // Reset to prevent re-start issues
+    //        }
+    //    }
+    //    MeowSound.Stop();
+    //}
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -66,10 +128,49 @@ public class CatFollowPath : MonoBehaviour
             isMoving = false;  // Stop following the path
             if (currentCoroutine != null) StopCoroutine(currentCoroutine);  // Stop FollowPath coroutine
             currentCoroutine = StartCoroutine(ChasePlayer());  // Start chasing player
+
+            // Start the coroutine to meow every 2 seconds
+            if (meowCoroutine == null)
+            {
+                meowCoroutine = StartCoroutine(MeowEvery2Seconds());
+            }
         }
     }
 
-    // Detect when the player leaves the chase range
+    void Update()
+    {
+        if (isChasingPlayer)
+        {
+            timeInCollider += Time.deltaTime;
+
+            // If player has been in the collider for more than 10 seconds and music hasn't changed yet
+            if (timeInCollider >= 10f && !isMusicChanged)
+            {
+                ChangeBackgroundMusic();
+                isMusicChanged = true;  // Prevents multiple music changes
+            }
+        }
+    }
+
+    // Coroutine to meow every 2 seconds
+    IEnumerator MeowEvery2Seconds()
+    {
+        yield return new WaitForSeconds(2f);  // Initial delay of 2 seconds
+
+        while (true)  // Repeat the meow every 2 seconds
+        {
+            MeowSound.PlayOneShot(Meow);  // Play the meow sound
+            yield return new WaitForSeconds(2f);  // Wait for 2 seconds before meowing again
+        }
+    }
+
+    // Function to change the background music
+    void ChangeBackgroundMusic()
+    {
+        backgroundMusic.clip = newBackgroundMusic;  // Set the new music clip
+        backgroundMusic.Play();  // Play the new music
+    }
+
     public void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -78,7 +179,19 @@ public class CatFollowPath : MonoBehaviour
             isMoving = true;  // Resume following the path
             if (currentCoroutine != null) StopCoroutine(currentCoroutine);  // Stop chasing player
             currentCoroutine = StartCoroutine(FollowPath());  // Resume following path
+
+            // Stop the meowing coroutine if the player exits the trigger
+            if (meowCoroutine != null)
+            {
+                StopCoroutine(meowCoroutine);
+                meowCoroutine = null;  // Reset to prevent re-start issues
+            }
+
+            // Reset time in collider and music change state
+            timeInCollider = 0f;
+            isMusicChanged = false;
         }
+        MeowSound.Stop();
     }
 
     // Coroutine to chase the player
