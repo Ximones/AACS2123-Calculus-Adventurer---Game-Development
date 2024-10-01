@@ -1040,7 +1040,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6214803023873808112, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
   m_PrefabInstance: {fileID: 724519471}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 739462688}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -1050,6 +1050,21 @@ MonoBehaviour:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7991746292658419427, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
   m_PrefabInstance: {fileID: 2100575955}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &739462688 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6986658744831345534, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
+  m_PrefabInstance: {fileID: 724519471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &798069400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3393712778606010993, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
+  m_PrefabInstance: {fileID: 724519471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &802182256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8965954574891625288, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
+  m_PrefabInstance: {fileID: 724519471}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &824375416
 GameObject:
@@ -1653,7 +1668,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5094887136147462465, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
   m_PrefabInstance: {fileID: 724519471}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 798069400}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -2337,7 +2352,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8206459724401778949, guid: b68047a672888aa4eb3dcc4f90e9c5d3, type: 3}
   m_PrefabInstance: {fileID: 724519471}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 802182256}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
@@ -2687,9 +2702,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1929841904}
     - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: confirmButton
+      value: 
+      objectReference: {fileID: 739462688}
+    - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: inputCalculus
+      value: 
+      objectReference: {fileID: 802182256}
+    - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: enemyBehaviour
       value: 
       objectReference: {fileID: 1921135078}
+    - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
+      propertyPath: displayCalculus
+      value: 
+      objectReference: {fileID: 798069400}
     - target: {fileID: 2419640783431087238, guid: 49621f5d433d8794db95b73210b7fe60, type: 3}
       propertyPath: playerBehaviour
       value: 

@@ -15,6 +15,11 @@ public class BattleHandler : MonoBehaviour
     public GameObject deathScene;
     public GameObject victoryScene;
     public GameObject damageObject;
+
+    public GameObject displayCalculus;
+    public GameObject inputCalculus;
+    public GameObject confirmButton;
+
     public Animator damageAnimator;
     private bool isShowingDamage = false;
 
@@ -63,6 +68,9 @@ public class BattleHandler : MonoBehaviour
             // Check if the player answered correctly
             if (calculusQuestion.getPlayerAns() == 1)
             {
+                displayCalculus.SetActive(false);
+                inputCalculus.SetActive(false);
+                confirmButton.SetActive(false);
                 // Player answered correctly, so the player attacks
                 playerBehaviour.WalkToTarget();
                 
@@ -71,14 +79,21 @@ public class BattleHandler : MonoBehaviour
             
             if (calculusQuestion.getPlayerAns() == -1)
             {
+                displayCalculus.SetActive(false);
+                inputCalculus.SetActive(false);
+                confirmButton.SetActive(false);
                 // Player answered incorrectly, so the enemy attacks
                 enemyBehaviour.Move();
                 calculusQuestion.playerAns = 0;
             }
 
             // Wait for both the player and enemy to stop moving before the next question
-            
+
             yield return new WaitUntil(() => !playerBehaviour.isMoving && !enemyBehaviour.getMoving());
+
+            displayCalculus.SetActive(true);
+            inputCalculus.SetActive(true);
+            confirmButton.SetActive(true);
         }
 
             

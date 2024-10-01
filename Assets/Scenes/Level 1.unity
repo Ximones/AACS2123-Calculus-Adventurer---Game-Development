@@ -973,7 +973,7 @@ Transform:
   m_GameObject: {fileID: 175008113}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 193.4, y: -5.13, z: -10}
+  m_LocalPosition: {x: -10.1, y: -6.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1644,11 +1644,6 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 803159972002514490, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
   m_PrefabInstance: {fileID: 7155558517419937998}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &204885882 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 673034388691860882, guid: b6b10b70ecdf2ef43ba7bb21998c3073, type: 3}
-  m_PrefabInstance: {fileID: 7155558517419937998}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &217049380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2019,7 +2014,7 @@ Transform:
   m_GameObject: {fileID: 224430855}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 193.4, y: -5.13, z: -10}
+  m_LocalPosition: {x: -10.1, y: -6.3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7669,11 +7664,11 @@ PrefabInstance:
       objectReference: {fileID: 801956801}
     - target: {fileID: 5384255320948641977, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 193.4
+      value: -10.1
       objectReference: {fileID: 0}
     - target: {fileID: 5384255320948641977, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.13
+      value: -6.3
       objectReference: {fileID: 0}
     - target: {fileID: 5384255320948641977, guid: 6e50d145ed909ad44bc5f9d9e23b2294, type: 3}
       propertyPath: m_LocalPosition.z
@@ -43944,8 +43939,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setting: {fileID: 1599754591}
-  portal: {fileID: 204885880}
-  portalAudio: {fileID: 204885882}
   gameObjectsInLevel: []
   mapSceneName: Level 1
   saveManager: {fileID: 7714975189507609944}
