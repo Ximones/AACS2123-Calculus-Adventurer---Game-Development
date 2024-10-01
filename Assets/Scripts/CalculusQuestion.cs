@@ -128,7 +128,7 @@ public class CalculusQuestion : MonoBehaviour
         questions.Add(new Question("What is the derivative of y = x^5 - 5x^3 + 9x?", "5x^4 - 15x^2 + 9"));
         questions.Add(new Question("What is the derivative of y = 2x^6 + 4x^2 - 7x + 12?", "12x^5 + 8x - 7"));
         questions.Add(new Question("What is the derivative of y = 7x^3 + 4x^2 + 5x?", "21x^2 + 8x + 5"));
-
+}
 
     }
 
