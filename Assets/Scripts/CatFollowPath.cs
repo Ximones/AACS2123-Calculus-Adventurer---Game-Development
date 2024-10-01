@@ -70,56 +70,6 @@ public class CatFollowPath : MonoBehaviour
         }
     }
 
-    // Detect when the player enters the chase range
-    //public void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision.CompareTag("Player"))
-    //    {
-    //        isChasingPlayer = true;
-    //        isMoving = false;  // Stop following the path
-    //        if (currentCoroutine != null) StopCoroutine(currentCoroutine);  // Stop FollowPath coroutine
-    //        currentCoroutine = StartCoroutine(ChasePlayer());  // Start chasing player
-
-    //        MeowSound.PlayOneShot(Meow);
-    //        // Start the coroutine to meow every 2 seconds
-    //        if (meowCoroutine == null)  // Prevent multiple coroutines
-    //        {
-    //            meowCoroutine = StartCoroutine(MeowEvery3Seconds());
-    //        }
-    //    }
-    //}
-
-    //IEnumerator MeowEvery3Seconds()
-    //{
-    //    // Initial wait for 2 seconds before the first meow
-    //    yield return new WaitForSeconds(2f);
-
-    //    while (true)  // Repeat the meow every 2 seconds
-    //    {
-    //        MeowSound.PlayOneShot(Meow);  // Play the meow sound
-    //        yield return new WaitForSeconds(2f);  // Wait for 2 seconds before meowing again
-    //    }
-    //}
-
-    //public void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    if (collision.CompareTag("Player"))
-    //    {
-    //        isChasingPlayer = false;
-    //        isMoving = true;  // Resume following the path
-    //        if (currentCoroutine != null) StopCoroutine(currentCoroutine);  // Stop chasing player
-    //        currentCoroutine = StartCoroutine(FollowPath());  // Resume following path
-
-    //        // Stop the meowing coroutine if the player exits the trigger
-    //        if (meowCoroutine != null)
-    //        {
-    //            StopCoroutine(meowCoroutine);
-    //            meowCoroutine = null;  // Reset to prevent re-start issues
-    //        }
-    //    }
-    //    MeowSound.Stop();
-    //}
-
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -129,6 +79,7 @@ public class CatFollowPath : MonoBehaviour
             if (currentCoroutine != null) StopCoroutine(currentCoroutine);  // Stop FollowPath coroutine
             currentCoroutine = StartCoroutine(ChasePlayer());  // Start chasing player
 
+            MeowSound.PlayOneShot(Meow);
             // Start the coroutine to meow every 2 seconds
             if (meowCoroutine == null)
             {
