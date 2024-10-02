@@ -249,7 +249,6 @@ public class PlayerBehaviour : MonoBehaviour
     {
         animatorPlayer.SetInteger("AnimState", 4);  // Die animation
         StartCoroutine(waitToRevive());
-        // Add logic for when character dies
     }
 
     IEnumerator waitToRevive()

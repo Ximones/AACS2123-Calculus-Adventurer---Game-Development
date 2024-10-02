@@ -84,7 +84,7 @@ public class SlimeBehaviour : Enemy
     protected override void Attack()
     {
         Debug.Log("Slime attacks!");
-        animatorEnemy.SetInteger("AnimState", 0);  // Mushroom attack animation
+        animatorEnemy.SetInteger("AnimState", 0);  // Slime attack animation
         PlayAudioClip(attackClip);
         // Assume PlayerBehaviour is available and hooked up
         playerBehaviour.TakeDamage(normalDamage, 1);
@@ -95,7 +95,7 @@ public class SlimeBehaviour : Enemy
     protected override void Attack2()
     {
         Debug.Log("Slime attacks!");
-        animatorEnemy.SetInteger("AnimState", 0);  // Mushroom attack animation
+        animatorEnemy.SetInteger("AnimState", 0);  // Slime attack animation
         PlayAudioClip(attackClip);
         // Assume PlayerBehaviour is available and hooked up
         playerBehaviour.TakeDamage(criticalDamage, 0.5f);

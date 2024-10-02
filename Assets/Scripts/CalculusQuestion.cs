@@ -261,7 +261,6 @@ public class CalculusQuestion : MonoBehaviour
 
     private void AskCalculusQuestion()
     {
-        // currentQuestionIndex = (currentQuestionIndex + 1) % questions.Count;
 
         //get random number index
         System.Random random = new System.Random();
