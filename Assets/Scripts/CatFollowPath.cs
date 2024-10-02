@@ -10,6 +10,8 @@ public class CatFollowPath : MonoBehaviour
     public Transform player;
     public Animator animator;
 
+    public GameObject lost;
+    public GameObject catLost;
     public float moveSpeed = 1f;
     public float chaseSpeed = 2f;
     public float chaseRange = 5.0f;
@@ -32,6 +34,8 @@ public class CatFollowPath : MonoBehaviour
 
     void Start()
     {
+        lost.SetActive(true);
+        catLost.SetActive(false);
         MeowSound = gameObject.AddComponent<AudioSource>();
         cat.position = waypoints[0].position;
         currentCoroutine = StartCoroutine(FollowPath());
@@ -99,6 +103,8 @@ public class CatFollowPath : MonoBehaviour
             {
                 ChangeBackgroundMusic();
                 isMusicChanged = true;  // Prevents multiple music changes
+                lost.SetActive(false);
+                catLost.SetActive(true);
             }
         }
     }
