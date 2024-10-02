@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class SlimeBehaviour : Enemy
 {
-    // Start is called before the first frame update
-      // [SerializeField] AudioClip walkClip; // Audio clip for walking
-      // [SerializeField] AudioClip attackClip; // Audio clip for attacking
-      // private AudioSource audioSource;
+    [SerializeField] AudioClip walkClip; // Audio clip for walking
+    [SerializeField] AudioClip attackClip; // Audio clip for attacking
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     protected override void Init()
@@ -20,7 +19,7 @@ public class SlimeBehaviour : Enemy
         Debug.Log("Slime initialized");
 
         // Initialize audio source
-        //audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     public override void Move()
@@ -32,7 +31,7 @@ public class SlimeBehaviour : Enemy
 
     private IEnumerator WalkToPlayer()
     {
-        animatorEnemy.SetInteger("AnimState",1);  // Walking animation
+        animatorEnemy.SetInteger("AnimState", 1);  // Walking animation
         Vector3 targetPosition = transformPlayer.position;
 
         // Determine which direction to face before starting to walk
@@ -47,7 +46,7 @@ public class SlimeBehaviour : Enemy
             transformEnemy.localScale = new Vector3(1, 1, 1);  // Flip to face right
         }
 
-       // PlayLoopingAudioClip(walkClip); // Play walking sound
+        PlayLoopingAudioClip(walkClip); // Play walking sound
 
         // Walk towards the player
         while (Vector3.Distance(transformEnemy.position, targetPosition) > attackRange)
@@ -70,7 +69,7 @@ public class SlimeBehaviour : Enemy
         }
 
         // After reaching the player, stop walking sound and perform attack
-        //StopLoopingAudioClip();
+        StopLoopingAudioClip();
 
         if (Random.Range(1, 3) == 1)
         {
@@ -86,7 +85,7 @@ public class SlimeBehaviour : Enemy
     {
         Debug.Log("Slime attacks!");
         animatorEnemy.SetInteger("AnimState", 0);  // Mushroom attack animation
-         // StartCoroutine(PlayAttackSoundMultipleTimes(3)); // Play attack sound 3 times
+        PlayAudioClip(attackClip);
         // Assume PlayerBehaviour is available and hooked up
         playerBehaviour.TakeDamage(normalDamage, 1);
         battleHandler.UpdateDamageText(normalDamage, false);
@@ -97,7 +96,7 @@ public class SlimeBehaviour : Enemy
     {
         Debug.Log("Slime attacks!");
         animatorEnemy.SetInteger("AnimState", 0);  // Mushroom attack animation
-         // StartCoroutine(PlayAttackSoundMultipleTimes(3)); // Play attack sound 3 times
+        PlayAudioClip(attackClip);
         // Assume PlayerBehaviour is available and hooked up
         playerBehaviour.TakeDamage(criticalDamage, 0.5f);
         battleHandler.UpdateDamageText(criticalDamage, true);
@@ -116,7 +115,7 @@ public class SlimeBehaviour : Enemy
         }
 
         animatorEnemy.SetInteger("AnimState", 1);  // Walking animation
-       // PlayLoopingAudioClip(walkClip); // Play walking sound
+        PlayLoopingAudioClip(walkClip); // Play walking sound
 
         // Save the original Y position to keep it constant during movement
         float originalY = transformEnemy.position.y;
@@ -133,7 +132,7 @@ public class SlimeBehaviour : Enemy
             else
             {
                 // Keep facing left if moving left
-                transformEnemy.localScale = new Vector3(-1,1, 1);
+                transformEnemy.localScale = new Vector3(-1, 1, 1);
             }
 
             // Move only along the X-axis, keep Y-axis and Z-axis constant
@@ -147,7 +146,7 @@ public class SlimeBehaviour : Enemy
         }
 
         // After reaching the original position, stop walking sound and switch to idle state
-     //   StopLoopingAudioClip();
+        StopLoopingAudioClip();
         animatorEnemy.SetInteger("AnimState", 0);  // Idle animation
 
         // Ensure the enemy is facing left (original direction)
@@ -157,39 +156,30 @@ public class SlimeBehaviour : Enemy
         isMoving = false;
     }
 
-   // private IEnumerator PlayAttackSoundMultipleTimes(int times)
-   // {
-   //     for (int i = 0; i < times; i++)
-   //     {
-   //         PlayAudioClip(attackClip);
-   //         yield return new WaitForSeconds(attackClip.length);
-   //     }
-   // }
-   //
-   // private void PlayAudioClip(AudioClip clip)
-   // {
-   //     if (clip != null)
-   //     {
-   //         audioSource.PlayOneShot(clip);
-   //     }
-   // }
-   //
-   // private void PlayLoopingAudioClip(AudioClip clip)
-   // {
-   //     if (clip != null && !audioSource.isPlaying)
-   //     {
-   //         audioSource.clip = clip;
-   //         audioSource.loop = true;
-   //         audioSource.Play();
-   //     }
-   // }
-   //
-   // private void StopLoopingAudioClip()
-   // {
-   //     if (audioSource.isPlaying)
-   //     {
-   //         audioSource.Stop();
-   //         audioSource.loop = false;
-   //     }
-   // }
+    private void PlayAudioClip(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+    }
+
+    private void PlayLoopingAudioClip(AudioClip clip)
+    {
+        if (clip != null && !audioSource.isPlaying)
+        {
+            audioSource.clip = clip;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+    }
+
+    private void StopLoopingAudioClip()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+            audioSource.loop = false;
+        }
+    }
 }

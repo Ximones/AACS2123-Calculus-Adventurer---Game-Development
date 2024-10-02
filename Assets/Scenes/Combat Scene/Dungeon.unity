@@ -265,6 +265,14 @@ PrefabInstance:
       value: Red_Slime
       objectReference: {fileID: 0}
     - target: {fileID: 1398389694216511501, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
+      propertyPath: walkClip
+      value: 
+      objectReference: {fileID: 8300000, guid: aa76eae4bf0302b4aa5796b272fa0857, type: 3}
+    - target: {fileID: 1398389694216511501, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
+      propertyPath: attackClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a652877b012108e41871f867ada9f176, type: 3}
+    - target: {fileID: 1398389694216511501, guid: e2637c0680cfe994daadaf9fcc38b17f, type: 3}
       propertyPath: attackRange
       value: 2
       objectReference: {fileID: 0}
