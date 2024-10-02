@@ -140,21 +140,6 @@ public class PlayerController : MonoBehaviour
     private void HandleDash()
     {
 
-        //if (isDashCooldown == true || dashCount > 1)
-        //{
-        //    StartCoroutine(DashCooldown());
-        //    isDashCooldown = false;
-        //    dashCount = 0;
-        //    return;
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.C) && isWalking)
-        //{
-        //    dashCount++;
-        //    canDash = true;
-        //    float playerHorizontalInput = Input.GetAxis("Horizontal");
-        //    StartCoroutine(PerformDash(playerHorizontalInput));
-        //}
 
         // If dash cooldown is active or player has already dashed twice, don't allow dashing
         if (isDashCooldown || dashCount > 1)
@@ -197,19 +182,6 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator PerformDash(float directionInput)
     {
-        //playerAnimator.SetBool("CanDash", canDash);
-
-        //if (dashCount == 1 && Time.time >= lastDashTime + dashCooldown && isWalking && canDash)
-        //{
-        //    playerAnimator.SetTrigger("isDashStart");
-        //    float dashDirectionX = directionInput < 0 ? -1 : 1;
-        //    playerBody.AddForce(new Vector2(dashDirectionX * dashForce, 0), ForceMode2D.Impulse);
-        //    audioSource.PlayOneShot(dashClip); // Play dash sound effect
-        //    yield return new WaitForSeconds(0.5f);
-        //    isDashCooldown = true;
-        //    lastDashTime = Time.time;
-        //    DashCooldown();
-        //}
 
         // Set animator and flags for dashing
         canDash = false;
