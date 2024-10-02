@@ -1428,7 +1428,7 @@ MonoBehaviour:
   originalposition: {x: 351.4, y: 29.1, z: 0}
   moveSpeed: 5
   chaseSpeed: 7
-  chaseRange: 5
+  chaseRange: 8
 --- !u!114 &202986866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2827,7 +2827,7 @@ MonoBehaviour:
   originalposition: {x: 815.99, y: 38.99, z: 0}
   moveSpeed: 5
   chaseSpeed: 7
-  chaseRange: 5
+  chaseRange: 8
 --- !u!114 &364539142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4558,7 +4558,7 @@ MonoBehaviour:
   originalposition: {x: 426.19, y: 13.03, z: 0}
   moveSpeed: 5
   chaseSpeed: 7
-  chaseRange: 5
+  chaseRange: 8
 --- !u!114 &616396974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8258,7 +8258,7 @@ MonoBehaviour:
   originalposition: {x: 276.61, y: 29.1, z: 0}
   moveSpeed: 5
   chaseSpeed: 7
-  chaseRange: 5
+  chaseRange: 8
 --- !u!114 &997325479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8391,7 +8391,7 @@ MonoBehaviour:
   originalposition: {x: 659.98, y: 29.06, z: 0}
   moveSpeed: 5
   chaseSpeed: 7
-  chaseRange: 5
+  chaseRange: 8
 --- !u!114 &1048541264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21517,7 +21517,7 @@ MonoBehaviour:
   originalposition: {x: 563.61, y: 36.1, z: 0}
   moveSpeed: 5
   chaseSpeed: 7
-  chaseRange: 5
+  chaseRange: 8
 --- !u!114 &1394099172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21796,7 +21796,7 @@ MonoBehaviour:
   originalposition: {x: 776.09, y: 39.04, z: 0}
   moveSpeed: 5
   chaseSpeed: 7
-  chaseRange: 5
+  chaseRange: 8
 --- !u!114 &1457418386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22975,7 +22975,7 @@ MonoBehaviour:
   originalposition: {x: 146.77, y: 7.09, z: 0}
   moveSpeed: 5
   chaseSpeed: 7
-  chaseRange: 5
+  chaseRange: 8
 --- !u!114 &1551728802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30821,7 +30821,7 @@ MonoBehaviour:
   originalposition: {x: 495.99, y: 13.1, z: 0}
   moveSpeed: 5
   chaseSpeed: 7
-  chaseRange: 5
+  chaseRange: 8
 --- !u!114 &2066104659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31906,7 +31906,7 @@ MonoBehaviour:
   originalposition: {x: 101.06, y: -0.99, z: 0}
   moveSpeed: 5
   chaseSpeed: 7
-  chaseRange: 5
+  chaseRange: 8
 --- !u!4 &143163800212626601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2666618679777059070, guid: eb21ee44433411544beef0b992626f67, type: 3}
@@ -32049,7 +32049,7 @@ MonoBehaviour:
   originalposition: {x: 356.74, y: 7.13, z: 0}
   moveSpeed: 5
   chaseSpeed: 7
-  chaseRange: 5
+  chaseRange: 8
 --- !u!95 &546274692108916379 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7047311479692434010, guid: 50513feb629d5de4aa7caa06d7872121, type: 3}
@@ -32169,7 +32169,7 @@ MonoBehaviour:
   originalposition: {x: 207.26, y: 29.11, z: 0}
   moveSpeed: 5
   chaseSpeed: 7
-  chaseRange: 5
+  chaseRange: 8
 --- !u!114 &5414962041082538705
 MonoBehaviour:
   m_ObjectHideFlags: 0
