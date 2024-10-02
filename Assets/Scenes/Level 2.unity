@@ -13699,7 +13699,7 @@ PrefabInstance:
     - target: {fileID: 806391528215355011, guid: 540ec64481a51ca4f99e91d28be29f19, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1299147856}
+      objectReference: {fileID: 963128771}
     - target: {fileID: 806391528215355011, guid: 540ec64481a51ca4f99e91d28be29f19, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -13718,7 +13718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 806391528215355011, guid: 540ec64481a51ca4f99e91d28be29f19, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: GameManager, Assembly-CSharp
+      value: SettingsController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 806391528215355011, guid: 540ec64481a51ca4f99e91d28be29f19, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -15004,6 +15004,7 @@ GameObject:
   - component: {fileID: 963128767}
   - component: {fileID: 963128766}
   - component: {fileID: 963128770}
+  - component: {fileID: 963128771}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -15171,6 +15172,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundVolumeSlider: {fileID: 684479503}
   backgroundMixer: {fileID: 24100000, guid: a34d7c01e5e90c045ae1207153c53e71, type: 2}
+--- !u!114 &963128771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963128765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db6f2a524885761499a64d02941e8839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  setting: {fileID: 1448706471}
 --- !u!1001 &978806782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81723,7 +81737,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878b0e53f4ddb924ca7b8b64c0db4abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setting: {fileID: 0}
   gameObjectsInLevel: []
   mapSceneName: Level 2
   saveManager: {fileID: 1299147857}
@@ -87082,8 +87095,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1299147856}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 963128771}
+        m_TargetAssemblyTypeName: SettingsController, Assembly-CSharp
         m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
@@ -90639,8 +90652,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d18b8dfd5936efd469f141ff5161c7f1, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0

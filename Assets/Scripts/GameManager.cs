@@ -7,8 +7,7 @@ public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public static GameManager Instance;
-    public GameObject setting;
-    private bool isPaused = false;
+
 
     public List<GameObject> gameObjectsInLevel = new List<GameObject>();
     public string mapSceneName = "";  // Scene to quit for combat
@@ -43,15 +42,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
 
-            ToggleSetting();
-
-        }
-    }
 
     // Call this method when transitioning to the combat scene
     public void ReturnToLevel()
@@ -81,32 +72,5 @@ public class GameManager : MonoBehaviour
     public void MarkEnemyForDestruction(GameObject enemy)
     {
         enemy.SetActive(false);  // Deactivate the enemy so it won't be restored
-    }
-
-    public void TogglePause()
-    {
-        Time.timeScale = 0.0f; // Pause the game
-    }
-
-    public void StopPause()
-    {
-
-        Time.timeScale = 1.0f; // Resume normal time
-    }
-
-    public void ToggleSetting()
-    {
-        isPaused = !isPaused;
-
-        if (isPaused)
-        {
-            setting.SetActive(true);
-            TogglePause();
-        }
-        else
-        {
-            setting.SetActive(false);
-            StopPause();
-        }
     }
 }
