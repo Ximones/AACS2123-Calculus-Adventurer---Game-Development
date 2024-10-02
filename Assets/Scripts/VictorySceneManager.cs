@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class VictorySceneManager : MonoBehaviour
 {
+    public GameObject block; 
     public GameObject victoryCanvas; 
     public Button nextLevelButton;
     public Button backToMenuButton;
@@ -17,13 +18,11 @@ public class VictorySceneManager : MonoBehaviour
 
     void Start()
     {
-
-        victoryCanvas.SetActive(false); 
+        victoryCanvas.SetActive(false);
+        block.SetActive(false);
         nextLevelButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(NextLevel)));
         backToMenuButton.onClick.AddListener(() => StartCoroutine(HandleButtonClick(BackToMenu)));
     }
-
-   
 
     void OnTriggerEnter2D(Collider2D other) // Player hit portal colider then set victory screen as true
     {
@@ -40,6 +39,7 @@ public class VictorySceneManager : MonoBehaviour
     public void ShowVictoryScreen()
     {
         victoryCanvas.SetActive(true);
+        block.SetActive(true);
 
         if (PlayerController != null)
         {
