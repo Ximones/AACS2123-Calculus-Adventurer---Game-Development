@@ -102,57 +102,55 @@ public class CalculusQuestion : MonoBehaviour
         questions.Add(new Question("16.Use the power rule to find the derivative of y = 5x^7.\n What is the derivative of y?", "35x^6"));
         questions.Add(new Question("17.Apply the power rule to find the derivative of y = 4x^3.\n What is the result?", "12x^2"));
         questions.Add(new Question("18.Use the power rule to find the derivative of y = 10x^6.\n What is the derivative of y?", "60x^5"));
-        questions.Add(new Question("19.Apply the power rule to find the derivative of y = 9x^8.\n What is the result?", "72x^7"));
-        questions.Add(new Question("20.Use the power rule to find the derivative of y = x^25.\n What is the derivative of y?", "25x^24"));
-        questions.Add(new Question("21.Apply the power rule to find the derivative of y = 6x^5.\n What is the result?", "30x^4"));
+        questions.Add(new Question("19.Use the power rule to find the derivative of y = x^25.\n What is the derivative of y?", "25x^24"));
+        questions.Add(new Question("20.Apply the power rule to find the derivative of y = 6x^5.\n What is the result?", "30x^4"));
     }
 
     private void InitializeSumRuleQuestions()
     {
-        questions.Add(new Question("What is the derivative of y = 4x^2 + 5x^3?", "8x + 15x^2"));
-        questions.Add(new Question("What is the derivative of y = 6x^2 - 3x^3?", "12x - 9x^2"));
-        questions.Add(new Question("What is the derivative of y = (2x^2 - x)^2?", "16x^3 - 12x^2 + 2x"));
-        questions.Add(new Question("What is the derivative of y = x^10 - 5x^7 + 4x^5 - 2x^2 + 10x?", "10x^9 - 35x^6 + 20x^4 - 4x + 10"));
-        questions.Add(new Question("What is the derivative of y = 3x^4 + 7x^2?", "12x^3 + 14x"));
-        questions.Add(new Question("What is the derivative of y = 5x^5 - 8x^3 + 6x?", "25x^4 - 24x^2 + 6"));
-        questions.Add(new Question("What is the derivative of y = x^6 - 4x^2 + 3?", "6x^5 - 8x"));
-        questions.Add(new Question("What is the derivative of y = 2x^7 + 3x^5 - x^3 + 5?", "14x^6 + 15x^4 - 3x^2"));
-        questions.Add(new Question("What is the derivative of y = 6x^3 + 4x^2 - 2x?", "18x^2 + 8x - 2"));
-        questions.Add(new Question("What is the derivative of y = 4x^3 + 7x^2?", "12x^2 + 14x"));
-        questions.Add(new Question("What is the derivative of y = 5x^6 - 3x^4?", "30x^5 - 12x^3"));
-        questions.Add(new Question("What is the derivative of y = 2x^8 + 4x^3?", "16x^7 + 12x^2"));
-        questions.Add(new Question("What is the derivative of y = 9x^4 - 6x^2 + x?", "36x^3 - 12x + 1"));
-        questions.Add(new Question("What is the derivative of y = 3x^5 + 2x^3 - x?", "15x^4 + 6x^2 - 1"));
-        questions.Add(new Question("What is the derivative of y = x^7 + 5x^2 - 4x + 7?", "7x^6 + 10x - 4"));
-        questions.Add(new Question("What is the derivative of y = 8x^4 - 3x^2 + 6?", "32x^3 - 6x"));
-        questions.Add(new Question("What is the derivative of y = x^5 - 5x^3 + 9x?", "5x^4 - 15x^2 + 9"));
-        questions.Add(new Question("What is the derivative of y = 2x^6 + 4x^2 - 7x + 12?", "12x^5 + 8x - 7"));
-        questions.Add(new Question("What is the derivative of y = 7x^3 + 4x^2 + 5x?", "21x^2 + 8x + 5"));
-
-
+        questions.Add(new Question("1.What is the derivative of y = 4x^2 + 5x^3?", "8x + 15x^2"));
+        questions.Add(new Question("2.What is the derivative of y = 6x^2 - 3x^3?", "12x - 9x^2"));
+        questions.Add(new Question("3.What is the derivative of y = (2x^2 - x)^2?", "16x^3 - 12x^2 + 2x"));
+        questions.Add(new Question("4.What is the derivative of y = x^10 - 5x^7 + 4x^5 - 2x^2 + 10x?", "10x^9 - 35x^6 + 20x^4 - 4x + 10"));
+        questions.Add(new Question("5.What is the derivative of y = 3x^4 + 7x^2?", "12x^3 + 14x"));
+        questions.Add(new Question("6.What is the derivative of y = 5x^5 - 8x^3 + 6x?", "25x^4 - 24x^2 + 6"));
+        questions.Add(new Question("7.What is the derivative of y = x^6 - 4x^2 + 3?", "6x^5 - 8x"));
+        questions.Add(new Question("8.What is the derivative of y = 2x^7 + 3x^5 - x^3 + 5?", "14x^6 + 15x^4 - 3x^2"));
+        questions.Add(new Question("9.What is the derivative of y = 6x^3 + 4x^2 - 2x?", "18x^2 + 8x - 2"));
+        questions.Add(new Question("10.What is the derivative of y = 4x^3 + 7x^2?", "12x^2 + 14x"));
+        questions.Add(new Question("11.What is the derivative of y = 5x^6 - 3x^4?", "30x^5 - 12x^3"));
+        questions.Add(new Question("12.What is the derivative of y = 2x^8 + 4x^3?", "16x^7 + 12x^2"));
+        questions.Add(new Question("13.What is the derivative of y = 9x^4 - 6x^2 + x?", "36x^3 - 12x + 1"));
+        questions.Add(new Question("14.What is the derivative of y = 3x^5 + 2x^3 - x?", "15x^4 + 6x^2 - 1"));
+        questions.Add(new Question("15.What is the derivative of y = x^7 + 5x^2 - 4x + 7?", "7x^6 + 10x - 4"));
+        questions.Add(new Question("16.What is the derivative of y = 8x^4 - 3x^2 + 6?", "32x^3 - 6x"));
+        questions.Add(new Question("17.What is the derivative of y = x^5 - 5x^3 + 9x?", "5x^4 - 15x^2 + 9"));
+        questions.Add(new Question("18.What is the derivative of y = 2x^6 + 4x^2 - 7x + 12?", "12x^5 + 8x - 7"));
+        questions.Add(new Question("19.What is the derivative of y = 7x^3 + 4x^2 + 5x?", "21x^2 + 8x + 5"));
     }
+
 
     private void InitializeProductRuleQuestions()
     {
-        questions.Add(new Question("What is the derivative of y = (4x^2 + 2)(3x^3 - 1)?", "60x^4 + 18x^2 - 8x"));
-        questions.Add(new Question("What is the derivative of y = (2 - x^3)(3x^3 + x - 1)?", "-6x^5 - 4x^3 + 9x^2 + 2"));
-        questions.Add(new Question("What is the derivative of y = (x^2 + 1)(x - 5 - 1/x)?", "3x^2 - 10x + 1/x^2"));
-        questions.Add(new Question("What is the derivative of y = (x - 1/x)(x^2 - 1/x - 1)?", "3x^2 - 2 - 1/x^2 - 2/x^3"));
-        questions.Add(new Question("What is the derivative of y = (x^2 + 3)(2x^4 - x)?", "10x^5 - 2x^3 - 3x + 3"));
-        questions.Add(new Question("What is the derivative of y = (x^3 + 2)(4x^2 - 3)?", "12x^4 + 8x^2 - 9x"));
-        questions.Add(new Question("What is the derivative of y = (x + 1)(x^2 - x + 2)?", "3x^2 - 2x + 3"));
-        questions.Add(new Question("What is the derivative of y = (x^4 + 1)(x^3 - 1)?", "7x^6 - x^3 - 1"));
-        questions.Add(new Question("What is the derivative of y = (x^5 - 2)(x^4 + x - 3)?", "9x^8 + x^5 - 12x^3 - x + 6"));
-        questions.Add(new Question("What is the derivative of y = (x^3 + 2)(x^4 - 1)?", "7x^6 + 4x^3 - 2x^2"));
-        questions.Add(new Question("What is the derivative of y = (3x^2 - 5)(2x^3 + 1)?", "18x^4 - 30x^2 + 6x"));
-        questions.Add(new Question("What is the derivative of y = (2x^3 + 3)(4x^2 - 5)?", "24x^4 - 30x^2 + 8x"));
-        questions.Add(new Question("What is the derivative of y = (x^5 + 2)(x^2 - 3)?", "7x^6 - 10x^2"));
-        questions.Add(new Question("What is the derivative of y = (2x^2 + 1)(x^3 - 2)?", "8x^4 - 4x"));
-        questions.Add(new Question("What is the derivative of y = (x^3 + 4x)(x^2 - 1)?", "5x^4 + 4x^2 - 2x"));
-        questions.Add(new Question("What is the derivative of y = (x^4 - 1)(2x^3 + 5)?", "8x^6 + 10x^3"));
-        questions.Add(new Question("What is the derivative of y = (x^5 + 3)(x^2 + 1)?", "7x^6 + 5x^2"));
-        questions.Add(new Question("What is the derivative of y = (2x^4 - 3x)(3x^3 + 2)?", "24x^6 + 12x^2"));
-        questions.Add(new Question("What is the derivative of y = (x^3 + 2)(x^2 + 3)?", "5x^5 + 6x^2"));
+        questions.Add(new Question("1.What is the derivative of y = (4x^2 + 2)(3x^3 - 1)?", "60x^4 + 18x^2 - 8x"));
+        questions.Add(new Question("2.What is the derivative of y = (2 - x^3)(3x^3 + x - 1)?", "-6x^5 - 4x^3 + 9x^2 + 2"));
+        questions.Add(new Question("3.What is the derivative of y = (x^2 + 1)(x - 5 - 1/x)?", "3x^2 - 10x + 1/x^2"));
+        questions.Add(new Question("4.What is the derivative of y = (x - 1/x)(x^2 - 1/x - 1)?", "3x^2 - 2 - 1/x^2 - 2/x^3"));
+        questions.Add(new Question("5.What is the derivative of y = (x^2 + 3)(2x^4 - x)?", "10x^5 - 2x^3 - 3x + 3"));
+        questions.Add(new Question("6.What is the derivative of y = (x^3 + 2)(4x^2 - 3)?", "12x^4 + 8x^2 - 9x"));
+        questions.Add(new Question("7.What is the derivative of y = (x + 1)(x^2 - x + 2)?", "3x^2 - 2x + 3"));
+        questions.Add(new Question("8.What is the derivative of y = (x^4 + 1)(x^3 - 1)?", "7x^6 - x^3 - 1"));
+        questions.Add(new Question("9.What is the derivative of y = (x^5 - 2)(x^4 + x - 3)?", "9x^8 + x^5 - 12x^3 - x + 6"));
+        questions.Add(new Question("10.What is the derivative of y = (x^3 + 2)(x^4 - 1)?", "7x^6 + 4x^3 - 2x^2"));
+        questions.Add(new Question("11.What is the derivative of y = (3x^2 - 5)(2x^3 + 1)?", "18x^4 - 30x^2 + 6x"));
+        questions.Add(new Question("12.What is the derivative of y = (2x^3 + 3)(4x^2 - 5)?", "24x^4 - 30x^2 + 8x"));
+        questions.Add(new Question("13.What is the derivative of y = (x^5 + 2)(x^2 - 3)?", "7x^6 - 10x^2"));
+        questions.Add(new Question("14.What is the derivative of y = (2x^2 + 1)(x^3 - 2)?", "8x^4 - 4x"));
+        questions.Add(new Question("15.What is the derivative of y = (x^3 + 4x)(x^2 - 1)?", "5x^4 + 4x^2 - 2x"));
+        questions.Add(new Question("16.What is the derivative of y = (x^4 - 1)(2x^3 + 5)?", "8x^6 + 10x^3"));
+        questions.Add(new Question("17.What is the derivative of y = (x^5 + 3)(x^2 + 1)?", "7x^6 + 5x^2"));
+        questions.Add(new Question("18.What is the derivative of y = (2x^4 - 3x)(3x^3 + 2)?", "24x^6 + 12x^2"));
+        questions.Add(new Question("19.What is the derivative of y = (x^3 + 2)(x^2 + 3)?", "5x^5 + 6x^2"));
     }
 
     // Check answer method
